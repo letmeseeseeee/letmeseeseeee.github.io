@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>DAY 35 | NPC BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="void gotoxy(int x, int y) {&#x2F;&#x2F;位置函数(行为x 列为y)    COORD pos;    pos.X&#x3D;2*y;    pos.Y&#x3D;x;    SetConsoleCursorPosition (GetStdHandle (STD_OUTPUT_HANDLE),pos);}上面的代码是一个用于设置光标位置的函数。它使用了Windo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DAY 35">
+<meta property="og:url" content="http://example.com/2023/06/10/DAY-35/index.html">
+<meta property="og:site_name" content="NPC BLOG">
+<meta property="og:description" content="void gotoxy(int x, int y) {&#x2F;&#x2F;位置函数(行为x 列为y)    COORD pos;    pos.X&#x3D;2*y;    pos.Y&#x3D;x;    SetConsoleCursorPosition (GetStdHandle (STD_OUTPUT_HANDLE),pos);}上面的代码是一个用于设置光标位置的函数。它使用了Windo">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-06-10T15:44:30.000Z">
+<meta property="article:modified_time" content="2023-06-10T16:12:19.718Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="BY NPC">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="NPC BLOG" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">NPC BLOG</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">ANYBODY WANT TO PLAY WITH ME?</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-DAY-35" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/10/DAY-35/" class="article-date">
+  <time class="dt-published" datetime="2023-06-10T15:44:30.000Z" itemprop="datePublished">2023-06-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      DAY 35
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>void gotoxy(int x, int y) {&#x2F;&#x2F;位置函数(行为x 列为y)<br>    COORD pos;<br>    pos.X&#x3D;2*y;<br>    pos.Y&#x3D;x;<br>    SetConsoleCursorPosition (GetStdHandle (STD_OUTPUT_HANDLE),pos);<br>}<br>上面的代码是一个用于设置光标位置的函数。它使用了Windows系统的Console API来设置光标的位置。</p>
+<p>函数定义了一个COORD结构类型的变化量pos，用于存储光标记的位置设置。</p>
+<p>该任数使用了Windows系统的控制台数来实现了标准位置的设置。COORD是一个结构体，它包含了控制台屏幕的行数和列表信息。在任数内部，首先创建一个类型的变量，然后COORD将pos参数x和y分配值给pos.Y和pos.X。在这里，行数对应参数x，列数对应参数y。最后，调用SetConsoleCursorPosition任意数来设置控制台灯标的位置，使之转移动到pos指定的行位置。</p>
+<p>COORD是一个库的自带结构体，包含控制台屏幕的行数和列表信息</p>
+<p>void begin () {<br>    system (“cls”);<br>    color (11);<br>    printf (“       ★”);<br>    color (10);<br>    printf (“吃豆人”);<br>    color (11);<br>    printf (“★\n\n”);<br>    color(7);<br>    printf (“  正在初始化，请耐心等待”);<br>    for (int i &#x3D; 0; i &lt;&#x3D; n; i++) {<br>        for (int j &#x3D; 1; j &lt;&#x3D; n; j++) {<br>            dis[i][j] &#x3D; 900;<br>        }<br>    }<br>    for (int i &#x3D; 0; i &lt;&#x3D; n; i++) {<br>        for (int j &#x3D; 0; j &lt;&#x3D; 3; j++) {<br>            if (i + fx[j] &gt;&#x3D; 0 &amp;&amp; i + fx[j] &lt;&#x3D; n) {<br>                int k &#x3D; i + fx[j], xx &#x3D; k&#x2F;27, yy &#x3D; k % 27, kk;<br>                if (changdi[i &#x2F; 27][i % 27] &amp;&amp; changdi[xx][yy]) {<br>                    dis[i][k] &#x3D; kk &#x3D; 1;<br>                }<br>            }<br>        }<br>    }<br>    for (int k &#x3D; 0; k &lt;&#x3D; n; k++) {<br>        if (changdi[k]) {<br>            for (int i &#x3D; 0; i &lt;&#x3D; n; i++) {<br>                if (changdi[i]) {<br>                    for (int j &#x3D; 0; j &lt;&#x3D; n; j++) {<br>                        if (changdi[j]) {<br>                            if (dis[i][j] &gt; dis[i][k] + dis[k][j]) {<br>                                dis[i][j] &#x3D; dis[i][k] + dis[k][j];<br>                            }<br>                        }<br>                    }<br>                }<br>            }<br>            if (k % 80 &#x3D;&#x3D; 0) {<br>                color (13);<br>                gotoxy (3, 12);<br>                printf(“│”);<br>            } else if (k % 80 &#x3D;&#x3D; 20) {<br>                    color (13);<br>                    gotoxy (3, 12);<br>                    printf (“╱”);<br>            } else if (k % 80 &#x3D;&#x3D; 40) {<br>                color (13);<br>                gotoxy (3, 12);<br>                printf (“─”);<br>            } else if (k % 80 &#x3D;&#x3D; 60) {<br>                color(13);<br>                gotoxy (3, 12);<br>                printf (“╲”);<br>            }<br>            if (k % 60&#x3D;&#x3D;0) {<br>                color (11);<br>                gotoxy (5, k &#x2F; 60);<br>                printf(“●”);<br>            }<br>        }<br>    }<br>}</p>
+<p>color(11), color(10), color(7), color(13): 这些函数调用是自定义的颜色函数，用于在控制台中设置文本颜色。通过这些函数调用，代码在不同的位置使用了不同的颜色，以美化输出。</p>
+<p>printf(“ ★”), printf(“吃豆人”), printf(“★\n\n”): 这些printf语句输出了带有星号的”吃豆人”标题，用于游戏开始时在控制台上显示。</p>
+<h2 id="for-int-i-x3D-0-i-lt-x3D-n-i-这是一个嵌套的循环，用于对二维数组dis进行初始化。dis是一个表示吃豆人游戏中节点之间距离的数组。"><a href="#for-int-i-x3D-0-i-lt-x3D-n-i-这是一个嵌套的循环，用于对二维数组dis进行初始化。dis是一个表示吃豆人游戏中节点之间距离的数组。" class="headerlink" title="for (int i &#x3D; 0; i &lt;&#x3D; n; i++): 这是一个嵌套的循环，用于对二维数组dis进行初始化。dis是一个表示吃豆人游戏中节点之间距离的数组。"></a>for (int i &#x3D; 0; i &lt;&#x3D; n; i++): 这是一个嵌套的循环，用于对二维数组dis进行初始化。dis是一个表示吃豆人游戏中节点之间距离的数组。</h2><p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/10/DAY-35/" data-id="cliq73cor001i5ctk0zu53sjm" data-title="DAY 35" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/06/09/DAY-34/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">DAY 34</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BY-NPc/" rel="tag">BY NPc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/I-come-here-to-sharpen-my-skills/" rel="tag">I come here to sharpen my skills</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/BY-NPC/" style="font-size: 20px;">BY NPC</a> <a href="/tags/BY-NPc/" style="font-size: 10px;">BY NPc</a> <a href="/tags/I-come-here-to-sharpen-my-skills/" style="font-size: 10px;">I come here to sharpen my skills</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/06/10/DAY-35/">DAY 35</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/09/DAY-34/">DAY 34</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/09/DAY-33/">DAY 33</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/07/DAY-32/">DAY 32</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/07/DAY-31-1/">DAY 31</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

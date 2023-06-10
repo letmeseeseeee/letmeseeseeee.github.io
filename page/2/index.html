@@ -77,6 +77,281 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-DAY-26-python-to-get-a-html-text" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/01/DAY-26-python-to-get-a-html-text/" class="article-date">
+  <time class="dt-published" datetime="2023-06-01T14:52:24.000Z" itemprop="datePublished">2023-06-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/01/DAY-26-python-to-get-a-html-text/">DAY 26 python to get a html text</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>crawl to get a html text</p>
+<p>I have to say that ai is too powerful</p>
+<p>and the knowledge that ai can not learn is becoming more useful</p>
+<p>we have to speed up to learn faster and better</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/01/DAY-26-python-to-get-a-html-text/" data-id="cliq73cok00145ctk1f7a3cmt" data-title="DAY 26 python to get a html text" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-25-faceswap" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/01/DAY-25-faceswap/" class="article-date">
+  <time class="dt-published" datetime="2023-06-01T11:43:02.000Z" itemprop="datePublished">2023-06-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/01/DAY-25-faceswap/">DAY 25 faceswap</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>这个傻逼换脸浪费了我至少二十五天的十天，十四小时的训练就换来屎一样的换脸效果，我就知道没有用到GPU，如果用到gpu</p>
+<p>也许结果不会这么烂，我还把换脸给搞反了，A的脸要换到B上，那么B应该是排在第一的文件夹</p>
+<h2 id="我决定继续尝试用GPU进行训练，如果仍然没有使用到我的gpu那我就放弃，转战linux"><a href="#我决定继续尝试用GPU进行训练，如果仍然没有使用到我的gpu那我就放弃，转战linux" class="headerlink" title="我决定继续尝试用GPU进行训练，如果仍然没有使用到我的gpu那我就放弃，转战linux"></a>我决定继续尝试用GPU进行训练，如果仍然没有使用到我的gpu那我就放弃，转战linux</h2><p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/01/DAY-25-faceswap/" data-id="cliq73cok00125ctkheoh5arq" data-title="DAY 25 faceswap" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-24-c" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/31/DAY-24-c/" class="article-date">
+  <time class="dt-published" datetime="2023-05-31T15:37:51.000Z" itemprop="datePublished">2023-05-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/31/DAY-24-c/">DAY 24 c++</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>#include <iostream><br>using namespace std;</p>
+<p>class Shape {<br>public:<br>    virtual double getArea() const &#x3D; 0;<br>    virtual double getPerimeter() const &#x3D; 0;<br>};</p>
+<p>class Circle : public Shape {<br>private:<br>    double radius;</p>
+<p>public:<br>    Circle(double r) : radius(r) {}</p>
+<pre><code>double getArea() const override &#123;
+    return 3.14159 * radius * radius;
+&#125;
+
+double getPerimeter() const override &#123;
+    return 2 * 3.14159 * radius;
+&#125;
+</code></pre>
+<p>};</p>
+<p>class Square : public Shape {<br>private:<br>    double side;</p>
+<p>public:<br>    Square(double s) : side(s) {}</p>
+<pre><code>double getArea() const override &#123;
+    return side * side;
+&#125;
+
+double getPerimeter() const override &#123;
+    return 4 * side;
+&#125;
+</code></pre>
+<p>};</p>
+<p>class Rectangle : public Shape {<br>private:<br>    double length;<br>    double width;</p>
+<p>public:<br>    Rectangle(double l, double w) : length(l), width(w) {}</p>
+<pre><code>double getArea() const override &#123;
+    return length * width;
+&#125;
+
+double getPerimeter() const override &#123;
+    return 2 * (length + width);
+&#125;
+</code></pre>
+<p>};</p>
+<p>int main() {<br>    const int numShapes &#x3D; 3;<br>    Shape* shapes[numShapes];</p>
+<pre><code>shapes[0] = new Circle(5.0);
+shapes[1] = new Square(4.0);
+shapes[2] = new Rectangle(3.0, 6.0);
+
+double totalArea = 0.0;
+for (int i = 0; i &lt; numShapes; i++) &#123;
+    totalArea += shapes[i]-&gt;getArea();
+&#125;
+
+cout &lt;&lt; &quot;所有图形的面积之和: &quot; &lt;&lt; totalArea &lt;&lt; endl;
+
+// 释放动态分配的内存
+for (int i = 0; i &lt; numShapes; i++) &#123;
+    delete shapes[i];
+&#125;
+
+return 0;
+</code></pre>
+<h2 id="analyseclass-Shape-public-virtual-double-getArea-const-x3D-0-virtual-double-getPerimeter-const-x3D-0-a-class-named-Shape-which-has-two-pure-virtual-function"><a href="#analyseclass-Shape-public-virtual-double-getArea-const-x3D-0-virtual-double-getPerimeter-const-x3D-0-a-class-named-Shape-which-has-two-pure-virtual-function" class="headerlink" title="}analyseclass Shape {public:    virtual double getArea() const &#x3D; 0;    virtual double getPerimeter() const &#x3D; 0;};a class named Shape which has two pure virtual function"></a>}<br>analyse<br>class Shape {<br>public:<br>    virtual double getArea() const &#x3D; 0;<br>    virtual double getPerimeter() const &#x3D; 0;<br>};<br>a class named Shape which has two pure virtual function</h2><p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/31/DAY-24-c/" data-id="cliq73coh000w5ctkgzfj7l57" data-title="DAY 24 c++" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-23-auto-gpt" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/31/DAY-23-auto-gpt/" class="article-date">
+  <time class="dt-published" datetime="2023-05-31T11:04:45.000Z" itemprop="datePublished">2023-05-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/31/DAY-23-auto-gpt/">DAY 23 auto-gpt</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>fork the Repository of auto-gpt in your own repository and enter the web gitpod</p>
+<p>log in and choose the repository of auto-gpt and wait for it to install the module it need</p>
+<p>renamed the env.template as .env</p>
+<p>add the openai api in the .env file </p>
+<h2 id="and-you-can-use-command-x2F-run-sh-to-run-it"><a href="#and-you-can-use-command-x2F-run-sh-to-run-it" class="headerlink" title="and you can use command .&#x2F;run.sh to run it"></a>and you can use command .&#x2F;run.sh to run it</h2><p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/31/DAY-23-auto-gpt/" data-id="cliq73coe000s5ctk5c2z96rg" data-title="DAY 23 auto-gpt" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-22-security" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/30/DAY-22-security/" class="article-date">
+  <time class="dt-published" datetime="2023-05-29T16:29:48.000Z" itemprop="datePublished">2023-05-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/30/DAY-22-security/">DAY 22 security</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>$whitelist &#x3D; [“source”&#x3D;&gt;”source.php”,”hint”&#x3D;&gt;”hint.php”];</p>
+<p>这串代码是一个PHP数组赋值操作，创建了一个名为$whitelist的关联数组，包含两个键值对。数组的键是字符串，分别为”source”和”hint”，对应的值分别是”source.php”和”hint.php”。这意味着在</p>
+<p>$whitelist数组中，”source”键关联的值是”source.php”，”hint”键关联的值是”hint.php”。这种数组结构可以用来存储和访问相关的键值对数据。</p>
+<p>if (! isset($page) || !is_string($page)) {<br>                echo “you can’t see it”;<br>                return false;<br>            }</p>
+<p>一个条件语句。它首先使用isset()函数检查变量$page是否已经设置。如果$page未设置（即不存在或为null），条件成立。接下来，使用is_string()函数检查$page的类型是否为字符串。如果$page不是字符串类型，条件同样成立。</p>
+<p>如果以上两个条件之一成立，代码块内的语句将被执行。在这种情况下，会输出字符串”you can’t see it”。然后，使用return语句返回false，表示在这种情况下函数或代码的执行将会终止。</p>
+<hr>
+<p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/30/DAY-22-security/" data-id="cliq73cod000q5ctk7i3l18cl" data-title="DAY 22 security" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-DAY-21-invest" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/05/29/DAY-21-invest/" class="article-date">
@@ -112,7 +387,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/29/DAY-21-invest/" data-id="clikiua88000sv0tkdnyv31zi" data-title="DAY 21 invest" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/29/DAY-21-invest/" data-id="cliq73cog000u5ctk77dga5v7" data-title="DAY 21 invest" class="article-share-link">Share</a>
       
       
       
@@ -157,7 +432,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/28/DAY-20-web/" data-id="clikiua83000mv0tk16u30zh6" data-title="DAY 20 web" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/28/DAY-20-web/" data-id="cliq73co8000k5ctk8wasa45x" data-title="DAY 20 web" class="article-share-link">Share</a>
       
       
       
@@ -211,7 +486,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/26/DAY-19-security/" data-id="clikiua80000iv0tk4dqd6a6d" data-title="DAY 19 security" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/26/DAY-19-security/" data-id="cliq73co2000d5ctk8kgea9sw" data-title="DAY 19 security" class="article-share-link">Share</a>
       
       
       
@@ -263,7 +538,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/26/DAY-18-c/" data-id="clikiua7x000fv0tkd5j1b5dx" data-title="DAY 18 c++" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/26/DAY-18-c/" data-id="cliq73co6000h5ctk30hfatoq" data-title="DAY 18 c++" class="article-share-link">Share</a>
       
       
       
@@ -303,301 +578,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/25/%E5%BD%B1%E8%AF%84-%E3%80%8A%E5%AE%B6%E6%9C%89%E5%A5%B3%E5%A9%BF%E3%80%8B/" data-id="clikiua8t001yv0tk2xvvbq2w" data-title="影评 《家有女婿》" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/25/%E5%BD%B1%E8%AF%84-%E3%80%8A%E5%AE%B6%E6%9C%89%E5%A5%B3%E5%A9%BF%E3%80%8B/" data-id="cliq73cp3002a5ctkc8d74wpj" data-title="影评 《家有女婿》" class="article-share-link">Share</a>
       
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-17-MANY-THINGS" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/25/DAY-17-MANY-THINGS/" class="article-date">
-  <time class="dt-published" datetime="2023-05-24T16:30:05.000Z" itemprop="datePublished">2023-05-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/25/DAY-17-MANY-THINGS/">DAY 17 MANY THINGS</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>ppt<br>关于ppt的超链接，可以给图片或者文字上超链接令其跳转到某一页幻灯片</p>
-<p>pr<br>在pr中新建项目然后导入视频即可对视频进行剪辑</p>
-<p>facesap<br>已经将两张人脸进行了extract</p>
-<p>华硕截图快捷键 win + alt +r</p>
-<hr>
-<p>see you again</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/25/DAY-17-MANY-THINGS/" data-id="clikiua8d0010v0tk7w0jcg73" data-title="DAY 17 MANY THINGS" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-16-SECURITY" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/24/DAY-16-SECURITY/" class="article-date">
-  <time class="dt-published" datetime="2023-05-23T16:26:34.000Z" itemprop="datePublished">2023-05-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/24/DAY-16-SECURITY/">DAY 16 SECURITY</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>php 中的$意思是变量</p>
-<p>$加上字符串表示一个变量名字</p>
-<p>比如说$page这是一个变量名</p>
-<p>前端(frontend)</p>
-<p>用动态绑定style的方法可以改变transform的值</p>
-<!-- <div :style="{ transform: transformValue }"></div> -->
-
-<p>通过js改变transformValue的值即可控制盒子的transform属性</p>
-<hr>
-<p>see you again</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/24/DAY-16-SECURITY/" data-id="clikiua7t000av0tk2n027ipk" data-title="DAY 16 SECURITY" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-15-security" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/23/DAY-15-security/" class="article-date">
-  <time class="dt-published" datetime="2023-05-22T16:02:28.000Z" itemprop="datePublished">2023-05-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/23/DAY-15-security/">DAY 15 security</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>TYPE:web</p>
-<p>f12 and found the tip that there was a file named source.php</p>
-<p>input source.php after the url and it would appear the code<br>&lt;?php<br>    highlight_file(__FILE__);<br>    class emmm<br>    {<br>        public static function checkFile(&amp;$page)<br>        {<br>            $whitelist &#x3D; [“source”&#x3D;&gt;”source.php”,”hint”&#x3D;&gt;”hint.php”];<br>            if (! isset($page) || !is_string($page)) {<br>                echo “you can’t see it”;<br>                return false;<br>            }</p>
-<pre><code>        if (in_array($page, $whitelist)) &#123;
-            return true;
-        &#125;
-
-        $_page = mb_substr(
-            $page,
-            0,
-            mb_strpos($page . &#39;?&#39;, &#39;?&#39;)
-        );
-        if (in_array($_page, $whitelist)) &#123;
-            return true;
-        &#125;
-
-        $_page = urldecode($page);
-        $_page = mb_substr(
-            $_page,
-            0,
-            mb_strpos($_page . &#39;?&#39;, &#39;?&#39;)
-        );
-        if (in_array($_page, $whitelist)) &#123;
-            return true;
-        &#125;
-        echo &quot;you can&#39;t see it&quot;;
-        return false;
-    &#125;
-&#125;
-
-if (! empty($_REQUEST[&#39;file&#39;])
-    &amp;&amp; is_string($_REQUEST[&#39;file&#39;])
-    &amp;&amp; emmm::checkFile($_REQUEST[&#39;file&#39;])
-) &#123;
-    include $_REQUEST[&#39;file&#39;];
-    exit;
-&#125; else &#123;
-    echo &quot;&lt;br&gt;&lt;img src=\&quot;https://i.loli.net/2018/11/01/5bdb0d93dc794.jpg\&quot; /&gt;&quot;;
-&#125;  
-</code></pre>
-<p>?&gt;<br>url 后加上后缀?file&#x3D;hint.php?&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;ffffllllaaaagggg</p>
-<p>即可获得flag：flag{676dde41-6fef-4e13-ad67-e576330af907}</p>
-<hr>
-<p>see you again</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/23/DAY-15-security/" data-id="clikiua7m0004v0tkg2cf5ftz" data-title="DAY 15 security" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-14-SECURITY" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/22/DAY-14-SECURITY/" class="article-date">
-  <time class="dt-published" datetime="2023-05-21T16:20:37.000Z" itemprop="datePublished">2023-05-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/22/DAY-14-SECURITY/">DAY 14 SECURITY</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>web type<br>f12看到注释为</p>
-<!--
-        $cat=$_GET['cat'];
-        echo $cat;
-        if($cat=='dog'){
-            echo 'Syc{cat_cat_cat_cat}';
-        }
-        --> 
-<p>提供的代码片段是PHP代码，可以用于处理通过GET请求传递的参数。</p>
-<p>该代码的作用是获取通过GET请求传递的名为”cat”的参数，并将其值存储在变量”$cat”中。然后，代码会将参数的值输出到屏幕上。</p>
-<p>接下来，代码使用条件语句检查变量”$cat”的值是否等于字符串”dog”。如果相等，代码将输出字符串”Syc{cat_cat_cat_cat}”。</p>
-<p>通过在URL中附加参数来向服务器传递参数</p>
-<p>查询字符串的格式是在问号后面使用键值对的形式，每个键值对之间使用 ampersand（&amp;）分隔。键值对中的键表示参数的名称，而值表示参数的值。传递多个参数用&amp;将各个参数进行连接</p>
-<p>根据代码逻辑传入值dog试一试，在<a target="_blank" rel="noopener" href="http://3db1c5bd-7cdf-4b2f-b406-ef3019d7d48f.node4.buuoj.cn:81/%E7%BD%91%E5%9D%80%E5%90%8E%E9%9D%A2%E5%8A%A0%E4%B8%8A">http://3db1c5bd-7cdf-4b2f-b406-ef3019d7d48f.node4.buuoj.cn:81/网址后面加上</a></p>
-<p>?cat&#x3D;dog 即传入cat的值为dog即可出现flag</p>
-<p>flag{3f76c85a-e5a9-4de5-8bd9-1b7c797099b7}</p>
-<p>电脑不会骗人，只要逻辑正确，输入正确，就会得到想要的答案，真的…挺爽的</p>
-<hr>
-<p>see you again</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/22/DAY-14-SECURITY/" data-id="clikiua7v000dv0tkh1scc6k9" data-title="DAY 14 SECURITY" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-13-FACESWAP-AND-frontend" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/21/DAY-13-FACESWAP-AND-frontend/" class="article-date">
-  <time class="dt-published" datetime="2023-05-20T16:16:53.000Z" itemprop="datePublished">2023-05-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/21/DAY-13-FACESWAP-AND-frontend/">DAY 13 FACESWAP AND frontend</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Actually the faceswap gui can detect my gpu so it’s not that gpu did not work</p>
-<p>It’s that faceswap mainly uses the cpu and the windows can not detect the usage of faceswap of gpuu according to the Forum administrator</p>
-<p>So I will finish the faceswap in the next few days</p>
-<p>frontend </p>
-<p>I used svg to solve the click area problem but There were still questions of detail that could not be solved </p>
-<p>svg仍然是方形区域而其中的path是一你想要的那个不规则图形，但是后面写的svg的优先级更大所以覆盖了前面的svg会使得前面的svg部分无法被点击触发相应的函数</p>
-<p>Alright, actually, writing code of frontend is funny</p>
-<p>watching the div rotate is so fucking cute</p>
-<p>And if you do not make a mistake and your understanding is not wrong .</p>
-<p>Things will go the way you want </p>
-<hr>
-<p>see you again</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/21/DAY-13-FACESWAP-AND-frontend/" data-id="clikiua7q0008v0tkhvftdrws" data-title="DAY 13 FACESWAP AND frontend" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
     </footer>
   </div>
   
@@ -610,7 +594,7 @@ if (! empty($_REQUEST[&#39;file&#39;])
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -656,23 +640,23 @@ if (! empty($_REQUEST[&#39;file&#39;])
       <ul>
         
           <li>
-            <a href="/2023/06/06/DAY-31/">DAY 31 nothing</a>
+            <a href="/2023/06/10/DAY-35/">DAY 35</a>
           </li>
         
           <li>
-            <a href="/2023/06/05/DAY-30/">DAY 30</a>
+            <a href="/2023/06/09/DAY-34/">DAY 34</a>
           </li>
         
           <li>
-            <a href="/2023/06/04/DAY-29/">DAY 29</a>
+            <a href="/2023/06/09/DAY-33/">DAY 33</a>
           </li>
         
           <li>
-            <a href="/2023/06/03/DAY-28/">DAY 28</a>
+            <a href="/2023/06/07/DAY-32/">DAY 32</a>
           </li>
         
           <li>
-            <a href="/2023/06/02/DAY-27-make-my-own-web/">DAY 27 make my own web</a>
+            <a href="/2023/06/07/DAY-31-1/">DAY 31</a>
           </li>
         
       </ul>

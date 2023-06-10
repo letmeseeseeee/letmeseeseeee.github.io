@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>DAY 34 | NPC BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="I plan to use c++ to make a game called Pac-Man First I need to figure out how the program run and what is the meaning of program  step by step 1.A color functionvoid color (int a) {&#x2F;&#x2F;颜色函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DAY 34">
+<meta property="og:url" content="http://example.com/2023/06/09/DAY-34/index.html">
+<meta property="og:site_name" content="NPC BLOG">
+<meta property="og:description" content="I plan to use c++ to make a game called Pac-Man First I need to figure out how the program run and what is the meaning of program  step by step 1.A color functionvoid color (int a) {&#x2F;&#x2F;颜色函数">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-06-09T14:21:11.000Z">
+<meta property="article:modified_time" content="2023-06-09T16:45:50.821Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="BY NPC">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="NPC BLOG" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">NPC BLOG</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">ANYBODY WANT TO PLAY WITH ME?</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-DAY-34" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/09/DAY-34/" class="article-date">
+  <time class="dt-published" datetime="2023-06-09T14:21:11.000Z" itemprop="datePublished">2023-06-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      DAY 34
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>I plan to use c++ to make a game called Pac-Man</p>
+<p>First I need to figure out how the program run and what is the meaning of program </p>
+<p>step by step</p>
+<p>1.A color function<br>void color (int a) {&#x2F;&#x2F;颜色函数<br>    SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), a);<br>}<br>define a color program </p>
+<p>use a console API SetConsoleTextAttribute to set the color of the text the console output</p>
+<p>variable a Represents a color code which is used to designate the The foreground and background colors of the text</p>
+<p>With this code, you can change the appearance of the text by passing different color codes.</p>
+<p>句柄通常是一个整数值，用于唯一标识操作系统或应用程序中的资源或对象，例如文件、窗口、进程等。</p>
+<p>GetStdHandle函数返回标准输入、输出或错误设备的句柄，也就是获得输入、输出&#x2F;错误的屏幕缓冲区的句柄。通过获得这些句柄，程序可以对其进行进一步操作或设置。</p>
+<p>GetStdHandle (STD_OUTPUT_HANDLE)是一个Windows API函数，用于获取标准输出的句柄</p>
+<p>GetStdHandle函数接受一个参数，指定所需的标准句柄类型，其中STD_OUTPUT_HANDLE表示标准输出句柄。该句柄通常用于在控制台应用程序中进行标准输出，即向控制台窗口输出文本或其他数据。函数会返回与该标准句柄类型相对应的句柄值</p>
+<p>SetConsoleTextAttribute是Windows操作系统中的一个函数，用于设置控制台窗口中文本的颜色和背景色。</p>
+<p>该函数接受一个句柄参数，另外，还需要指定一个由字符和背景色组成的参数，其中高位字节表示背景色，低位字节表示文本颜色。</p>
+<p>对于	SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), a); ，GetStdHandle 函数用于获取标准输出设备的句柄。</p>
+<p>这里SetConsoleTextAttribute函数用于设定文本属性，接受两个值，一个句柄值，一个参数a，a的具体值决定了文本颜色和背景颜色</p>
+<h2 id="总的来说这段代码的作用是设定文本颜色和背景颜色"><a href="#总的来说这段代码的作用是设定文本颜色和背景颜色" class="headerlink" title="总的来说这段代码的作用是设定文本颜色和背景颜色"></a>总的来说这段代码的作用是设定文本颜色和背景颜色</h2><p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/09/DAY-34/" data-id="cliq73cop001e5ctkc3mz2ocm" data-title="DAY 34" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/06/10/DAY-35/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          DAY 35
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/06/09/DAY-33/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">DAY 33</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BY-NPc/" rel="tag">BY NPc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/I-come-here-to-sharpen-my-skills/" rel="tag">I come here to sharpen my skills</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/BY-NPC/" style="font-size: 20px;">BY NPC</a> <a href="/tags/BY-NPc/" style="font-size: 10px;">BY NPc</a> <a href="/tags/I-come-here-to-sharpen-my-skills/" style="font-size: 10px;">I come here to sharpen my skills</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/06/10/DAY-35/">DAY 35</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/09/DAY-34/">DAY 34</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/09/DAY-33/">DAY 33</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/07/DAY-32/">DAY 32</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/07/DAY-31-1/">DAY 31</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

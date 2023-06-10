@@ -77,6 +77,299 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-DAY-35" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/10/DAY-35/" class="article-date">
+  <time class="dt-published" datetime="2023-06-10T15:44:30.000Z" itemprop="datePublished">2023-06-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/10/DAY-35/">DAY 35</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>void gotoxy(int x, int y) {&#x2F;&#x2F;位置函数(行为x 列为y)<br>    COORD pos;<br>    pos.X&#x3D;2*y;<br>    pos.Y&#x3D;x;<br>    SetConsoleCursorPosition (GetStdHandle (STD_OUTPUT_HANDLE),pos);<br>}<br>上面的代码是一个用于设置光标位置的函数。它使用了Windows系统的Console API来设置光标的位置。</p>
+<p>函数定义了一个COORD结构类型的变化量pos，用于存储光标记的位置设置。</p>
+<p>该任数使用了Windows系统的控制台数来实现了标准位置的设置。COORD是一个结构体，它包含了控制台屏幕的行数和列表信息。在任数内部，首先创建一个类型的变量，然后COORD将pos参数x和y分配值给pos.Y和pos.X。在这里，行数对应参数x，列数对应参数y。最后，调用SetConsoleCursorPosition任意数来设置控制台灯标的位置，使之转移动到pos指定的行位置。</p>
+<p>COORD是一个库的自带结构体，包含控制台屏幕的行数和列表信息</p>
+<p>void begin () {<br>    system (“cls”);<br>    color (11);<br>    printf (“       ★”);<br>    color (10);<br>    printf (“吃豆人”);<br>    color (11);<br>    printf (“★\n\n”);<br>    color(7);<br>    printf (“  正在初始化，请耐心等待”);<br>    for (int i &#x3D; 0; i &lt;&#x3D; n; i++) {<br>        for (int j &#x3D; 1; j &lt;&#x3D; n; j++) {<br>            dis[i][j] &#x3D; 900;<br>        }<br>    }<br>    for (int i &#x3D; 0; i &lt;&#x3D; n; i++) {<br>        for (int j &#x3D; 0; j &lt;&#x3D; 3; j++) {<br>            if (i + fx[j] &gt;&#x3D; 0 &amp;&amp; i + fx[j] &lt;&#x3D; n) {<br>                int k &#x3D; i + fx[j], xx &#x3D; k&#x2F;27, yy &#x3D; k % 27, kk;<br>                if (changdi[i &#x2F; 27][i % 27] &amp;&amp; changdi[xx][yy]) {<br>                    dis[i][k] &#x3D; kk &#x3D; 1;<br>                }<br>            }<br>        }<br>    }<br>    for (int k &#x3D; 0; k &lt;&#x3D; n; k++) {<br>        if (changdi[k]) {<br>            for (int i &#x3D; 0; i &lt;&#x3D; n; i++) {<br>                if (changdi[i]) {<br>                    for (int j &#x3D; 0; j &lt;&#x3D; n; j++) {<br>                        if (changdi[j]) {<br>                            if (dis[i][j] &gt; dis[i][k] + dis[k][j]) {<br>                                dis[i][j] &#x3D; dis[i][k] + dis[k][j];<br>                            }<br>                        }<br>                    }<br>                }<br>            }<br>            if (k % 80 &#x3D;&#x3D; 0) {<br>                color (13);<br>                gotoxy (3, 12);<br>                printf(“│”);<br>            } else if (k % 80 &#x3D;&#x3D; 20) {<br>                    color (13);<br>                    gotoxy (3, 12);<br>                    printf (“╱”);<br>            } else if (k % 80 &#x3D;&#x3D; 40) {<br>                color (13);<br>                gotoxy (3, 12);<br>                printf (“─”);<br>            } else if (k % 80 &#x3D;&#x3D; 60) {<br>                color(13);<br>                gotoxy (3, 12);<br>                printf (“╲”);<br>            }<br>            if (k % 60&#x3D;&#x3D;0) {<br>                color (11);<br>                gotoxy (5, k &#x2F; 60);<br>                printf(“●”);<br>            }<br>        }<br>    }<br>}</p>
+<p>color(11), color(10), color(7), color(13): 这些函数调用是自定义的颜色函数，用于在控制台中设置文本颜色。通过这些函数调用，代码在不同的位置使用了不同的颜色，以美化输出。</p>
+<p>printf(“ ★”), printf(“吃豆人”), printf(“★\n\n”): 这些printf语句输出了带有星号的”吃豆人”标题，用于游戏开始时在控制台上显示。</p>
+<h2 id="for-int-i-x3D-0-i-lt-x3D-n-i-这是一个嵌套的循环，用于对二维数组dis进行初始化。dis是一个表示吃豆人游戏中节点之间距离的数组。"><a href="#for-int-i-x3D-0-i-lt-x3D-n-i-这是一个嵌套的循环，用于对二维数组dis进行初始化。dis是一个表示吃豆人游戏中节点之间距离的数组。" class="headerlink" title="for (int i &#x3D; 0; i &lt;&#x3D; n; i++): 这是一个嵌套的循环，用于对二维数组dis进行初始化。dis是一个表示吃豆人游戏中节点之间距离的数组。"></a>for (int i &#x3D; 0; i &lt;&#x3D; n; i++): 这是一个嵌套的循环，用于对二维数组dis进行初始化。dis是一个表示吃豆人游戏中节点之间距离的数组。</h2><p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/10/DAY-35/" data-id="cliq73cor001i5ctk0zu53sjm" data-title="DAY 35" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-34" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/09/DAY-34/" class="article-date">
+  <time class="dt-published" datetime="2023-06-09T14:21:11.000Z" itemprop="datePublished">2023-06-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/09/DAY-34/">DAY 34</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>I plan to use c++ to make a game called Pac-Man</p>
+<p>First I need to figure out how the program run and what is the meaning of program </p>
+<p>step by step</p>
+<p>1.A color function<br>void color (int a) {&#x2F;&#x2F;颜色函数<br>    SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), a);<br>}<br>define a color program </p>
+<p>use a console API SetConsoleTextAttribute to set the color of the text the console output</p>
+<p>variable a Represents a color code which is used to designate the The foreground and background colors of the text</p>
+<p>With this code, you can change the appearance of the text by passing different color codes.</p>
+<p>句柄通常是一个整数值，用于唯一标识操作系统或应用程序中的资源或对象，例如文件、窗口、进程等。</p>
+<p>GetStdHandle函数返回标准输入、输出或错误设备的句柄，也就是获得输入、输出&#x2F;错误的屏幕缓冲区的句柄。通过获得这些句柄，程序可以对其进行进一步操作或设置。</p>
+<p>GetStdHandle (STD_OUTPUT_HANDLE)是一个Windows API函数，用于获取标准输出的句柄</p>
+<p>GetStdHandle函数接受一个参数，指定所需的标准句柄类型，其中STD_OUTPUT_HANDLE表示标准输出句柄。该句柄通常用于在控制台应用程序中进行标准输出，即向控制台窗口输出文本或其他数据。函数会返回与该标准句柄类型相对应的句柄值</p>
+<p>SetConsoleTextAttribute是Windows操作系统中的一个函数，用于设置控制台窗口中文本的颜色和背景色。</p>
+<p>该函数接受一个句柄参数，另外，还需要指定一个由字符和背景色组成的参数，其中高位字节表示背景色，低位字节表示文本颜色。</p>
+<p>对于	SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), a); ，GetStdHandle 函数用于获取标准输出设备的句柄。</p>
+<p>这里SetConsoleTextAttribute函数用于设定文本属性，接受两个值，一个句柄值，一个参数a，a的具体值决定了文本颜色和背景颜色</p>
+<h2 id="总的来说这段代码的作用是设定文本颜色和背景颜色"><a href="#总的来说这段代码的作用是设定文本颜色和背景颜色" class="headerlink" title="总的来说这段代码的作用是设定文本颜色和背景颜色"></a>总的来说这段代码的作用是设定文本颜色和背景颜色</h2><p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/09/DAY-34/" data-id="cliq73cop001e5ctkc3mz2ocm" data-title="DAY 34" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-33" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/09/DAY-33/" class="article-date">
+  <time class="dt-published" datetime="2023-06-08T16:14:44.000Z" itemprop="datePublished">2023-06-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/09/DAY-33/">DAY 33</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>#include <iostream><br>#include <fstream><br>#include <algorithm></p>
+<p>using namespace std;</p>
+<p>struct Student {<br>    int score;<br>};</p>
+<p>int main() {<br>    ofstream firstFile(“first.dat”, ios::binary);<br>    ofstream secondFile(“second.dat”, ios::binary);</p>
+<pre><code>cout &lt;&lt; &quot;请输入10个整数：&quot; &lt;&lt; endl;
+
+Student stud[10];
+
+for (int i = 0; i &lt; 10; ++i) &#123;
+    cin &gt;&gt; stud[i].score;
+&#125;
+
+for (int i = 0; i &lt; 5; ++i) &#123;
+    firstFile.write(reinterpret_cast&lt;const char*&gt;(&amp;stud[i]), sizeof(stud[i]));
+&#125;
+
+for (int i = 5; i &lt; 10; ++i) &#123;
+    secondFile.write(reinterpret_cast&lt;const char*&gt;(&amp;stud[i]), sizeof(stud[i]));
+&#125;
+
+firstFile.close();
+secondFile.close();
+
+cout &lt;&lt; &quot;已将整数存储到文件first.dat和second.dat中。&quot; &lt;&lt; endl;
+
+ifstream inFile(&quot;second.dat&quot;, ios::binary);
+ofstream outFile(&quot;first.dat&quot;, ios::binary|ios::app);
+
+if (!inFile || !outFile) &#123;
+    cout &lt;&lt; &quot;无法打开文件。&quot; &lt;&lt; endl;
+    return 1;
+&#125;
+
+Student stud2[10];
+
+for (int i = 5; i &lt; 10; ++i) &#123;
+    inFile.read(reinterpret_cast&lt;char*&gt;(&amp;stud2[i]), sizeof(stud2[i]));
+    outFile.write(reinterpret_cast&lt;char*&gt;(&amp;stud2[i]), sizeof(stud2[i]));
+
+&#125;
+
+inFile.close();
+
+inFile.open(&quot;first.dat&quot;,ios::binary);
+for(int i =0;i&lt;10;i++)
+&#123;
+    inFile.read(reinterpret_cast&lt;char*&gt;(&amp;stud2[i]), sizeof(stud2[i]));
+&#125;
+
+// 对整数进行升序排列
+</code></pre>
+<p>   for(int i&#x3D;0;i&lt;10;i++)<br>   {<br>       for(int j&#x3D;0;j&lt;9;j++)<br>       {<br>           if(stud2[j].score&gt;stud2[j+1].score){<br>           int t&#x3D; stud2[j].score;<br>           stud2[j].score&#x3D;stud2[j+1].score;<br>           stud2[j+1].score&#x3D;t;<br>           }<br>       }</p>
+<p>   }</p>
+<pre><code>// 将排序后的整数覆盖写入second.dat文件
+for (int i = 0; i &lt; 10; ++i) &#123;
+    outFile.write(reinterpret_cast&lt;const char*&gt;(&amp;stud2[i]), sizeof(stud2[i]));
+&#125;
+            cout &lt;&lt; &quot;存放到second.dat的数据是&quot;&lt;&lt; endl;
+
+ for(int i=0;i&lt;10;i++)&#123;
+    cout &lt;&lt; stud2[i].score &lt;&lt; &quot; &quot;;
+ &#125;
+ cout &lt;&lt; endl;
+outFile.close();
+
+cout &lt;&lt; &quot;已将整数从first.dat文件读取并升序排列后存放到second.dat文件中。&quot; &lt;&lt; endl;
+
+return 0;
+</code></pre>
+<p>}</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/09/DAY-33/" data-id="cliq73cou001o5ctkch5rgdjj" data-title="DAY 33" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-32" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/07/DAY-32/" class="article-date">
+  <time class="dt-published" datetime="2023-06-07T04:11:49.000Z" itemprop="datePublished">2023-06-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/07/DAY-32/">DAY 32</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>六六六，咖啡加可乐有一种雪碧的味道</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/07/DAY-32/" data-id="cliq73cos001k5ctkgajc5xxj" data-title="DAY 32" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-31-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/07/DAY-31-1/" class="article-date">
+  <time class="dt-published" datetime="2023-06-07T04:11:20.000Z" itemprop="datePublished">2023-06-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/07/DAY-31-1/">DAY 31</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/07/DAY-31-1/" data-id="cliq73cot001m5ctkf4bw8p1a" data-title="DAY 31" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-DAY-31" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/06/06/DAY-31/" class="article-date">
@@ -110,7 +403,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/06/DAY-31/" data-id="clikiua8g0018v0tk55l9239o" data-title="DAY 31 nothing" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/06/06/DAY-31/" data-id="cliq73coo001c5ctkdpgi3dxk" data-title="DAY 31 nothing" class="article-share-link">Share</a>
       
       
       
@@ -157,7 +450,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/05/DAY-30/" data-id="clikiua8f0016v0tkc1pwczn7" data-title="DAY 30" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/06/05/DAY-30/" data-id="cliq73col00165ctk7kuygpm2" data-title="DAY 30" class="article-share-link">Share</a>
       
       
       
@@ -200,7 +493,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/04/DAY-29/" data-id="clikiua8e0014v0tkdrb5a61x" data-title="DAY 29" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/06/04/DAY-29/" data-id="cliq73con001a5ctk26fydpev" data-title="DAY 29" class="article-share-link">Share</a>
       
       
       
@@ -336,7 +629,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/03/DAY-28/" data-id="clikiua8e0012v0tkf29g2vue" data-title="DAY 28" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/06/03/DAY-28/" data-id="cliq73coq001g5ctk9wsz6xrh" data-title="DAY 28" class="article-share-link">Share</a>
       
       
       
@@ -385,282 +678,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/02/DAY-27-make-my-own-web/" data-id="clikiua8b000wv0tk75vfegr2" data-title="DAY 27 make my own web" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-26-python-to-get-a-html-text" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/06/01/DAY-26-python-to-get-a-html-text/" class="article-date">
-  <time class="dt-published" datetime="2023-06-01T14:52:24.000Z" itemprop="datePublished">2023-06-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/01/DAY-26-python-to-get-a-html-text/">DAY 26 python to get a html text</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>crawl to get a html text</p>
-<p>I have to say that ai is too powerful</p>
-<p>and the knowledge that ai can not learn is becoming more useful</p>
-<p>we have to speed up to learn faster and better</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/01/DAY-26-python-to-get-a-html-text/" data-id="clikiua8i001cv0tk53guf78p" data-title="DAY 26 python to get a html text" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-25-faceswap" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/06/01/DAY-25-faceswap/" class="article-date">
-  <time class="dt-published" datetime="2023-06-01T11:43:02.000Z" itemprop="datePublished">2023-06-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/01/DAY-25-faceswap/">DAY 25 faceswap</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>这个傻逼换脸浪费了我至少二十五天的十天，十四小时的训练就换来屎一样的换脸效果，我就知道没有用到GPU，如果用到gpu</p>
-<p>也许结果不会这么烂，我还把换脸给搞反了，A的脸要换到B上，那么B应该是排在第一的文件夹</p>
-<h2 id="我决定继续尝试用GPU进行训练，如果仍然没有使用到我的gpu那我就放弃，转战linux"><a href="#我决定继续尝试用GPU进行训练，如果仍然没有使用到我的gpu那我就放弃，转战linux" class="headerlink" title="我决定继续尝试用GPU进行训练，如果仍然没有使用到我的gpu那我就放弃，转战linux"></a>我决定继续尝试用GPU进行训练，如果仍然没有使用到我的gpu那我就放弃，转战linux</h2><p>see you again</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/01/DAY-25-faceswap/" data-id="clikiua8i001ev0tkec3p7fkt" data-title="DAY 25 faceswap" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-24-c" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/31/DAY-24-c/" class="article-date">
-  <time class="dt-published" datetime="2023-05-31T15:37:51.000Z" itemprop="datePublished">2023-05-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/31/DAY-24-c/">DAY 24 c++</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>#include <iostream><br>using namespace std;</p>
-<p>class Shape {<br>public:<br>    virtual double getArea() const &#x3D; 0;<br>    virtual double getPerimeter() const &#x3D; 0;<br>};</p>
-<p>class Circle : public Shape {<br>private:<br>    double radius;</p>
-<p>public:<br>    Circle(double r) : radius(r) {}</p>
-<pre><code>double getArea() const override &#123;
-    return 3.14159 * radius * radius;
-&#125;
-
-double getPerimeter() const override &#123;
-    return 2 * 3.14159 * radius;
-&#125;
-</code></pre>
-<p>};</p>
-<p>class Square : public Shape {<br>private:<br>    double side;</p>
-<p>public:<br>    Square(double s) : side(s) {}</p>
-<pre><code>double getArea() const override &#123;
-    return side * side;
-&#125;
-
-double getPerimeter() const override &#123;
-    return 4 * side;
-&#125;
-</code></pre>
-<p>};</p>
-<p>class Rectangle : public Shape {<br>private:<br>    double length;<br>    double width;</p>
-<p>public:<br>    Rectangle(double l, double w) : length(l), width(w) {}</p>
-<pre><code>double getArea() const override &#123;
-    return length * width;
-&#125;
-
-double getPerimeter() const override &#123;
-    return 2 * (length + width);
-&#125;
-</code></pre>
-<p>};</p>
-<p>int main() {<br>    const int numShapes &#x3D; 3;<br>    Shape* shapes[numShapes];</p>
-<pre><code>shapes[0] = new Circle(5.0);
-shapes[1] = new Square(4.0);
-shapes[2] = new Rectangle(3.0, 6.0);
-
-double totalArea = 0.0;
-for (int i = 0; i &lt; numShapes; i++) &#123;
-    totalArea += shapes[i]-&gt;getArea();
-&#125;
-
-cout &lt;&lt; &quot;所有图形的面积之和: &quot; &lt;&lt; totalArea &lt;&lt; endl;
-
-// 释放动态分配的内存
-for (int i = 0; i &lt; numShapes; i++) &#123;
-    delete shapes[i];
-&#125;
-
-return 0;
-</code></pre>
-<h2 id="analyseclass-Shape-public-virtual-double-getArea-const-x3D-0-virtual-double-getPerimeter-const-x3D-0-a-class-named-Shape-which-has-two-pure-virtual-function"><a href="#analyseclass-Shape-public-virtual-double-getArea-const-x3D-0-virtual-double-getPerimeter-const-x3D-0-a-class-named-Shape-which-has-two-pure-virtual-function" class="headerlink" title="}analyseclass Shape {public:    virtual double getArea() const &#x3D; 0;    virtual double getPerimeter() const &#x3D; 0;};a class named Shape which has two pure virtual function"></a>}<br>analyse<br>class Shape {<br>public:<br>    virtual double getArea() const &#x3D; 0;<br>    virtual double getPerimeter() const &#x3D; 0;<br>};<br>a class named Shape which has two pure virtual function</h2><p>see you again</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/31/DAY-24-c/" data-id="clikiua89000uv0tkb7va4z1t" data-title="DAY 24 c++" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-23-auto-gpt" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/31/DAY-23-auto-gpt/" class="article-date">
-  <time class="dt-published" datetime="2023-05-31T11:04:45.000Z" itemprop="datePublished">2023-05-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/31/DAY-23-auto-gpt/">DAY 23 auto-gpt</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>fork the Repository of auto-gpt in your own repository and enter the web gitpod</p>
-<p>log in and choose the repository of auto-gpt and wait for it to install the module it need</p>
-<p>renamed the env.template as .env</p>
-<p>add the openai api in the .env file </p>
-<h2 id="and-you-can-use-command-x2F-run-sh-to-run-it"><a href="#and-you-can-use-command-x2F-run-sh-to-run-it" class="headerlink" title="and you can use command .&#x2F;run.sh to run it"></a>and you can use command .&#x2F;run.sh to run it</h2><p>see you again</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/31/DAY-23-auto-gpt/" data-id="clikiua86000qv0tk83eif06g" data-title="DAY 23 auto-gpt" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-22-security" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/30/DAY-22-security/" class="article-date">
-  <time class="dt-published" datetime="2023-05-29T16:29:48.000Z" itemprop="datePublished">2023-05-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/30/DAY-22-security/">DAY 22 security</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>$whitelist &#x3D; [“source”&#x3D;&gt;”source.php”,”hint”&#x3D;&gt;”hint.php”];</p>
-<p>这串代码是一个PHP数组赋值操作，创建了一个名为$whitelist的关联数组，包含两个键值对。数组的键是字符串，分别为”source”和”hint”，对应的值分别是”source.php”和”hint.php”。这意味着在</p>
-<p>$whitelist数组中，”source”键关联的值是”source.php”，”hint”键关联的值是”hint.php”。这种数组结构可以用来存储和访问相关的键值对数据。</p>
-<p>if (! isset($page) || !is_string($page)) {<br>                echo “you can’t see it”;<br>                return false;<br>            }</p>
-<p>一个条件语句。它首先使用isset()函数检查变量$page是否已经设置。如果$page未设置（即不存在或为null），条件成立。接下来，使用is_string()函数检查$page的类型是否为字符串。如果$page不是字符串类型，条件同样成立。</p>
-<p>如果以上两个条件之一成立，代码块内的语句将被执行。在这种情况下，会输出字符串”you can’t see it”。然后，使用return语句返回false，表示在这种情况下函数或代码的执行将会终止。</p>
-<hr>
-<p>see you again</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/30/DAY-22-security/" data-id="clikiua84000ov0tkg7zc33q0" data-title="DAY 22 security" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/06/02/DAY-27-make-my-own-web/" data-id="cliq73coj00105ctk7p0i7629" data-title="DAY 27 make my own web" class="article-share-link">Share</a>
       
       
       
@@ -678,7 +696,7 @@ return 0;
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -724,23 +742,23 @@ return 0;
       <ul>
         
           <li>
-            <a href="/2023/06/06/DAY-31/">DAY 31 nothing</a>
+            <a href="/2023/06/10/DAY-35/">DAY 35</a>
           </li>
         
           <li>
-            <a href="/2023/06/05/DAY-30/">DAY 30</a>
+            <a href="/2023/06/09/DAY-34/">DAY 34</a>
           </li>
         
           <li>
-            <a href="/2023/06/04/DAY-29/">DAY 29</a>
+            <a href="/2023/06/09/DAY-33/">DAY 33</a>
           </li>
         
           <li>
-            <a href="/2023/06/03/DAY-28/">DAY 28</a>
+            <a href="/2023/06/07/DAY-32/">DAY 32</a>
           </li>
         
           <li>
-            <a href="/2023/06/02/DAY-27-make-my-own-web/">DAY 27 make my own web</a>
+            <a href="/2023/06/07/DAY-31-1/">DAY 31</a>
           </li>
         
       </ul>
