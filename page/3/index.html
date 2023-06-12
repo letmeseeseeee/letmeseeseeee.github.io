@@ -77,6 +77,96 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-DAY-18-c" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/26/DAY-18-c/" class="article-date">
+  <time class="dt-published" datetime="2023-05-25T17:03:17.000Z" itemprop="datePublished">2023-05-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/26/DAY-18-c/">DAY 18 c++</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>just, look at the code</p>
+<p>#include <iostream></p>
+<p>using namespace std;</p>
+<p>class Person{<br>protected:<br>    string sex;<br>    int age;<br>    string name;<br>public:<br>  Person(string nam,int ag,string se):name(nam),age(ag),sex(se){}<br>     void ShowPerson() {<br>        cout &lt;&lt; “name: “ &lt;&lt; name &lt;&lt; endl;<br>        cout &lt;&lt; “age: “ &lt;&lt; age &lt;&lt; endl;<br>        cout &lt;&lt; “sex: “ &lt;&lt; sex &lt;&lt; endl;<br>    }<br>};</p>
+<p>class Student : virtual public Person {<br>protected:<br>      int studentNumber;<br>public:<br>     Student(string nam,int ag,string se,int num):Person(nam,ag,se )<br>      {<br>          studentNumber&#x3D;num;<br>      }<br>       void ShowStudent(){cout&lt;&lt;”studentNumber: “&lt;&lt;studentNumber&lt;&lt;endl;}<br>};<br>class Employee : virtual public Person {<br>protected:<br>   string career;<br>public:<br>     Employee(string nam,int ag,string se,string caree):Person(nam,ag,se ){career&#x3D;caree;}<br>    void ShowCareer()<br>    {<br>        cout&lt;&lt;”career: “&lt;&lt;career&lt;&lt;endl;<br>    }<br>};<br>class PartTime_Graduate_Student : public Employee, public Student{<br>private:<br>   int wage;<br>public:<br>    PartTime_Graduate_Student(string nam,int ag,string se,int num,string caree,int wag):Person(nam,ag,se),Student(nam,ag,se,num),Employee(nam,ag,se,caree),wage(wag){};</p>
+<pre><code>void showPart() &#123;
+    ShowPerson();
+    ShowCareer();
+    ShowStudent();
+&#125;;
+</code></pre>
+<h2 id="int-main-PartTime-Graduate-Student-stu-“Ai”-19-”AÐ”-1-”¹IO±”-1000-stu-showPart-return-0-The-points-You’d-better-use-protected-to-have-the-viriable-of-基类-defined"><a href="#int-main-PartTime-Graduate-Student-stu-“Ai”-19-”AÐ”-1-”¹IO±”-1000-stu-showPart-return-0-The-points-You’d-better-use-protected-to-have-the-viriable-of-基类-defined" class="headerlink" title="};int main(){    PartTime_Graduate_Student stu(“Àî”,19,”ÄÐ”,1,”¹ÍÔ±”,1000);    stu.showPart();    return 0;}The points: You’d better use protected to have the viriable of 基类 defined"></a>};<br>int main()<br>{<br>    PartTime_Graduate_Student stu(“Àî”,19,”ÄÐ”,1,”¹ÍÔ±”,1000);<br>    stu.showPart();<br>    return 0;<br>}<br>The points: You’d better use protected to have the viriable of 基类 defined</h2><p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/26/DAY-18-c/" data-id="cliszdtv8000fzctkalbv9lyx" data-title="DAY 18 c++" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-影评-《家有女婿》" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/25/%E5%BD%B1%E8%AF%84-%E3%80%8A%E5%AE%B6%E6%9C%89%E5%A5%B3%E5%A9%BF%E3%80%8B/" class="article-date">
+  <time class="dt-published" datetime="2023-05-25T05:08:28.000Z" itemprop="datePublished">2023-05-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/25/%E5%BD%B1%E8%AF%84-%E3%80%8A%E5%AE%B6%E6%9C%89%E5%A5%B3%E5%A9%BF%E3%80%8B/">影评 《家有女婿》</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/25/%E5%BD%B1%E8%AF%84-%E3%80%8A%E5%AE%B6%E6%9C%89%E5%A5%B3%E5%A9%BF%E3%80%8B/" data-id="cliszdtwg002hzctk0n732lq9" data-title="影评 《家有女婿》" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-DAY-17-MANY-THINGS" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/05/25/DAY-17-MANY-THINGS/" class="article-date">
@@ -109,7 +199,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/25/DAY-17-MANY-THINGS/" data-id="cliq73cob000o5ctk9569db03" data-title="DAY 17 MANY THINGS" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/25/DAY-17-MANY-THINGS/" data-id="cliszdtvh000mzctk8lzn2rat" data-title="DAY 17 MANY THINGS" class="article-share-link">Share</a>
       
       
       
@@ -159,7 +249,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/24/DAY-16-SECURITY/" data-id="cliq73co9000m5ctk29iz50ao" data-title="DAY 16 SECURITY" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/24/DAY-16-SECURITY/" data-id="cliszdtvf000kzctk6a5pco3r" data-title="DAY 16 SECURITY" class="article-share-link">Share</a>
       
       
       
@@ -243,7 +333,7 @@ if (! empty($_REQUEST[&#39;file&#39;])
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/23/DAY-15-security/" data-id="cliq73cnv00055ctkh5a8aiad" data-title="DAY 15 security" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/23/DAY-15-security/" data-id="cliszdtuz0005zctk0uqqfinh" data-title="DAY 15 security" class="article-share-link">Share</a>
       
       
       
@@ -302,7 +392,7 @@ if (! empty($_REQUEST[&#39;file&#39;])
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/22/DAY-14-SECURITY/" data-id="cliq73cnt00045ctkdzita5me" data-title="DAY 14 SECURITY" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/22/DAY-14-SECURITY/" data-id="cliszdtv7000dzctk5zhj5eqq" data-title="DAY 14 SECURITY" class="article-share-link">Share</a>
       
       
       
@@ -354,7 +444,7 @@ if (! empty($_REQUEST[&#39;file&#39;])
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/21/DAY-13-FACESWAP-AND-frontend/" data-id="cliq73cns00035ctkgdyodhfx" data-title="DAY 13 FACESWAP AND frontend" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/21/DAY-13-FACESWAP-AND-frontend/" data-id="cliszdtuy0004zctkg4ehflj1" data-title="DAY 13 FACESWAP AND frontend" class="article-share-link">Share</a>
       
       
       
@@ -413,7 +503,7 @@ if (! empty($_REQUEST[&#39;file&#39;])
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/19/DAY-12-SECURITY-LEARN/" data-id="cliq73co0000a5ctkdbnkay9o" data-title="DAY 12 SECURITY LEARN" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/19/DAY-12-SECURITY-LEARN/" data-id="cliszdtv5000azctk9fyjdxoq" data-title="DAY 12 SECURITY LEARN" class="article-share-link">Share</a>
       
       
       
@@ -503,7 +593,7 @@ void showX() &#123;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/18/DAY-11-about-ai-change-face/" data-id="cliq73co3000f5ctkeo63h40c" data-title="DAY 11 about ai change face" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/18/DAY-11-about-ai-change-face/" data-id="cliszdtv20008zctk5p2ibhz3" data-title="DAY 11 about ai change face" class="article-share-link">Share</a>
       
       
       
@@ -554,107 +644,7 @@ void showX() &#123;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/17/DAY-10-c-learn/" data-id="cliq73cnz00085ctk6bil11b7" data-title="DAY 10 c++ learn" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-9-front-end" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/17/DAY-9-front-end/" class="article-date">
-  <time class="dt-published" datetime="2023-05-16T16:26:16.000Z" itemprop="datePublished">2023-05-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/17/DAY-9-front-end/">DAY 9 front end</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>alright.</p>
-<p>I have found the way to solve the problem, the same error like I made.</p>
-<p>当我们引用的图片在静态资源文件夹下的话，一定要使用require进行引用,否则图片引用不生效</p>
-<p>esc模式下输入命令:.!可以在vim中执行外部命令我可以在编辑vim的时候输入shutdown -s -t 秒数来进行关机，非常方便vim </p>
-<p>想要保存到想要的路径只需要用:saveas 路径\文件名字 即可</p>
-<p>比如说</p>
-<p>:saveas D:\vimlianxi\file.txt</p>
-<p>vimlianxi 是文件夹的名字，而file.txt则是我想要保存的文件名字 </p>
-<p>没有这个文件的话就会进行新建一个文件名字</p>
-<p>如何修改一个文件里面的内容？可以用saveas吗？</p>
-<hr>
-<p>see you again.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/17/DAY-9-front-end/" data-id="cliq73coz00205ctk4fo9cq5l" data-title="DAY 9 front end" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-8-vim-learn" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/16/DAY-8-vim-learn/" class="article-date">
-  <time class="dt-published" datetime="2023-05-15T16:59:58.000Z" itemprop="datePublished">2023-05-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/16/DAY-8-vim-learn/">DAY 8 vim learn</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>You can click alt+windows+r to record video.</p>
-<p>cw → 替换从光标所在位置后到一个单词结尾的字符</p>
-<p>光标开始是指在闪烁的光标的左边边开始</p>
-<p>not very clear actually.</p>
-<p>tomorrow continue.</p>
-<p>how to open vim and save what I wrote as the name what I want and save it in the path I want.</p>
-<hr>
-<p>see you again.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/16/DAY-8-vim-learn/" data-id="cliq73coy001y5ctkd9nzchtv" data-title="DAY 8 vim learn" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/05/17/DAY-10-c-learn/" data-id="cliszdtuq0001zctkflb48jif" data-title="DAY 10 c++ learn" class="article-share-link">Share</a>
       
       
       
@@ -718,6 +708,14 @@ void showX() &#123;
       <ul>
         
           <li>
+            <a href="/2023/06/12/DAY-37/">DAY 37</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/12/DAY-36/">DAY 36</a>
+          </li>
+        
+          <li>
             <a href="/2023/06/10/DAY-35/">DAY 35</a>
           </li>
         
@@ -727,14 +725,6 @@ void showX() &#123;
         
           <li>
             <a href="/2023/06/09/DAY-33/">DAY 33</a>
-          </li>
-        
-          <li>
-            <a href="/2023/06/07/DAY-32/">DAY 32</a>
-          </li>
-        
-          <li>
-            <a href="/2023/06/07/DAY-31-1/">DAY 31</a>
           </li>
         
       </ul>
