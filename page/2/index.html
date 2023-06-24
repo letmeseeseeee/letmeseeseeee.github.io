@@ -77,10 +77,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-DAY-28" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-DAY-37" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/06/03/DAY-28/" class="article-date">
-  <time class="dt-published" datetime="2023-06-03T14:23:23.000Z" itemprop="datePublished">2023-06-03</time>
+    <a href="/2023/06/12/DAY-37/" class="article-date">
+  <time class="dt-published" datetime="2023-06-12T14:20:49.000Z" itemprop="datePublished">2023-06-12</time>
 </a>
     
   </div>
@@ -91,7 +91,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/03/DAY-28/">DAY 28</a>
+      <a class="p-name article-title" href="/2023/06/12/DAY-37/">DAY 37</a>
     </h1>
   
 
@@ -99,107 +99,16 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>以后用中文，英文自己也看不懂，平时看的都是中文，不习惯</p>
-<p>AI真的太强大，如果不能利用AI快速掌握知识的话，就会被淘汰</p>
-<p>没有付费购买更加强大的AI的话，掌握知识的速度就会落后好几倍</p>
-<p>如果拥有强力的AI，能够轻易地掌握不同领域的好几门技术</p>
-<p>要么人类迎来脑力的进化，要么人类因为阶级差异而导致撕裂般的个体成长性差异</p>
-<p>显然前者更具有偶然性，AI的技术性已经超过绝大部分的程序员</p>
-<p>显然，必须时刻保持高效，更好地利用AI</p>
-<p>“beforeEach”是一个导航守卫函数，在每次路由切换之前都会执行</p>
-<p>let backstageUrl &#x3D; [‘&#x2F;login&#x2F;‘, ‘&#x2F;registrant&#x2F;‘, ‘&#x2F;registrant&#x2F;delete&#x2F;‘, ‘&#x2F;refresh&#x2F;‘]</p>
-<p>export const get &#x3D; async (url2, params) &#x3D;&gt; {<br>  let url &#x3D; “”<br>  if (backstageUrl.indexOf(url2) !&#x3D; -1) url &#x3D; “<a target="_blank" rel="noopener" href="http://backstage.daoxuan.cc/">http://backstage.daoxuan.cc</a>“ + url2;<br>  else url &#x3D; “<a target="_blank" rel="noopener" href="http://itstudio.daoxuan.cc/">http://itstudio.daoxuan.cc</a>“ + url2;</p>
-<p>  let params2 &#x3D; params || {};<br>  try {<br>    const response &#x3D; await request.get(url, { params: params2 });<br>    return response;<br>  } catch (error) {<br>    return error.response;<br>  }<br>};</p>
-<p>export const post &#x3D; async (url2, params) &#x3D;&gt; {<br>  let url &#x3D; “”<br>  if (backstageUrl.indexOf(url2) !&#x3D; -1) url &#x3D; “<a target="_blank" rel="noopener" href="http://backstage.daoxuan.cc/">http://backstage.daoxuan.cc</a>“ + url2;<br>  else url &#x3D; “<a target="_blank" rel="noopener" href="http://itstudio.daoxuan.cc/">http://itstudio.daoxuan.cc</a>“ + url2;</p>
-<p>  let params2 &#x3D; params || {};<br>  try {<br>    const response &#x3D; await request.post(url, params2);<br>    return response;<br>  } catch (error) {<br>    return error.response;<br>  }<br>};</p>
-<p>利用请求库创建两个函数GET和POST并且将其导出</p>
-<p>对于关键字async为什么要添加，是为了给函数GET和POST添加异步的属性来让他能够在执行过程中使用await关键字暂停执行</p>
-<p>const response &#x3D; await request.post(url, params2);<br>    return response;</p>
-<p>以上代码便是通过关键字await使函数暂停执行，并等待request.get()方法返回一个Promise对象的解析值（即异步操作的结果）</p>
-<p>Promise对象代表一个尚未完成但最终会返回结果的异步操作。</p>
-<p>状态转换：Promise对象可以从pending状态转变为fulfilled或rejected状态。当异步操作成功完成时，Promise会变为fulfilled状态，并将结果传递给与之关联的then()方法。当异步操作失败或出现错误时，Promise会变为rejected状态，并将错误信息传递给与之关联的catch()方法。</p>
-<p>这里的params是自己输入的，是要向服务器传递的一个数据，如果没有提供则params2根据代码逻辑默认为空，params2是经过处理之后作为请求主体发送给服务器的</p>
-<p>let authUrl &#x3D; [“<a target="_blank" rel="noopener" href="http://backstage.daoxuan.cc/admin/login/">http://backstage.daoxuan.cc/admin/login/</a>“, ‘<a target="_blank" rel="noopener" href="http://backstage.daoxuan.cc/admin/">http://backstage.daoxuan.cc/admin/</a>‘, “<a target="_blank" rel="noopener" href="http://backstage.daoxuan.cc/registrant/">http://backstage.daoxuan.cc/registrant/</a>“, “<a target="_blank" rel="noopener" href="http://backstage.daoxuan.cc/registrant/delete/%22]">http://backstage.daoxuan.cc/registrant/delete/&quot;]</a><br>request.interceptors.request.use(<br>    async (config) &#x3D;&gt; {<br>        &#x2F;&#x2F; console.log(config);<br>        if (authUrl.indexOf(config.url) !&#x3D; -1) {<br>            console.log(“需要验证的请求：”);<br>            let auth &#x3D; false;<br>            let loginMsg &#x3D; JSON.parse(localStorage.getItem(“login”)) || {<br>                “access”: “1.eyJleHAiOiIxIn0&#x3D;.1”,<br>                “refresh”: “1.eyJleHAiOiIxIn0&#x3D;.1”<br>            }</p>
-<pre><code>        console.log(loginMsg, JSON.parse(Base64.decode(loginMsg.access.split(&quot;.&quot;)[1])).exp)
-        let timeNow = Date.now()
-        let accessExp = JSON.parse(Base64.decode(loginMsg.access.split(&quot;.&quot;)[1])).exp * 1000
-        if (loginMsg != &#123;&#125;) &#123;
-            if (accessExp &lt; timeNow) &#123;
-                // access过期
-                console.log(&quot;access过期&quot;);
-                let refreshExp = JSON.parse(Base64.decode(loginMsg.refresh.split(&quot;.&quot;)[1])).exp * 1000;
-                if (refreshExp &lt; timeNow) &#123;
-                    //refresh过期
-                    console.log(&quot;refresh过期&quot;);
-                &#125; else &#123;
-                    //access过期但refresh没过期
-                    let refreshMsg = await this.$http.post(&#39;/refresh/&#39;, &#123;
-                        &quot;refresh&quot;: loginMsg.refresh
-                    &#125;)
-                    // console.log(refreshMsg);
-                    console.log(&quot;access过期但是refresh没有&quot;);
-
-                    if (refreshMsg.status == 200) &#123;
-                        localStorage.setItem(JSON.stringify(refreshMsg.data))
-                        console.log(&quot;login&quot;, JSON.parse(localStorage.getItem(&quot;login&quot;)));
-                        auth = true
-                    &#125;
-                &#125;
-            &#125; else &#123;
-                auth = true
-            &#125;
-        &#125;
-
-        if (auth) &#123; // 有权限
-            config.headers.Authorization = &quot;Bearer &quot; + JSON.parse(localStorage.getItem(&quot;login&quot;)).access
-            // console.log(config);
-            return config
-        &#125; else &#123;
-            // next(&quot;/admin/login&quot;) 
-            this.$router.push(&#123; &quot;path&quot;: &quot;/admin/login/&quot; &#125;)
-            return
-        &#125;
-    &#125;
-    return config;
-&#125;,
-(error) =&gt; &#123;
-    // 请求错误时的处理
-    return Promise.reject(error);
-&#125;
-</code></pre>
-<p>);</p>
-<p>interceptors意思是拦截器，显然是拦截什么东西对其进行处理或者验证</p>
-<p>首先，代码中定义了一个名为authUrl的数组，包含了一些需要进行验证的URL。</p>
-<p>然后，使用request.interceptors.request.use()方法注册了一个请求拦截器。该拦截器会在每个请求发送之前执行给定的回调函数。</p>
-<p>在回调函数中，首先通过检查config.url是否在authUrl数组中来确定是否需要进行验证。</p>
-<p>如果需要验证，代码会执行以下步骤：<br>  console.log(“需要验证的请求：”);<br>            let auth &#x3D; false;<br>            let loginMsg &#x3D; JSON.parse(localStorage.getItem(“login”)) || {<br>                “access”: “1.eyJleHAiOiIxIn0&#x3D;.1”,<br>                “refresh”: “1.eyJleHAiOiIxIn0&#x3D;.1”<br>从本地存储中获取名为”login”的数据，并将其解析为loginMsg对象，该对象包含了访问令牌(access token)和刷新令牌(refresh token)的信息。</p>
-<p>检查访问令牌(access token)是否过期。通过解码令牌中的信息，比较其过期时间(expiration time)与当前时间，如果过期则进行进一步处理。</p>
-<p>如果访问令牌过期，继续检查刷新令牌(refresh token)是否过期。同样，通过解码刷新令牌中的信息，比较其过期时间与当前时间，如果过期则执行相应的处理。</p>
-<p>如果刷新令牌未过期，向服务器发送一个&#x2F;refresh&#x2F;的POST请求，传递刷新令牌作为参数。根据返回的响应，更新本地存储中的登录信息。</p>
-<p>如果验证通过，将访问令牌(access token)添加到请求的头部中，使用Bearer身份验证方式。</p>
-<p>如果验证未通过，通过this.$router.push()方法跳转到指定的登录页面。</p>
-<p>最后，回调函数需要返回config对象或一个Promise对象，以便允许请求继续发送，或者中止请求。</p>
-<p>代码中的config对象并非JavaScript语言的原生对象，而是特定框架或库（如Axios）提供的请求配置对象。</p>
-<p>在请求拦截器中，config参数是由Axios库提供的，用于配置发送的HTTP请求的对象。它包含了请求的URL、请求方法、请求头部、请求体等信息。</p>
-<p>具体来说，config对象可能包含以下属性：</p>
-<p>url: 请求的URL地址。<br>method: 请求的方法，如GET、POST等。<br>headers: 请求的头部信息，包括Content-Type、Authorization等。<br>params: GET请求的查询参数。<br>data: POST请求的请求体数据。<br>timeout: 请求的超时时间。<br>responseType: 期望的响应数据类型。</p>
-<p>在拦截器的回调函数中，可以通过访问和修改config对象来对请求进行处理和配置。例如，可以添加请求头部、修改URL、设置请求超时时间等。</p>
-<p>在以上代码中，通过检查config.url是否在authUrl数组中来确定是否需要进行验证和授权操作。如果是需要验证的请求，根据config对象的内容进行相应的处理。</p>
-<p>config.headers.Authorization是一个HTTP请求头部字段，用于携带身份验证凭据或授权信息。</p>
-<p>该拦截器的回调函数是利用了Bearer身份验证，config.headers.Authorization的值通常是一个访问令牌（Access Token），用于对API进行授权访问。</p>
-<p>localStorage.setItem()是用于将数据存储到Web浏览器的本地存储(Local Storage)中的方法。该方法用于将数据以键值对的形式存储在浏览器中</p>
-<p>setItem()方法接受两个参数：键和值。其中，键是一个字符串，用于唯一标识存储的数据，而值可以是任何支持序列化的数据类型，例如字符串、数字、布尔值、对象或数组。</p>
-<p>JSON.stringify(refreshMsg.data)当值为对象或数组时，可以使用JSON.stringify()方法将其转换为字符串形式，然后再进行存储。</p>
-<p>同时，存储在本地存储中的数据是以字符串的形式存储的，因此在读取时可能需要使用JSON.parse()方法将其转换回原始的数据类型。  </p>
-<p>JSON字符串与键值对的关系：JSON字符串表示一个JavaScript对象，它由一系列的键值对组成。每个键值对由一个键（key）和一个值（value）组成，中间使用冒号（:）分隔。键是一个字符串，值可以是字符串、数字、布尔值、对象、数组或null等。键值对之间使用逗号（,）分隔。</p>
-<p> let refreshMsg &#x3D; await this.$http.post(‘&#x2F;refresh&#x2F;‘, {<br>                            “refresh”: loginMsg.refresh<br>                        })</p>
-<p>使用this.$http.post方法发送了一个POST请求到&#x2F;refresh&#x2F;的URL，并传递了一个包含”refresh”键和loginMsg.refresh值的对象作为请求的数据。</p>
-<h2 id="请求的数据是一个对象，该对象包含一个键值对，键是”refresh”，对应的值是loginMsg-refresh。这个值可能是登录消息中的刷新令牌，用于进行身份验证或更新会话信息。"><a href="#请求的数据是一个对象，该对象包含一个键值对，键是”refresh”，对应的值是loginMsg-refresh。这个值可能是登录消息中的刷新令牌，用于进行身份验证或更新会话信息。" class="headerlink" title="请求的数据是一个对象，该对象包含一个键值对，键是”refresh”，对应的值是loginMsg.refresh。这个值可能是登录消息中的刷新令牌，用于进行身份验证或更新会话信息。"></a>请求的数据是一个对象，该对象包含一个键值对，键是”refresh”，对应的值是loginMsg.refresh。这个值可能是登录消息中的刷新令牌，用于进行身份验证或更新会话信息。</h2><p>see you again</p>
+        <p>关于使用github copilot：我是之前有申请过，一直到现在还能用，直接在github settings中选择Allow，save</p>
+<p>然后回到vscode安装github copilot插件，然后在vscode中登录github账号，就可以使用了</p>
+<p>可能是我之前有登录过所以一下载好就能用了</p>
+<hr>
+<p>see you again</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/03/DAY-28/" data-id="cliszdtw0001izctk4jchh0tb" data-title="DAY 28" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/06/12/DAY-37/" data-id="cljadkweg001wrotk7zlk7dw3" data-title="DAY 37" class="article-share-link">Share</a>
       
       
       
@@ -213,10 +122,10 @@
 
 
   
-    <article id="post-DAY-27-make-my-own-web" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-DAY-36" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/06/02/DAY-27-make-my-own-web/" class="article-date">
-  <time class="dt-published" datetime="2023-06-02T15:40:53.000Z" itemprop="datePublished">2023-06-02</time>
+    <a href="/2023/06/12/DAY-36/" class="article-date">
+  <time class="dt-published" datetime="2023-06-12T14:20:41.000Z" itemprop="datePublished">2023-06-12</time>
 </a>
     
   </div>
@@ -227,7 +136,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/02/DAY-27-make-my-own-web/">DAY 27 make my own web</a>
+      <a class="p-name article-title" href="/2023/06/12/DAY-36/">DAY 36</a>
     </h1>
   
 
@@ -235,20 +144,22 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>我准备搭建一个自己的网站，但内容我还没想好，没关系，预计这个网站后天才能搭建好，我还有时间想想</p>
-<p>1.在阿里云领一个云服务器，这里我选择了ubuntu的操作系统</p>
-<p>2.远程连接Workbench</p>
-<p>3.复制宝塔的安装脚本，选你的服务器的对应的操作系统</p>
-<p>4.安装的时候有y选择就选y就完了</p>
-<p>5.安装好之后对照外网地址中的端口在安全组中的配置规则添加相应的端口数字</p>
-<p>6.添加完安全组之后打开外网地址，此时如果出现隐私错误，凭空输入thisisunsafe即可解决</p>
-<p>7.用安装宝塔所给的默认用户名和密码进行登录，登录完之后注册宝塔账号，注册完在首页登录，登录出现安全套，选择安装推荐的即可</p>
-<h2 id="8-安装很久很费时间"><a href="#8-安装很久很费时间" class="headerlink" title="8.安装很久很费时间"></a>8.安装很久很费时间</h2><p>see you again</p>
+        <p>快考试了，先不复现吃豆人游戏了，复习一下c++知识点</p>
+<p>实验八的重写说明</p>
+<p>为什么要使用虚基类?</p>
+<p>使用虚基类的目的是避免出现多次继承导致数据冗余，可以确保在派生类中只有一个共享的基类的子对象</p>
+<p>在给定的代码中，PartTime_Graduate_Student 类继承了 Employee 和 Student 两个类</p>
+<p>这两个类Employee和Student都继承了person类，如果没有使用虚基类，PartTime_Graduate_Student类将会包含两个独立person子对象，这两个冗余数据分别来自于Employee和Student类的继承</p>
+<p>这样就会导致两个person子对象中的数据比如说：name、age 和 sex重复存储浪费内存空间，</p>
+<p>通过使用虚基类，Person成为虚基类，派生类 PartTime_Graduate_Student 只包含一个 Person 子对象</p>
+<p>只有一个共享的Person对象被创建。派生类PartTime_Graduate_Student只包含一个Person对象,所以称Person为子对象</p>
+<hr>
+<p>see You Again</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/02/DAY-27-make-my-own-web/" data-id="cliszdtvo000yzctk4po80wvc" data-title="DAY 27 make my own web" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/06/12/DAY-36/" data-id="cljadkweg001yrotk9t6m9bcy" data-title="DAY 36" class="article-share-link">Share</a>
       
       
       
@@ -262,10 +173,10 @@
 
 
   
-    <article id="post-DAY-26-python-to-get-a-html-text" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-DAY-35" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/06/01/DAY-26-python-to-get-a-html-text/" class="article-date">
-  <time class="dt-published" datetime="2023-06-01T14:52:24.000Z" itemprop="datePublished">2023-06-01</time>
+    <a href="/2023/06/10/DAY-35/" class="article-date">
+  <time class="dt-published" datetime="2023-06-10T15:44:30.000Z" itemprop="datePublished">2023-06-10</time>
 </a>
     
   </div>
@@ -276,7 +187,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/01/DAY-26-python-to-get-a-html-text/">DAY 26 python to get a html text</a>
+      <a class="p-name article-title" href="/2023/06/10/DAY-35/">DAY 35</a>
     </h1>
   
 
@@ -284,15 +195,19 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>crawl to get a html text</p>
-<p>I have to say that ai is too powerful</p>
-<p>and the knowledge that ai can not learn is becoming more useful</p>
-<p>we have to speed up to learn faster and better</p>
+        <p>void gotoxy(int x, int y) {&#x2F;&#x2F;位置函数(行为x 列为y)<br>    COORD pos;<br>    pos.X&#x3D;2*y;<br>    pos.Y&#x3D;x;<br>    SetConsoleCursorPosition (GetStdHandle (STD_OUTPUT_HANDLE),pos);<br>}<br>上面的代码是一个用于设置光标位置的函数。它使用了Windows系统的Console API来设置光标的位置。</p>
+<p>函数定义了一个COORD结构类型的变化量pos，用于存储光标记的位置设置。</p>
+<p>该任数使用了Windows系统的控制台数来实现了标准位置的设置。COORD是一个结构体，它包含了控制台屏幕的行数和列表信息。在任数内部，首先创建一个类型的变量，然后COORD将pos参数x和y分配值给pos.Y和pos.X。在这里，行数对应参数x，列数对应参数y。最后，调用SetConsoleCursorPosition任意数来设置控制台灯标的位置，使之转移动到pos指定的行位置。</p>
+<p>COORD是一个库的自带结构体，包含控制台屏幕的行数和列表信息</p>
+<p>void begin () {<br>    system (“cls”);<br>    color (11);<br>    printf (“       ★”);<br>    color (10);<br>    printf (“吃豆人”);<br>    color (11);<br>    printf (“★\n\n”);<br>    color(7);<br>    printf (“  正在初始化，请耐心等待”);<br>    for (int i &#x3D; 0; i &lt;&#x3D; n; i++) {<br>        for (int j &#x3D; 1; j &lt;&#x3D; n; j++) {<br>            dis[i][j] &#x3D; 900;<br>        }<br>    }<br>    for (int i &#x3D; 0; i &lt;&#x3D; n; i++) {<br>        for (int j &#x3D; 0; j &lt;&#x3D; 3; j++) {<br>            if (i + fx[j] &gt;&#x3D; 0 &amp;&amp; i + fx[j] &lt;&#x3D; n) {<br>                int k &#x3D; i + fx[j], xx &#x3D; k&#x2F;27, yy &#x3D; k % 27, kk;<br>                if (changdi[i &#x2F; 27][i % 27] &amp;&amp; changdi[xx][yy]) {<br>                    dis[i][k] &#x3D; kk &#x3D; 1;<br>                }<br>            }<br>        }<br>    }<br>    for (int k &#x3D; 0; k &lt;&#x3D; n; k++) {<br>        if (changdi[k]) {<br>            for (int i &#x3D; 0; i &lt;&#x3D; n; i++) {<br>                if (changdi[i]) {<br>                    for (int j &#x3D; 0; j &lt;&#x3D; n; j++) {<br>                        if (changdi[j]) {<br>                            if (dis[i][j] &gt; dis[i][k] + dis[k][j]) {<br>                                dis[i][j] &#x3D; dis[i][k] + dis[k][j];<br>                            }<br>                        }<br>                    }<br>                }<br>            }<br>            if (k % 80 &#x3D;&#x3D; 0) {<br>                color (13);<br>                gotoxy (3, 12);<br>                printf(“│”);<br>            } else if (k % 80 &#x3D;&#x3D; 20) {<br>                    color (13);<br>                    gotoxy (3, 12);<br>                    printf (“╱”);<br>            } else if (k % 80 &#x3D;&#x3D; 40) {<br>                color (13);<br>                gotoxy (3, 12);<br>                printf (“─”);<br>            } else if (k % 80 &#x3D;&#x3D; 60) {<br>                color(13);<br>                gotoxy (3, 12);<br>                printf (“╲”);<br>            }<br>            if (k % 60&#x3D;&#x3D;0) {<br>                color (11);<br>                gotoxy (5, k &#x2F; 60);<br>                printf(“●”);<br>            }<br>        }<br>    }<br>}</p>
+<p>color(11), color(10), color(7), color(13): 这些函数调用是自定义的颜色函数，用于在控制台中设置文本颜色。通过这些函数调用，代码在不同的位置使用了不同的颜色，以美化输出。</p>
+<p>printf(“ ★”), printf(“吃豆人”), printf(“★\n\n”): 这些printf语句输出了带有星号的”吃豆人”标题，用于游戏开始时在控制台上显示。</p>
+<h2 id="for-int-i-x3D-0-i-lt-x3D-n-i-这是一个嵌套的循环，用于对二维数组dis进行初始化。dis是一个表示吃豆人游戏中节点之间距离的数组。"><a href="#for-int-i-x3D-0-i-lt-x3D-n-i-这是一个嵌套的循环，用于对二维数组dis进行初始化。dis是一个表示吃豆人游戏中节点之间距离的数组。" class="headerlink" title="for (int i &#x3D; 0; i &lt;&#x3D; n; i++): 这是一个嵌套的循环，用于对二维数组dis进行初始化。dis是一个表示吃豆人游戏中节点之间距离的数组。"></a>for (int i &#x3D; 0; i &lt;&#x3D; n; i++): 这是一个嵌套的循环，用于对二维数组dis进行初始化。dis是一个表示吃豆人游戏中节点之间距离的数组。</h2><p>see you again</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/01/DAY-26-python-to-get-a-html-text/" data-id="cliszdtvr0014zctke77vexev" data-title="DAY 26 python to get a html text" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/06/10/DAY-35/" data-id="cljadkweb001orotke6a9hqod" data-title="DAY 35" class="article-share-link">Share</a>
       
       
       
@@ -306,10 +221,10 @@
 
 
   
-    <article id="post-DAY-25-faceswap" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-DAY-34" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/06/01/DAY-25-faceswap/" class="article-date">
-  <time class="dt-published" datetime="2023-06-01T11:43:02.000Z" itemprop="datePublished">2023-06-01</time>
+    <a href="/2023/06/09/DAY-34/" class="article-date">
+  <time class="dt-published" datetime="2023-06-09T14:21:11.000Z" itemprop="datePublished">2023-06-09</time>
 </a>
     
   </div>
@@ -320,7 +235,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/01/DAY-25-faceswap/">DAY 25 faceswap</a>
+      <a class="p-name article-title" href="/2023/06/09/DAY-34/">DAY 34</a>
     </h1>
   
 
@@ -328,14 +243,27 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>这个傻逼换脸浪费了我至少二十五天的十天，十四小时的训练就换来屎一样的换脸效果，我就知道没有用到GPU，如果用到gpu</p>
-<p>也许结果不会这么烂，我还把换脸给搞反了，A的脸要换到B上，那么B应该是排在第一的文件夹</p>
-<h2 id="我决定继续尝试用GPU进行训练，如果仍然没有使用到我的gpu那我就放弃，转战linux"><a href="#我决定继续尝试用GPU进行训练，如果仍然没有使用到我的gpu那我就放弃，转战linux" class="headerlink" title="我决定继续尝试用GPU进行训练，如果仍然没有使用到我的gpu那我就放弃，转战linux"></a>我决定继续尝试用GPU进行训练，如果仍然没有使用到我的gpu那我就放弃，转战linux</h2><p>see you again</p>
+        <p>I plan to use c++ to make a game called Pac-Man</p>
+<p>First I need to figure out how the program run and what is the meaning of program </p>
+<p>step by step</p>
+<p>1.A color function<br>void color (int a) {&#x2F;&#x2F;颜色函数<br>    SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), a);<br>}<br>define a color program </p>
+<p>use a console API SetConsoleTextAttribute to set the color of the text the console output</p>
+<p>variable a Represents a color code which is used to designate the The foreground and background colors of the text</p>
+<p>With this code, you can change the appearance of the text by passing different color codes.</p>
+<p>句柄通常是一个整数值，用于唯一标识操作系统或应用程序中的资源或对象，例如文件、窗口、进程等。</p>
+<p>GetStdHandle函数返回标准输入、输出或错误设备的句柄，也就是获得输入、输出&#x2F;错误的屏幕缓冲区的句柄。通过获得这些句柄，程序可以对其进行进一步操作或设置。</p>
+<p>GetStdHandle (STD_OUTPUT_HANDLE)是一个Windows API函数，用于获取标准输出的句柄</p>
+<p>GetStdHandle函数接受一个参数，指定所需的标准句柄类型，其中STD_OUTPUT_HANDLE表示标准输出句柄。该句柄通常用于在控制台应用程序中进行标准输出，即向控制台窗口输出文本或其他数据。函数会返回与该标准句柄类型相对应的句柄值</p>
+<p>SetConsoleTextAttribute是Windows操作系统中的一个函数，用于设置控制台窗口中文本的颜色和背景色。</p>
+<p>该函数接受一个句柄参数，另外，还需要指定一个由字符和背景色组成的参数，其中高位字节表示背景色，低位字节表示文本颜色。</p>
+<p>对于	SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), a); ，GetStdHandle 函数用于获取标准输出设备的句柄。</p>
+<p>这里SetConsoleTextAttribute函数用于设定文本属性，接受两个值，一个句柄值，一个参数a，a的具体值决定了文本颜色和背景颜色</p>
+<h2 id="总的来说这段代码的作用是设定文本颜色和背景颜色"><a href="#总的来说这段代码的作用是设定文本颜色和背景颜色" class="headerlink" title="总的来说这段代码的作用是设定文本颜色和背景颜色"></a>总的来说这段代码的作用是设定文本颜色和背景颜色</h2><p>see you again</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/01/DAY-25-faceswap/" data-id="cliszdtvq0012zctk7r5cf7ds" data-title="DAY 25 faceswap" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/06/09/DAY-34/" data-id="cljadkwe9001grotk6nq48w5c" data-title="DAY 34" class="article-share-link">Share</a>
       
       
       
@@ -349,10 +277,10 @@
 
 
   
-    <article id="post-DAY-24-c" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-DAY-33" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/05/31/DAY-24-c/" class="article-date">
-  <time class="dt-published" datetime="2023-05-31T15:37:51.000Z" itemprop="datePublished">2023-05-31</time>
+    <a href="/2023/06/09/DAY-33/" class="article-date">
+  <time class="dt-published" datetime="2023-06-08T16:14:44.000Z" itemprop="datePublished">2023-06-09</time>
 </a>
     
   </div>
@@ -363,7 +291,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/31/DAY-24-c/">DAY 24 c++</a>
+      <a class="p-name article-title" href="/2023/06/09/DAY-33/">DAY 33</a>
     </h1>
   
 
@@ -371,66 +299,81 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>#include <iostream><br>using namespace std;</p>
-<p>class Shape {<br>public:<br>    virtual double getArea() const &#x3D; 0;<br>    virtual double getPerimeter() const &#x3D; 0;<br>};</p>
-<p>class Circle : public Shape {<br>private:<br>    double radius;</p>
-<p>public:<br>    Circle(double r) : radius(r) {}</p>
-<pre><code>double getArea() const override &#123;
-    return 3.14159 * radius * radius;
+        <p>#include <iostream><br>#include <fstream><br>#include <algorithm></p>
+<p>using namespace std;</p>
+<p>struct Student {<br>    int score;<br>};</p>
+<p>int main() {<br>    ofstream firstFile(“first.dat”, ios::binary);<br>    ofstream secondFile(“second.dat”, ios::binary);</p>
+<pre><code>cout &lt;&lt; &quot;请输入10个整数：&quot; &lt;&lt; endl;
+
+Student stud[10];
+
+for (int i = 0; i &lt; 10; ++i) &#123;
+    cin &gt;&gt; stud[i].score;
 &#125;
 
-double getPerimeter() const override &#123;
-    return 2 * 3.14159 * radius;
+for (int i = 0; i &lt; 5; ++i) &#123;
+    firstFile.write(reinterpret_cast&lt;const char*&gt;(&amp;stud[i]), sizeof(stud[i]));
 &#125;
+
+for (int i = 5; i &lt; 10; ++i) &#123;
+    secondFile.write(reinterpret_cast&lt;const char*&gt;(&amp;stud[i]), sizeof(stud[i]));
+&#125;
+
+firstFile.close();
+secondFile.close();
+
+cout &lt;&lt; &quot;已将整数存储到文件first.dat和second.dat中。&quot; &lt;&lt; endl;
+
+ifstream inFile(&quot;second.dat&quot;, ios::binary);
+ofstream outFile(&quot;first.dat&quot;, ios::binary|ios::app);
+
+if (!inFile || !outFile) &#123;
+    cout &lt;&lt; &quot;无法打开文件。&quot; &lt;&lt; endl;
+    return 1;
+&#125;
+
+Student stud2[10];
+
+for (int i = 5; i &lt; 10; ++i) &#123;
+    inFile.read(reinterpret_cast&lt;char*&gt;(&amp;stud2[i]), sizeof(stud2[i]));
+    outFile.write(reinterpret_cast&lt;char*&gt;(&amp;stud2[i]), sizeof(stud2[i]));
+
+&#125;
+
+inFile.close();
+
+inFile.open(&quot;first.dat&quot;,ios::binary);
+for(int i =0;i&lt;10;i++)
+&#123;
+    inFile.read(reinterpret_cast&lt;char*&gt;(&amp;stud2[i]), sizeof(stud2[i]));
+&#125;
+
+// 对整数进行升序排列
 </code></pre>
-<p>};</p>
-<p>class Square : public Shape {<br>private:<br>    double side;</p>
-<p>public:<br>    Square(double s) : side(s) {}</p>
-<pre><code>double getArea() const override &#123;
-    return side * side;
+<p>   for(int i&#x3D;0;i&lt;10;i++)<br>   {<br>       for(int j&#x3D;0;j&lt;9;j++)<br>       {<br>           if(stud2[j].score&gt;stud2[j+1].score){<br>           int t&#x3D; stud2[j].score;<br>           stud2[j].score&#x3D;stud2[j+1].score;<br>           stud2[j+1].score&#x3D;t;<br>           }<br>       }</p>
+<p>   }</p>
+<pre><code>// 将排序后的整数覆盖写入second.dat文件
+for (int i = 0; i &lt; 10; ++i) &#123;
+    outFile.write(reinterpret_cast&lt;const char*&gt;(&amp;stud2[i]), sizeof(stud2[i]));
 &#125;
+            cout &lt;&lt; &quot;存放到second.dat的数据是&quot;&lt;&lt; endl;
 
-double getPerimeter() const override &#123;
-    return 4 * side;
-&#125;
-</code></pre>
-<p>};</p>
-<p>class Rectangle : public Shape {<br>private:<br>    double length;<br>    double width;</p>
-<p>public:<br>    Rectangle(double l, double w) : length(l), width(w) {}</p>
-<pre><code>double getArea() const override &#123;
-    return length * width;
-&#125;
+ for(int i=0;i&lt;10;i++)&#123;
+    cout &lt;&lt; stud2[i].score &lt;&lt; &quot; &quot;;
+ &#125;
+ cout &lt;&lt; endl;
+outFile.close();
 
-double getPerimeter() const override &#123;
-    return 2 * (length + width);
-&#125;
-</code></pre>
-<p>};</p>
-<p>int main() {<br>    const int numShapes &#x3D; 3;<br>    Shape* shapes[numShapes];</p>
-<pre><code>shapes[0] = new Circle(5.0);
-shapes[1] = new Square(4.0);
-shapes[2] = new Rectangle(3.0, 6.0);
-
-double totalArea = 0.0;
-for (int i = 0; i &lt; numShapes; i++) &#123;
-    totalArea += shapes[i]-&gt;getArea();
-&#125;
-
-cout &lt;&lt; &quot;所有图形的面积之和: &quot; &lt;&lt; totalArea &lt;&lt; endl;
-
-// 释放动态分配的内存
-for (int i = 0; i &lt; numShapes; i++) &#123;
-    delete shapes[i];
-&#125;
+cout &lt;&lt; &quot;已将整数从first.dat文件读取并升序排列后存放到second.dat文件中。&quot; &lt;&lt; endl;
 
 return 0;
 </code></pre>
-<h2 id="analyseclass-Shape-public-virtual-double-getArea-const-x3D-0-virtual-double-getPerimeter-const-x3D-0-a-class-named-Shape-which-has-two-pure-virtual-function"><a href="#analyseclass-Shape-public-virtual-double-getArea-const-x3D-0-virtual-double-getPerimeter-const-x3D-0-a-class-named-Shape-which-has-two-pure-virtual-function" class="headerlink" title="}analyseclass Shape {public:    virtual double getArea() const &#x3D; 0;    virtual double getPerimeter() const &#x3D; 0;};a class named Shape which has two pure virtual function"></a>}<br>analyse<br>class Shape {<br>public:<br>    virtual double getArea() const &#x3D; 0;<br>    virtual double getPerimeter() const &#x3D; 0;<br>};<br>a class named Shape which has two pure virtual function</h2><p>see you again</p>
+<p>}</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/31/DAY-24-c/" data-id="cliszdtvp0010zctkgvxb7t1x" data-title="DAY 24 c++" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/06/09/DAY-33/" data-id="cljadkwea001irotk30qaeiat" data-title="DAY 33" class="article-share-link">Share</a>
       
       
       
@@ -444,10 +387,10 @@ return 0;
 
 
   
-    <article id="post-DAY-23-auto-gpt" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-DAY-32" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/05/31/DAY-23-auto-gpt/" class="article-date">
-  <time class="dt-published" datetime="2023-05-31T11:04:45.000Z" itemprop="datePublished">2023-05-31</time>
+    <a href="/2023/06/07/DAY-32/" class="article-date">
+  <time class="dt-published" datetime="2023-06-07T04:11:49.000Z" itemprop="datePublished">2023-06-07</time>
 </a>
     
   </div>
@@ -458,7 +401,7 @@ return 0;
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/31/DAY-23-auto-gpt/">DAY 23 auto-gpt</a>
+      <a class="p-name article-title" href="/2023/06/07/DAY-32/">DAY 32</a>
     </h1>
   
 
@@ -466,16 +409,12 @@ return 0;
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>fork the Repository of auto-gpt in your own repository and enter the web gitpod</p>
-<p>log in and choose the repository of auto-gpt and wait for it to install the module it need</p>
-<p>renamed the env.template as .env</p>
-<p>add the openai api in the .env file </p>
-<h2 id="and-you-can-use-command-x2F-run-sh-to-run-it"><a href="#and-you-can-use-command-x2F-run-sh-to-run-it" class="headerlink" title="and you can use command .&#x2F;run.sh to run it"></a>and you can use command .&#x2F;run.sh to run it</h2><p>see you again</p>
+        <p>六六六，咖啡加可乐有一种雪碧的味道</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/31/DAY-23-auto-gpt/" data-id="cliszdtvk000qzctk9jjh6802" data-title="DAY 23 auto-gpt" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/06/07/DAY-32/" data-id="cljadkwe8001crotkeep6gns0" data-title="DAY 32" class="article-share-link">Share</a>
       
       
       
@@ -489,10 +428,10 @@ return 0;
 
 
   
-    <article id="post-DAY-22-security" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-DAY-31-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/05/30/DAY-22-security/" class="article-date">
-  <time class="dt-published" datetime="2023-05-29T16:29:48.000Z" itemprop="datePublished">2023-05-30</time>
+    <a href="/2023/06/07/DAY-31-1/" class="article-date">
+  <time class="dt-published" datetime="2023-06-07T04:11:20.000Z" itemprop="datePublished">2023-06-07</time>
 </a>
     
   </div>
@@ -503,7 +442,7 @@ return 0;
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/30/DAY-22-security/">DAY 22 security</a>
+      <a class="p-name article-title" href="/2023/06/07/DAY-31-1/">DAY 31</a>
     </h1>
   
 
@@ -511,19 +450,103 @@ return 0;
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>$whitelist &#x3D; [“source”&#x3D;&gt;”source.php”,”hint”&#x3D;&gt;”hint.php”];</p>
-<p>这串代码是一个PHP数组赋值操作，创建了一个名为$whitelist的关联数组，包含两个键值对。数组的键是字符串，分别为”source”和”hint”，对应的值分别是”source.php”和”hint.php”。这意味着在</p>
-<p>$whitelist数组中，”source”键关联的值是”source.php”，”hint”键关联的值是”hint.php”。这种数组结构可以用来存储和访问相关的键值对数据。</p>
-<p>if (! isset($page) || !is_string($page)) {<br>                echo “you can’t see it”;<br>                return false;<br>            }</p>
-<p>一个条件语句。它首先使用isset()函数检查变量$page是否已经设置。如果$page未设置（即不存在或为null），条件成立。接下来，使用is_string()函数检查$page的类型是否为字符串。如果$page不是字符串类型，条件同样成立。</p>
-<p>如果以上两个条件之一成立，代码块内的语句将被执行。在这种情况下，会输出字符串”you can’t see it”。然后，使用return语句返回false，表示在这种情况下函数或代码的执行将会终止。</p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/07/DAY-31-1/" data-id="cljadkwea001krotk1n2ehwyy" data-title="DAY 31" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-31" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/06/DAY-31/" class="article-date">
+  <time class="dt-published" datetime="2023-06-06T14:24:01.000Z" itemprop="datePublished">2023-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/06/DAY-31/">DAY 31 nothing</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>本来找到一个很好的聊天机器人可以免费查询天气。。。其实也不知道</p>
+<p>项目是扒下来了但是运行不了因为傻逼透了的网页版微信</p>
+<p>c++</p>
+<p>get()</p>
+<p>getline()</p>
+<p>ignore()</p>
+<h2 id="To-Use-Disk-I-x2F-O-you-must❖use-include-❖choose-valid-identifiers-for-yourfilestreams-and-declare-them❖open-the-files-and-associate-filestreamidentifiers-with-disk-names❖use-your-filestream-identifiers-in-yourI-x2F-O-statements❖close-the-files"><a href="#To-Use-Disk-I-x2F-O-you-must❖use-include-❖choose-valid-identifiers-for-yourfilestreams-and-declare-them❖open-the-files-and-associate-filestreamidentifiers-with-disk-names❖use-your-filestream-identifiers-in-yourI-x2F-O-statements❖close-the-files" class="headerlink" title="To Use Disk I&#x2F;O, you must❖use #include ❖choose valid identifiers for yourfilestreams and declare them❖open the files and associate filestreamidentifiers with disk names❖use your filestream identifiers in yourI&#x2F;O statements❖close the files"></a>To Use Disk I&#x2F;O, you must<br>❖use #include <fstream><br>❖choose valid identifiers for your<br>filestreams and declare them<br>❖open the files and associate filestream<br>identifiers with disk names<br>❖use your filestream identifiers in your<br>I&#x2F;O statements<br>❖close the files</h2><p>see  you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/06/DAY-31/" data-id="cljadkwe70018rotkeyo9djw0" data-title="DAY 31 nothing" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-30" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/05/DAY-30/" class="article-date">
+  <time class="dt-published" datetime="2023-06-05T14:49:36.000Z" itemprop="datePublished">2023-06-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/05/DAY-30/">DAY 30</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>关于faceswap</p>
+<p>真的真的不知道有没有用到我的GPU但是我的cpu一直是拉满的利用率，随便吧不管了，多跑一点，多锻炼一下</p>
+<p>更健康hhh</p>
+<p>目前我的电脑配置是双显：独显加集显，独显n卡3050laptop，集显a卡</p>
+<p>接下来的安排，先应付数学小测，然后每天c++程序编写，多认识一些c++的英文名词</p>
 <hr>
-<p>see you again</p>
+<p>see you again   </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/30/DAY-22-security/" data-id="cliszdtvi000ozctk11pmefdd" data-title="DAY 22 security" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/06/05/DAY-30/" data-id="cljadkwe8001arotk4jdmeif1" data-title="DAY 30" class="article-share-link">Share</a>
       
       
       
@@ -537,10 +560,10 @@ return 0;
 
 
   
-    <article id="post-DAY-21-invest" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-DAY-29" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/05/29/DAY-21-invest/" class="article-date">
-  <time class="dt-published" datetime="2023-05-28T17:10:39.000Z" itemprop="datePublished">2023-05-29</time>
+    <a href="/2023/06/04/DAY-29/" class="article-date">
+  <time class="dt-published" datetime="2023-06-04T12:30:09.000Z" itemprop="datePublished">2023-06-04</time>
 </a>
     
   </div>
@@ -551,7 +574,7 @@ return 0;
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/29/DAY-21-invest/">DAY 21 invest</a>
+      <a class="p-name article-title" href="/2023/06/04/DAY-29/">DAY 29</a>
     </h1>
   
 
@@ -559,119 +582,14 @@ return 0;
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>确实一直就是这么难(也有可能是习惯了寻找简单)</p>
-<p>在这个什么都不是很懂得b年纪，身边所有都启示着你做长期打算</p>
-<p>秉持着更一行也是更的原则，我又来啦</p>
-<p>（写的都什么垃圾玩意）</p>
-<p>  class emmm （定义一个名为emmm的类）</p>
-<p>  public static function checkFile(&amp;$page)（定义一个checkFile函数检查传入的参数是否合格）</p>
-<p>  $page是一个变量，&amp;是引用这个变量的地址</p>
-<hr>
-<p>  see you again</p>
+        <p>ε&#x3D;(´ο｀*)))唉</p>
+<p>浪费老子宝贵的阳间三个小时</p>
+<h2 id="虚拟机里面的系统无法调用物理机的gpu并且无法使用tensorflow-gpu"><a href="#虚拟机里面的系统无法调用物理机的gpu并且无法使用tensorflow-gpu" class="headerlink" title="虚拟机里面的系统无法调用物理机的gpu并且无法使用tensorflow-gpu"></a>虚拟机里面的系统无法调用物理机的gpu并且无法使用tensorflow-gpu</h2><p>see you again</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/29/DAY-21-invest/" data-id="cliszdtvn000wzctka1ru7wm0" data-title="DAY 21 invest" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-20-web" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/28/DAY-20-web/" class="article-date">
-  <time class="dt-published" datetime="2023-05-27T17:39:41.000Z" itemprop="datePublished">2023-05-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/28/DAY-20-web/">DAY 20 web</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>LOOK AT THE CODE</p>
-<p>It is a code about listenning the width of page </p>
-<p>mounted() {<br>  &#x2F;&#x2F; 监听窗口大小变化<br>  window.addEventListener(‘resize’, this.handleResize);<br>  &#x2F;&#x2F; 初始化执行一次<br>  this.handleResize();<br>},</p>
-<p>beforeDestroy() {<br>  &#x2F;&#x2F; 移除事件监听<br>  window.removeEventListener(‘resize’, this.handleResize);<br>},</p>
-<h1 id="methods-handleResize-const-width-x3D-window-innerWidth-if-width-lt-460-this-program-x3D-0-x2F-x2F-here-you-can-change-the-value-you-want-x2F-x2F-你可以在这里改变你想要改变的东西-x2F-x2F-当页面的宽度小于460px时，改变一些东西-else-x2F-x2F-如果需要在其他情况下设置this-program的值，可以在这里添加对应的逻辑"><a href="#methods-handleResize-const-width-x3D-window-innerWidth-if-width-lt-460-this-program-x3D-0-x2F-x2F-here-you-can-change-the-value-you-want-x2F-x2F-你可以在这里改变你想要改变的东西-x2F-x2F-当页面的宽度小于460px时，改变一些东西-else-x2F-x2F-如果需要在其他情况下设置this-program的值，可以在这里添加对应的逻辑" class="headerlink" title="methods: {  handleResize() {    const width &#x3D; window.innerWidth;    if (width &lt; 460) {      this.program &#x3D; 0;      &#x2F;&#x2F;here you can change the value you want      &#x2F;&#x2F;你可以在这里改变你想要改变的东西      &#x2F;&#x2F;当页面的宽度小于460px时，改变一些东西    } else {      &#x2F;&#x2F; 如果需要在其他情况下设置this.program的值，可以在这里添加对应的逻辑    }  },}"></a>methods: {<br>  handleResize() {<br>    const width &#x3D; window.innerWidth;<br>    if (width &lt; 460) {<br>      this.program &#x3D; 0;<br>      &#x2F;&#x2F;here you can change the value you want<br>      &#x2F;&#x2F;你可以在这里改变你想要改变的东西<br>      &#x2F;&#x2F;当页面的宽度小于460px时，改变一些东西<br>    } else {<br>      &#x2F;&#x2F; 如果需要在其他情况下设置this.program的值，可以在这里添加对应的逻辑<br>    }<br>  },<br>}</h1><p>see you again</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/28/DAY-20-web/" data-id="cliszdtvm000uzctk6tgjdea4" data-title="DAY 20 web" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-19-security" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/26/DAY-19-security/" class="article-date">
-  <time class="dt-published" datetime="2023-05-26T04:32:45.000Z" itemprop="datePublished">2023-05-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/26/DAY-19-security/">DAY 19 security</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>exercise name: warm up</p>
-<p>type: web</p>
-<p>testing centre: php、Code auditing</p>
-<p>f12 and found the tips source.php</p>
-<p> &#x2F;source.php follow the url</p>
-<p> <a target="_blank" rel="noopener" href="http://67e50b84-6e7c-4967-8e09-27fbb637a48b.node4.buuoj.cn:81/source.php">http://67e50b84-6e7c-4967-8e09-27fbb637a48b.node4.buuoj.cn:81/source.php</a>   </p>
-<p> and found the php code</p>
-<p>PHP 变量规则：</p>
-<p>变量以 $ 符号开始，后面跟着变量的名称<br>变量名必须以字母或者下划线字符开始<br>变量名只能包含字母、数字以及下划线（A-z、0-9 和 _ ）<br>变量名不能包含空格<br>变量名是区分大小写的（$y 和 $Y 是两个不同的变量）</p>
-<p>analyse the code </p>
-<p>$_page &#x3D; mb_substr(<br>    $page,<br>    0,<br>    mb_strpos($page . ‘?’, ‘?’)<br>);<br>使用了 PHP 的 mb_substr() 和 mb_strpos() 函数来截取字符串。这些函数是用于处理多字节字符的版本，可以正确处理包含非 ASCII 字符的字符串。<br>mb_substr() 函数用于返回一个字符串的子串。它接受三个参数：原始字符串 $page，子串的起始位置和子串的长度。在这段代码中，起始位置是 0，长度是通过 mb_strpos() 函数计算得出的。<br>mb_strpos() 函数用于在字符串中查找指定字符或子字符串的位置。它接受两个参数：要搜索的字符串和要查找的字符或子字符串。在这段代码中，它用于查找 $page 字符串中第一个出现的 ‘?’ 字符的位置。<br>通过这段代码，$_page 变量将被赋值为 $page 字符串中 ‘?’ 字符之前的子串。</p>
-<p>综上所述，给定的代码通过使用 PHP 的多字节字符串函数来截取 $page 字符串中 ‘?’ 字符之前的子串。</p>
-<hr>
-<p>see you again</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/26/DAY-19-security/" data-id="cliszdtvd000izctkhgix2s5m" data-title="DAY 19 security" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/06/04/DAY-29/" data-id="cljadkweb001mrotkfmome2qt" data-title="DAY 29" class="article-share-link">Share</a>
       
       
       
@@ -689,7 +607,7 @@ return 0;
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -735,23 +653,23 @@ return 0;
       <ul>
         
           <li>
-            <a href="/2023/06/12/DAY-37/">DAY 37</a>
+            <a href="/2023/06/25/DAY-47/">DAY 47</a>
           </li>
         
           <li>
-            <a href="/2023/06/12/DAY-36/">DAY 36</a>
+            <a href="/2023/06/23/DAY-46/">DAY 46</a>
           </li>
         
           <li>
-            <a href="/2023/06/10/DAY-35/">DAY 35</a>
+            <a href="/2023/06/23/DAY-45/">DAY 45</a>
           </li>
         
           <li>
-            <a href="/2023/06/09/DAY-34/">DAY 34</a>
+            <a href="/2023/06/21/DAY-44/">DAY 44</a>
           </li>
         
           <li>
-            <a href="/2023/06/09/DAY-33/">DAY 33</a>
+            <a href="/2023/06/20/DAY-43/">DAY 43</a>
           </li>
         
       </ul>

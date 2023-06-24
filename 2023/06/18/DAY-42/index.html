@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>DAY 42 | NPC BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="你好 写的add_new_card函数 void CardSystem::add_new_card(Card&amp; new_card) {    string name &#x3D; new_card.get_name();    int ret &#x3D; search(name);&#x2F;&#x2F;-2:找不到，-1:挂失，0:找到    if (ret &#x3D;&#x3D;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DAY 42">
+<meta property="og:url" content="http://example.com/2023/06/18/DAY-42/index.html">
+<meta property="og:site_name" content="NPC BLOG">
+<meta property="og:description" content="你好 写的add_new_card函数 void CardSystem::add_new_card(Card&amp; new_card) {    string name &#x3D; new_card.get_name();    int ret &#x3D; search(name);&#x2F;&#x2F;-2:找不到，-1:挂失，0:找到    if (ret &#x3D;&#x3D;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-06-18T04:07:19.000Z">
+<meta property="article:modified_time" content="2023-06-18T17:29:55.816Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="BY NPC">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="NPC BLOG" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">NPC BLOG</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">ANYBODY WANT TO PLAY WITH ME?</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-DAY-42" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/18/DAY-42/" class="article-date">
+  <time class="dt-published" datetime="2023-06-18T04:07:19.000Z" itemprop="datePublished">2023-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      DAY 42
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>你好</p>
+<p>写的add_new_card函数</p>
+<p>void CardSystem::add_new_card(Card&amp; new_card) {<br>    string name &#x3D; new_card.get_name();<br>    int ret &#x3D; search(name);&#x2F;&#x2F;-2:找不到，-1:挂失，0:找到<br>    if (ret &#x3D;&#x3D; -1) {<br>        cout &lt;&lt; “your card is lost!!! go to find it!!!” &lt;&lt; endl;<br>        return;<br>    }<br>    if (ret &gt;&#x3D; 0) {<br>        cout &lt;&lt; “the card is exited!!!” &lt;&lt; endl;<br>        return;<br>    }<br>    cards_array_.push_back(new_card);<br>    cout &lt;&lt; “add a new card successfully!!!” &lt;&lt; endl;<br>}</p>
+<p>状态-2是找不到这张卡可以进行创建卡，0是已经找到这张卡不能建卡，-1是卡已经挂失，需要去恢复状态</p>
+<p>有几种使用的功能<br>1.建卡<br>  建卡失败<br>  建卡成功<br>2.充值<br>  充值失败<br>  充值成功<br>3.余额查询</p>
+<p>2.在主函数和重载(istream，注意不是ifstream)&gt;&gt;里，输入int可能输入char，需要用try..catch…throw; 命令行输入时，多输入错误类型，检查程序的错误判断是否完善，记得记录每一个bug；</p>
+<p>主函数和重载istream里面，输入int可能输入char</p>
+<p>重载friend istream&amp; operator&gt;&gt;(istream&amp; cin, Card&amp; input);这里输入的值可能是char而不是int</p>
+<p>一个友元函数，重载了输入流操作中的输入流操作符’&gt;&gt;’，使其能够从输入流读取数据，并且将数据保存到card对象当中</p>
+<p>该函数接受两个参数，一个是cin表示输入流对象，表示标准输入流</p>
+<p>Card&amp; input表示要读取数据的Card对象的引用</p>
+<p>函数返回一个输入流对象(istream&amp;)，允许在多个输入操作符连接在一起时进行链式输入</p>
+<p>该函数的实现将根据Card对象的内部结构和输入格式，从输入流中提取必要的数据，并将其存储在Card对象的成员变量中</p>
+<p>为什么要用友元函数？</p>
+<p>为了更好地访问私有成员和保护成员 operator&gt;&gt;函数可以直接访问Card类的私有成员变量value，以读取和设置其值</p>
+<p>具体的实现为：</p>
+<pre><code>friend istream&amp; operator&gt;&gt;(istream&amp; cin, Card&amp; input);//重载从命令行输入
+</code></pre>
+<p>istream&amp; operator&gt;&gt;(istream&amp; cin, Card&amp; input) {<br>    cout &lt;&lt; “please enter the name:\n”;<br>    cin &gt;&gt; input.name_;<br>    cout &lt;&lt; “please choose the type (1. student, 2. teacher)\n”;<br>    while (cin &gt;&gt; input.type_ &amp;&amp; (input.type_ &lt; 1 || input.type_ &gt; 2)) {<br>        cout &lt;&lt; “wrong type!!! please enter again!”;<br>    }<br>    cout &lt;&lt; “please enter the number(&gt;0): \n”;<br>    while (cin &gt;&gt; input.number_ &amp;&amp; input.number_ &lt; 0) {<br>        cout &lt;&lt; “wrong number(&gt;0)!!! please enter again!”;<br>    }<br>    cout &lt;&lt; “please choose the gender (1. male, 2. female)\n”;<br>    while (cin &gt;&gt; input.gender_ &amp;&amp; (input.gender_ &lt; 1 || input.gender_ &gt; 2)) {<br>        cout &lt;&lt; “wrong gender!!! please enter again!”;<br>    }<br>    cout &lt;&lt; “please enter the place:\n”;<br>    cin &gt;&gt; input.place_;<br>    return cin;<br>}<br>我的目的就是对以上重载的实现进行一个容错处理</p>
+<p>ifstream与istream的区别</p>
+<p>ifstream是istream的派生类，继承了istream的所有方法和操作符，并增加了一些用于从文件读取数据的特定方法</p>
+<p>总结：istream是输入流的基类，提供了通用的输入功能，而ifstream是从文件中读取数据的特化输入流类。</p>
+<p>这是一个重载输入流运算符，用于从输入流中读取数据并将其存储到Card对象的相应成员变量中</p>
+<p>istream&amp; operator&gt;&gt;(istream&amp; cin, Card&amp; input) {<br>    try {<br>        cout &lt;&lt; “Please enter the name:\n”;<br>        cin &gt;&gt; input.name_;</p>
+<pre><code>    cout &lt;&lt; &quot;Please choose the type (1. student, 2. teacher):\n&quot;;
+    while (!(cin &gt;&gt; input.type_) || (input.type_ &lt; 1 || input.type_ &gt; 2)) &#123;
+        throw runtime_error(&quot;Invalid type! Please enter again: &quot;);
+    &#125;
+    
+    cout &lt;&lt; &quot;Please enter the number (&gt;0):\n&quot;;
+    while (!(cin &gt;&gt; input.number_) || input.number_ &lt; 0) &#123;
+        throw runtime_error(&quot;Invalid number (&gt;0)! Please enter again: &quot;);
+    &#125;
+    
+    cout &lt;&lt; &quot;Please choose the gender (1. male, 2. female):\n&quot;;
+    while (!(cin &gt;&gt; input.gender_) || (input.gender_ &lt; 1 || input.gender_ &gt; 2)) &#123;
+        throw runtime_error(&quot;Invalid gender! Please enter again: &quot;);
+    &#125;
+    
+    cout &lt;&lt; &quot;Please enter the place:\n&quot;;
+    cin &gt;&gt; input.place_;
+&#125; catch (const exception&amp; e) &#123;
+    // 捕获异常并处理错误消息
+    cerr &lt;&lt; &quot;Exception caught: &quot; &lt;&lt; e.what() &lt;&lt; endl;
+    // 清除错误状态和输入流
+    cin.clear();
+    cin.ignore(numeric_limits&lt;streamsize&gt;::max(), &#39;\n&#39;);
+&#125;
+
+return cin;
+</code></pre>
+<p>}</p>
+<p>以上代码使用try-catch块来捕获可能抛出的异常，当输入不满足要求的时候，通过throw语句抛出runtime_error类型的异常，异常消息作为参数传递</p>
+<p>在catch块中，异常被捕获并处理，错误消息被输出到标准错误流(‘cerr’),并使用cin.clear()来清除输入流的错误状态标志</p>
+<p>cin.ignore(numeric_limits<streamsize>::max(), ‘\n’)用于忽略剩余的输入内容。</p>
+<h2 id="这样，在发生异常时，会显示错误消息并清除错误状态，以便进行下一次输入。"><a href="#这样，在发生异常时，会显示错误消息并清除错误状态，以便进行下一次输入。" class="headerlink" title="这样，在发生异常时，会显示错误消息并清除错误状态，以便进行下一次输入。"></a>这样，在发生异常时，会显示错误消息并清除错误状态，以便进行下一次输入。</h2><p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/18/DAY-42/" data-id="cljadkwej0024rotk28ss2l92" data-title="DAY 42" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/06/20/DAY-43/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          DAY 43
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/06/17/DAY-41/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">DAY 41</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BY-NPc/" rel="tag">BY NPc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/I-come-here-to-sharpen-my-skills/" rel="tag">I come here to sharpen my skills</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/BY-NPC/" style="font-size: 20px;">BY NPC</a> <a href="/tags/BY-NPc/" style="font-size: 10px;">BY NPc</a> <a href="/tags/I-come-here-to-sharpen-my-skills/" style="font-size: 10px;">I come here to sharpen my skills</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/06/25/DAY-47/">DAY 47</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/23/DAY-46/">DAY 46</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/23/DAY-45/">DAY 45</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/21/DAY-44/">DAY 44</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/20/DAY-43/">DAY 43</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>DAY 41 | NPC BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="嘶，很快考试了还是复习c++把 真的很怕挂了，什么都没学跟废物似得 STL的基本组件 • 容器（container） • 迭代器（iterator） • 函数对象（function object） • 算法（algorithms） 将迭代器作为算法的参数，通过迭代器来访问容器而不是把容器直接作为算法的参数 将函数对象作为算法的参数而不是将函数所执行的运算作为算法的一部分？ #include #in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DAY 41">
+<meta property="og:url" content="http://example.com/2023/06/17/DAY-41/index.html">
+<meta property="og:site_name" content="NPC BLOG">
+<meta property="og:description" content="嘶，很快考试了还是复习c++把 真的很怕挂了，什么都没学跟废物似得 STL的基本组件 • 容器（container） • 迭代器（iterator） • 函数对象（function object） • 算法（algorithms） 将迭代器作为算法的参数，通过迭代器来访问容器而不是把容器直接作为算法的参数 将函数对象作为算法的参数而不是将函数所执行的运算作为算法的一部分？ #include #in">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-06-16T16:49:09.000Z">
+<meta property="article:modified_time" content="2023-06-16T17:25:36.906Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="BY NPC">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="NPC BLOG" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">NPC BLOG</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">ANYBODY WANT TO PLAY WITH ME?</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-DAY-41" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/17/DAY-41/" class="article-date">
+  <time class="dt-published" datetime="2023-06-16T16:49:09.000Z" itemprop="datePublished">2023-06-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      DAY 41
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>嘶，很快考试了还是复习c++把</p>
+<p>真的很怕挂了，什么都没学跟废物似得</p>
+<p>STL的基本组件<br> • 容器（container）<br> • 迭代器（iterator）<br> • 函数对象（function object）<br> • 算法（algorithms）</p>
+<p>将迭代器作为算法的参数，通过迭代器来访问容器而不是把容器直接作为算法的参数</p>
+<p>将函数对象作为算法的参数而不是将函数所执行的运算作为算法的一部分？</p>
+<p>#include <iostream><br>#include <algorithm><br>#include <vector></p>
+<p>&#x2F;&#x2F; 定义一个函数对象（Functor）<br>class MultiplyBy {<br>private:<br>    int factor;<br>public:<br>    MultiplyBy(int factor) : factor(factor) {}</p>
+<pre><code>// 重载函数调用运算符
+int operator()(int value) const &#123;
+    return value * factor;
+&#125;
+</code></pre>
+<p>};</p>
+<p>int main() {<br>    std::vector<int> numbers &#x3D; {1, 2, 3, 4, 5};<br>    int factor &#x3D; 2;</p>
+<pre><code>// 创建函数对象
+MultiplyBy multiply(factor);
+
+// 使用函数对象作为算法参数，而不是将函数所执行的运算作为算法的一部分
+std::transform(numbers.begin(), numbers.end(), numbers.begin(), multiply);
+
+// 打印结果
+for (const auto&amp; number : numbers) &#123;
+    std::cout &lt;&lt; number &lt;&lt; &quot; &quot;;
+&#125;
+std::cout &lt;&lt; std::endl;
+
+return 0;
+</code></pre>
+<p>}<br>在    MultiplyBy multiply(factor);<br>这一步的时候，multiply这个对象的私有成员factor的值被设置为2</p>
+<pre><code>std::transform(numbers.begin(), numbers.end(), numbers.begin(), multiply);
+</code></pre>
+<p>这一步的时候执行算法numbers向量中的每一个元素作为参数传递给函数对象的函数调用运算符</p>
+<p>容器（Containers）：STL 提供了多种容器类，如向量（vector）、列表（list）、映射（map）、集合（set）等，用于存储和管理数据。这些容器提供了不同的特性和操作，以满足各种需求。</p>
+<p>算法（Algorithms）：STL 提供了大量的算法，如排序、查找、遍历、变换等，可用于对容器中的数据进行操作和处理。这些算法是通用的，适用于各种容器类型，而无需开发者自己实现。  </p>
+<p>异常处理</p>
+<p>抛掷异常的程序段<br>throw 表达式;</p>
+<p>捕获并处理异常的程序段<br>try<br>复合语句—保护段<br>catch（异常声明）<br>复合语句—异常处理程序<br>catch（异常声明）<br>复合语句</p>
+<p>将可能抛出异常的程序段嵌在try块之中。通过<br>正常的顺序执行到达try语句，然后执行try块内<br>的保护段</p>
+<p>如果在保护段执行期间没有引起异常，那么跟在<br>try块后的catch子句就不执行。程序从try块后<br>的最后一个catch子句后面的语句继续执行</p>
+<p>理解程度不行，完成度也不够，二十分钟过去了</p>
+<p>为什么呢?</p>
+<h2 id="这些b字跟没有见过一样"><a href="#这些b字跟没有见过一样" class="headerlink" title="这些b字跟没有见过一样"></a>这些b字跟没有见过一样</h2><p>see you again </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/17/DAY-41/" data-id="cljadkwek0028rotkdr9u3zp3" data-title="DAY 41" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/06/18/DAY-42/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          DAY 42
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/06/15/DAY-40/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">DAY 40</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BY-NPc/" rel="tag">BY NPc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/I-come-here-to-sharpen-my-skills/" rel="tag">I come here to sharpen my skills</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/BY-NPC/" style="font-size: 20px;">BY NPC</a> <a href="/tags/BY-NPc/" style="font-size: 10px;">BY NPc</a> <a href="/tags/I-come-here-to-sharpen-my-skills/" style="font-size: 10px;">I come here to sharpen my skills</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/06/25/DAY-47/">DAY 47</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/23/DAY-46/">DAY 46</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/23/DAY-45/">DAY 45</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/21/DAY-44/">DAY 44</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/20/DAY-43/">DAY 43</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
