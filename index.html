@@ -77,10 +77,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-DAY-47" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-DAY-60" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/06/25/DAY-47/" class="article-date">
-  <time class="dt-published" datetime="2023-06-24T18:58:28.000Z" itemprop="datePublished">2023-06-25</time>
+    <a href="/2023/08/24/DAY-60/" class="article-date">
+  <time class="dt-published" datetime="2023-08-24T07:06:25.000Z" itemprop="datePublished">2023-08-24</time>
 </a>
     
   </div>
@@ -91,7 +91,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/25/DAY-47/">DAY 47</a>
+      <a class="p-name article-title" href="/2023/08/24/DAY-60/">DAY 60</a>
     </h1>
   
 
@@ -99,194 +99,111 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>protected 在子类定义和当前类定义中可以访问</p>
-<p>private 只在当前类定义中可以访问</p>
-<p>public 在任何地方中都可以访问</p>
-<p>class GoldenBox{<br>public:<br>GoldenBox(int);<br>void show(Box &amp; );<br>private:<br>int weight;<br>};<br>class Box {<br>public:<br>Box(int ,int ,int );<br>friend void GoldenBox::show(Box &amp; );<br>private:<br>int width;<br>int length;<br>int height;<br>};<br>friend 数据类型 classtype::functionname</p>
-<h1 id="include"><a href="#include" class="headerlink" title="include "></a>include <iostream></h1><p>using namespace std;<br>class Box; &#x2F;&#x2F;pre-reference declaration<br>class GoldenBox{<br>public:<br>GoldenBox(int);<br>void show(Box &amp; );<br>private:<br>int weight;<br>};<br>class Box {<br>public:<br>Box(int ,int ,int );<br>friend GoldenBox;<br>private:<br>int width;<br>int length;<br>int height;<br>}<br>Box 有一个友元类GoldenBox</p>
-<p>友元类（Friend Class）是一种特殊的类关系，允许一个类的成员函数或友元函数访问另一个类的私有成员。友元类可以访问其它类的私有成员，包括私有变量和私有函数，而不需要通过公有接口进行访问。</p>
-<h2 id="但是使用友元类需要谨慎"><a href="#但是使用友元类需要谨慎" class="headerlink" title="但是使用友元类需要谨慎"></a>但是使用友元类需要谨慎</h2><p>see you again</p>
+        <p>实训第一周的作业</p>
+<p>题目是<br>1.创建一个Person类，包含id,name两个属性，添加2个构造函数，重写toString（）方法返回id和name的值，同时包含display方法，用于显示id和name的值；包含静态的daffodilThree方法，用于循环打印100-999之间的水仙花数</p>
+<p>2.创建一个测试类TestPerson</p>
+<p>实例化Person类对象，并调用其display方法。</p>
+<p>打印水仙花数</p>
+<p>我创建了两个java文件</p>
+<p>一个名字是TestPerson.java 装main</p>
+<p>一个名字是Person.java 装Person类</p>
+<p>Person类中有两个基本属性</p>
+<p>我设置为了 int id 和 String name</p>
+<p>然后有两个构造方法</p>
+<p>一个有参构造方法</p>
+<p>一个无参构造方法<br>    public Person(){<br>        &#x2F;&#x2F;无参构造函数<br>    }</p>
+<pre><code>public Person(int id,String name)&#123;
+    this.id=id;
+    this.name=name;
+    //有参构造函数
+&#125;
+然后重构了toString方法
+public String toString()&#123;
+    return &quot;id:&quot;+this.id+&quot; name:&quot;+this.name;
+&#125;
+写了display()方法
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/25/DAY-47/" data-id="cljadkwej0026rotkgiuw4bk6" data-title="DAY 47" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-46" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/06/23/DAY-46/" class="article-date">
-  <time class="dt-published" datetime="2023-06-23T14:43:03.000Z" itemprop="datePublished">2023-06-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/23/DAY-46/">DAY 46</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>interface 接口</p>
-<p>implementation 实现</p>
-<p>override 覆盖</p>
-<p>abstract class 抽象类</p>
-<p>pure virtual class 纯虚方法</p>
-<p>deferred 递延</p>
-<p>syntax 语法</p>
-<p>定义一个纯虚函数的时候</p>
-<p>比如说Shape</p>
-<h2 id="需要将该方法-x3D-0"><a href="#需要将该方法-x3D-0" class="headerlink" title="需要将该方法&#x3D;0"></a>需要将该方法&#x3D;0</h2><p>see you again</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/23/DAY-46/" data-id="cljadkwen002irotk2vbl3tct" data-title="DAY 46" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-45" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/06/23/DAY-45/" class="article-date">
-  <time class="dt-published" datetime="2023-06-22T19:54:58.000Z" itemprop="datePublished">2023-06-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/23/DAY-45/">DAY 45</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Binding 绑定</p>
-<p>dynamic 动态的</p>
-<p>创建了两个对象之后，不能够直接进行赋值，比如说</p>
-<p>class1 a;</p>
-<p>class2 b;</p>
-<p>a&#x3D;b 实际上a仍然是class1</p>
-<p>overriding 重写</p>
-<p>Shadowing 遮蔽</p>
-<p>Redefinition 重定义</p>
-<p>Polymorphism 多态性</p>
-<h2 id="Abstract-Classes-抽象类"><a href="#Abstract-Classes-抽象类" class="headerlink" title=" Abstract Classes 抽象类"></a> Abstract Classes 抽象类</h2><p> see you again</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/23/DAY-45/" data-id="cljadkwem002erotk8dpwe2w5" data-title="DAY 45" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-44" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/06/21/DAY-44/" class="article-date">
-  <time class="dt-published" datetime="2023-06-21T08:53:59.000Z" itemprop="datePublished">2023-06-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/21/DAY-44/">DAY 44</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>分别定义Person类、Employee类、Student类以及在职研<br>究生类PartTime_Graduate_Student，并且画出相应的继承层<br>次图</p>
-<p>显然Person是基类</p>
-<p>而student和Employee在第二层</p>
-<p>PartTime_Graduate_Student在第三层</p>
-<p>这里用到虚基类的知识，第三层是在职研究生既是Employee，也是student</p>
-<p>#include <iostream></p>
-<p>using namespace std;</p>
-<p>class Person{<br>private:<br>        string name;<br>        char sex;<br>public:<br>     Person(string a,char s):name(a),sex(s){<br>     }<br>    virtual ~Person{</p>
-<pre><code>&#125;
-virtual void info()&#123;
-cout &lt;&lt; &quot;名字是&quot; &lt;&lt; name ;
-cout &lt;&lt; &quot;性别是&quot; &lt;&lt; sex;
+ public void display()&#123;
+    System.out.println(this.toString());
 &#125;
 </code></pre>
-<p>};<br>class student:virtual public Person{<br>private:<br>     int number;<br>     int grade;<br>public:<br>    student(int a,int g ):number(a),grade(g){<br>    }<br>    ~student(){<br>    }<br>    void info(){<br>     Person.info();<br>     cout &lt;&lt; “学号是” &lt;&lt; number&lt;&lt; endl;<br>     cout &lt;&lt; “年级是” &lt;&lt; grade &lt;&lt;endl;<br>    }<br>};<br>class Employee:virtual public Person{<br>private:<br>    int worknum;<br>    double wage;<br>    string job;<br>public:<br>    Employee(int a,double b , string c):worknum(a),wage(b),job(c){<br>    }<br>    ~Employee(){<br>    }<br>    void info (){<br>    Person.info();<br>    cout &lt;&lt; “工号是” &lt;&lt;worknum&lt;&lt; endl;<br>    cout &lt;&lt; “工资是” &lt;&lt;wage &lt;&lt;endl;<br>    cout &lt;&lt; “工作是” &lt;&lt;job &lt;&lt; endl ;<br>    }</p>
-<p>};<br>class PartTime_Graduate_Student:public Employee,public student{<br>private:</p>
-<p>public:<br>    void info (){<br>         student.info();<br>    Employee.info();</p>
-<pre><code>&#125;
+<p>在测试类TestPerson中实例化Person类对象，并调用其display方法。</p>
+<p>写了daffodilThree以打印水仙花数</p>
+<pre><code>public static void daffodilThree()&#123;
+    for(int i=100;i&lt;1000;i++)&#123;
+        int a=i/100;
+        int b=i/10%10;
+        int c=i%10;
+        if(i==a*a*a+b*b*b+c*c*c)&#123;
+            System.out.println(i);
+        &#125;
+    &#125;
+&#125;
+然后在main中调用
+以下是我的整段代码
+
+public static void main(String[] args) &#123;
+    Person person=new Person(1,&quot;张三&quot;);
+    person.display();
+    daffodilThree();
+&#125;
+运行结果
+id:1 name:张三
+153
+370
+371
+407
+Process finished with exit code 0
+代码如下
+TestPerson.java
+import java.util.Scanner;
+
+public class TestPerson &#123;
+    public static void main(String[] args) &#123;
+        Person person=new Person(1,&quot;张三&quot;);
+        person.display();
+        daffodilThree();
+    &#125;
+    public static void daffodilThree()&#123;
+        for(int i=100;i&lt;1000;i++)&#123;
+            int a=i/100;
+            int b=i/10%10;
+            int c=i%10;
+            if(i==a*a*a+b*b*b+c*c*c)&#123;
+                System.out.println(i);
+            &#125;
+        &#125;
+    &#125;
+&#125;
+Person.java
+public class Person &#123;
+    int id;
+    String name;
+    public Person()&#123;
+        //无参构造函数
+    &#125;
+
+    public Person(int id,String name)&#123;
+        this.id=id;
+        this.name=name;
+        //有参构造函数
+    &#125;
+    public String toString()&#123;
+        return &quot;id:&quot;+this.id+&quot; name:&quot;+this.name;
+    &#125;
+    public void display()&#123;
+        System.out.println(this.toString());
+    &#125;
+&#125;
+代码上传到了github上
 </code></pre>
-<p>};<br>int main()<br>{<br>  PartTime_Graduate_Student nihao(“李伯辉”,”男”,19,1,1,10000,”程序员”);<br> nihao.info();</p>
-<pre><code>return 0;
-</code></pre>
-<p>}</p>
-<p>首先，在派生类引用基类的成员函数的时候需要用::而不是.</p>
-<p>其次在两个派生类的构造函数中初始化错误，应该引用虚基类的构造函数</p>
-<p>并且在最小的那个派生类中的构造函数初始化成员数值也出现了错误</p>
-<p>PartTime_Graduate_Student(string a, char b ,int d ,int e ,int f ,double g ,string h):Person(a,b),student(d,e),Employee(f,g,h)<br>        {<br>    }<br>上面是重写的一个派生类，但仍然有错误</p>
-<p>再用student和Employee进行构造函数对数值进行初始化的时候要把之前的虚基类中的两个私有成员数值也加上 </p>
-<p>PartTime_Graduate_Student(string a, char b ,int d ,int e ,int f ,double g ,string h):Person(a,b),student(a,b,d,e),Employee(a,b,f,g,h)<br>            {<br>        }<br>修改好之后的函数</p>
-<p>并且，由于b是char类型所以男应该用单引号括‘c’，而不是双引号”c”</p>
-<p>一开始输出错误了，但是加上endl又正常输出了不知道为什么</p>
-<p>如果不使用 &lt;&lt; endl，输出的内容将保持在输出缓冲区中，直到达到缓冲区刷新的条件（例如缓冲区填满或遇到换行符等），才会将内容显示在终端上。因此，如果不加 &lt;&lt; endl，输出可能会被缓冲而不立即显示。</p>
-<p>派生类要用虚基类的成员时，构造函数中要把基类的成员也写上</p>
 <hr>
-<p>see you again</p>
+<p>SEE YOU AGAIN</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/21/DAY-44/" data-id="cljadkwel002crotk3vni87lh" data-title="DAY 44" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/08/24/DAY-60/" data-id="cllow2eeo000kmstk2cm5g5an" data-title="DAY 60" class="article-share-link">Share</a>
       
       
       
@@ -300,10 +217,10 @@ cout &lt;&lt; &quot;性别是&quot; &lt;&lt; sex;
 
 
   
-    <article id="post-DAY-43" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-DAY-59" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/06/20/DAY-43/" class="article-date">
-  <time class="dt-published" datetime="2023-06-20T09:15:24.000Z" itemprop="datePublished">2023-06-20</time>
+    <a href="/2023/08/10/DAY-59/" class="article-date">
+  <time class="dt-published" datetime="2023-08-09T16:57:25.000Z" itemprop="datePublished">2023-08-10</time>
 </a>
     
   </div>
@@ -314,7 +231,7 @@ cout &lt;&lt; &quot;性别是&quot; &lt;&lt; sex;
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/20/DAY-43/">DAY 43</a>
+      <a class="p-name article-title" href="/2023/08/10/DAY-59/">DAY 59</a>
     </h1>
   
 
@@ -322,30 +239,14 @@ cout &lt;&lt; &quot;性别是&quot; &lt;&lt; sex;
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>不搞faceswap了，身体受不了</p>
-<p>若有似无得GPU我真哮了</p>
-<p>最近身体很不舒服，嘴巴疼，眼睛疼</p>
-<p>整个人也很焦虑，一年了还没有养成生活习惯也是挺离谱的</p>
-<p>说实话根本没有在这方面下过什么努力</p>
-<p>个人觉得c++多态性方面比较重要这里特别复习一下，重做一下实验</p>
-<p>题目<br>实验九：多态性<br>实验目的：<br>（1）了解多态性的概念<br>（2）了解虚函数的作用和使用方法<br>（3）了解纯虚函数和抽象类的概念和使用方法<br>实验内容：<br>声明类Shape以及它的3个派生类：Circle、Square、Rectangle，<br>用虚函数分别计算几种图形的面积、周长，编写程序，建立基<br>类指针数组，每个指针均指向一个派生类对象，利用基类指针<br>遍历元素对象，求取所有图形面积之和。请绘制UML类图</p>
-<p>#include <iostream><br>const double pi&#x3D; 3.1415926;<br>using namespace std;</p>
-<p>class Shape {<br>public:<br>    Shape(){<br>    }<br>    ~Shape(){<br>    }<br>    virtual double perimeter(){<br>    }<br>    virtual double area(){<br>    }<br>};<br>class Circle:public Shape{<br>private:<br>double radius;<br>public:<br>    Circle(double r):radius(r){<br>    }<br>    ~Circle(){<br>    }<br>     double perimeter(){<br>    return 2<em>pi</em>radius;<br>    }<br>    double area(){<br>    return pi<em>radius</em>radius;<br>    }<br>};<br>class Square:public Shape{<br>private:<br>double side;<br>public:<br>    Square(double sid):side(sid){<br>    }<br>    ~Square(){</p>
-<pre><code>&#125;
-double perimeter()&#123;
-return side*4;
-&#125;
-double area()&#123;
-    return side*side;
-&#125;
-</code></pre>
-<p>};<br>class Rectangle:public Shape{<br>private:<br>    double length;<br>    double width;<br>public:<br>    Rectangle(double len,double wid){<br>    len&#x3D; length;<br>    wid&#x3D; width;<br>    }<br>    ~Rectangle(){<br>    }<br>     double perimeter(){<br>    return (length+width)<em>2;<br>    }<br>    double area(){<br>          return length</em>width;<br>    }<br>};</p>
-<h2 id="int-main-x2F-x2F-Shape-有三个派生类-x2F-x2F-创造一个基类指针数组-Shape-nihao-3-nihao-0-x3D-new-Circle-2-nihao-1-x3D-new-Square-2-nihao-2-x3D-new-Rectangle-3-2-cout-lt-lt-nihao-0-area-cout-lt-lt-nihao-0-perimeter-return-0-自己写的多态性代码1-没有进行delete操作-没有进行delete操作的话会导致内存泄漏，会导致程序内存占用增加，造成额外的内存压力2-对于指针对象数组的函数引用要用箭头进行指向-gt-反思：类都写对了，有相应的构造函数析构函数和对应的成员函数实现计算周长和面积的功能"><a href="#int-main-x2F-x2F-Shape-有三个派生类-x2F-x2F-创造一个基类指针数组-Shape-nihao-3-nihao-0-x3D-new-Circle-2-nihao-1-x3D-new-Square-2-nihao-2-x3D-new-Rectangle-3-2-cout-lt-lt-nihao-0-area-cout-lt-lt-nihao-0-perimeter-return-0-自己写的多态性代码1-没有进行delete操作-没有进行delete操作的话会导致内存泄漏，会导致程序内存占用增加，造成额外的内存压力2-对于指针对象数组的函数引用要用箭头进行指向-gt-反思：类都写对了，有相应的构造函数析构函数和对应的成员函数实现计算周长和面积的功能" class="headerlink" title="int main(){ &#x2F;&#x2F;Shape 有三个派生类 &#x2F;&#x2F;创造一个基类指针数组 Shape *nihao[3]; nihao[0]&#x3D;new Circle(2); nihao[1]&#x3D;new Square(2); nihao[2]&#x3D;new Rectangle(3,2) cout &lt;&lt; nihao[0].area(); cout &lt;&lt; nihao[0].perimeter();    return 0;}自己写的多态性代码1.没有进行delete操作,没有进行delete操作的话会导致内存泄漏，会导致程序内存占用增加，造成额外的内存压力2.对于指针对象数组的函数引用要用箭头进行指向-&gt;反思：类都写对了，有相应的构造函数析构函数和对应的成员函数实现计算周长和面积的功能"></a>int main()<br>{<br> &#x2F;&#x2F;Shape 有三个派生类<br> &#x2F;&#x2F;创造一个基类指针数组<br> Shape *nihao[3];<br> nihao[0]&#x3D;new Circle(2);<br> nihao[1]&#x3D;new Square(2);<br> nihao[2]&#x3D;new Rectangle(3,2)<br> cout &lt;&lt; nihao[0].area();<br> cout &lt;&lt; nihao[0].perimeter();<br>    return 0;<br>}<br>自己写的多态性代码<br>1.没有进行delete操作,没有进行delete操作的话会导致内存泄漏，会导致程序内存占用增加，造成额外的内存压力<br>2.对于指针对象数组的函数引用要用箭头进行指向-&gt;<br>反思：类都写对了，有相应的构造函数析构函数和对应的成员函数实现计算周长和面积的功能</h2><p>see you again</p>
+        <p>sql注入的考题</p>
+<p>sql注入</p>
+<p>sql语句注入实际上考研一个人对于数据库程序执行的相关代码的理解</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/20/DAY-43/" data-id="cljadkwei0022rotkfbsvbf6c" data-title="DAY 43" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/08/10/DAY-59/" data-id="cllow2een000imstkhk1o1pc9" data-title="DAY 59" class="article-share-link">Share</a>
       
       
       
@@ -359,10 +260,10 @@ double area()&#123;
 
 
   
-    <article id="post-DAY-42" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-DAY-58" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/06/18/DAY-42/" class="article-date">
-  <time class="dt-published" datetime="2023-06-18T04:07:19.000Z" itemprop="datePublished">2023-06-18</time>
+    <a href="/2023/08/04/DAY-58/" class="article-date">
+  <time class="dt-published" datetime="2023-08-04T12:36:52.000Z" itemprop="datePublished">2023-08-04</time>
 </a>
     
   </div>
@@ -373,7 +274,7 @@ double area()&#123;
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/18/DAY-42/">DAY 42</a>
+      <a class="p-name article-title" href="/2023/08/04/DAY-58/">DAY 58</a>
     </h1>
   
 
@@ -381,67 +282,13 @@ double area()&#123;
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>你好</p>
-<p>写的add_new_card函数</p>
-<p>void CardSystem::add_new_card(Card&amp; new_card) {<br>    string name &#x3D; new_card.get_name();<br>    int ret &#x3D; search(name);&#x2F;&#x2F;-2:找不到，-1:挂失，0:找到<br>    if (ret &#x3D;&#x3D; -1) {<br>        cout &lt;&lt; “your card is lost!!! go to find it!!!” &lt;&lt; endl;<br>        return;<br>    }<br>    if (ret &gt;&#x3D; 0) {<br>        cout &lt;&lt; “the card is exited!!!” &lt;&lt; endl;<br>        return;<br>    }<br>    cards_array_.push_back(new_card);<br>    cout &lt;&lt; “add a new card successfully!!!” &lt;&lt; endl;<br>}</p>
-<p>状态-2是找不到这张卡可以进行创建卡，0是已经找到这张卡不能建卡，-1是卡已经挂失，需要去恢复状态</p>
-<p>有几种使用的功能<br>1.建卡<br>  建卡失败<br>  建卡成功<br>2.充值<br>  充值失败<br>  充值成功<br>3.余额查询</p>
-<p>2.在主函数和重载(istream，注意不是ifstream)&gt;&gt;里，输入int可能输入char，需要用try..catch…throw; 命令行输入时，多输入错误类型，检查程序的错误判断是否完善，记得记录每一个bug；</p>
-<p>主函数和重载istream里面，输入int可能输入char</p>
-<p>重载friend istream&amp; operator&gt;&gt;(istream&amp; cin, Card&amp; input);这里输入的值可能是char而不是int</p>
-<p>一个友元函数，重载了输入流操作中的输入流操作符’&gt;&gt;’，使其能够从输入流读取数据，并且将数据保存到card对象当中</p>
-<p>该函数接受两个参数，一个是cin表示输入流对象，表示标准输入流</p>
-<p>Card&amp; input表示要读取数据的Card对象的引用</p>
-<p>函数返回一个输入流对象(istream&amp;)，允许在多个输入操作符连接在一起时进行链式输入</p>
-<p>该函数的实现将根据Card对象的内部结构和输入格式，从输入流中提取必要的数据，并将其存储在Card对象的成员变量中</p>
-<p>为什么要用友元函数？</p>
-<p>为了更好地访问私有成员和保护成员 operator&gt;&gt;函数可以直接访问Card类的私有成员变量value，以读取和设置其值</p>
-<p>具体的实现为：</p>
-<pre><code>friend istream&amp; operator&gt;&gt;(istream&amp; cin, Card&amp; input);//重载从命令行输入
-</code></pre>
-<p>istream&amp; operator&gt;&gt;(istream&amp; cin, Card&amp; input) {<br>    cout &lt;&lt; “please enter the name:\n”;<br>    cin &gt;&gt; input.name_;<br>    cout &lt;&lt; “please choose the type (1. student, 2. teacher)\n”;<br>    while (cin &gt;&gt; input.type_ &amp;&amp; (input.type_ &lt; 1 || input.type_ &gt; 2)) {<br>        cout &lt;&lt; “wrong type!!! please enter again!”;<br>    }<br>    cout &lt;&lt; “please enter the number(&gt;0): \n”;<br>    while (cin &gt;&gt; input.number_ &amp;&amp; input.number_ &lt; 0) {<br>        cout &lt;&lt; “wrong number(&gt;0)!!! please enter again!”;<br>    }<br>    cout &lt;&lt; “please choose the gender (1. male, 2. female)\n”;<br>    while (cin &gt;&gt; input.gender_ &amp;&amp; (input.gender_ &lt; 1 || input.gender_ &gt; 2)) {<br>        cout &lt;&lt; “wrong gender!!! please enter again!”;<br>    }<br>    cout &lt;&lt; “please enter the place:\n”;<br>    cin &gt;&gt; input.place_;<br>    return cin;<br>}<br>我的目的就是对以上重载的实现进行一个容错处理</p>
-<p>ifstream与istream的区别</p>
-<p>ifstream是istream的派生类，继承了istream的所有方法和操作符，并增加了一些用于从文件读取数据的特定方法</p>
-<p>总结：istream是输入流的基类，提供了通用的输入功能，而ifstream是从文件中读取数据的特化输入流类。</p>
-<p>这是一个重载输入流运算符，用于从输入流中读取数据并将其存储到Card对象的相应成员变量中</p>
-<p>istream&amp; operator&gt;&gt;(istream&amp; cin, Card&amp; input) {<br>    try {<br>        cout &lt;&lt; “Please enter the name:\n”;<br>        cin &gt;&gt; input.name_;</p>
-<pre><code>    cout &lt;&lt; &quot;Please choose the type (1. student, 2. teacher):\n&quot;;
-    while (!(cin &gt;&gt; input.type_) || (input.type_ &lt; 1 || input.type_ &gt; 2)) &#123;
-        throw runtime_error(&quot;Invalid type! Please enter again: &quot;);
-    &#125;
-    
-    cout &lt;&lt; &quot;Please enter the number (&gt;0):\n&quot;;
-    while (!(cin &gt;&gt; input.number_) || input.number_ &lt; 0) &#123;
-        throw runtime_error(&quot;Invalid number (&gt;0)! Please enter again: &quot;);
-    &#125;
-    
-    cout &lt;&lt; &quot;Please choose the gender (1. male, 2. female):\n&quot;;
-    while (!(cin &gt;&gt; input.gender_) || (input.gender_ &lt; 1 || input.gender_ &gt; 2)) &#123;
-        throw runtime_error(&quot;Invalid gender! Please enter again: &quot;);
-    &#125;
-    
-    cout &lt;&lt; &quot;Please enter the place:\n&quot;;
-    cin &gt;&gt; input.place_;
-&#125; catch (const exception&amp; e) &#123;
-    // 捕获异常并处理错误消息
-    cerr &lt;&lt; &quot;Exception caught: &quot; &lt;&lt; e.what() &lt;&lt; endl;
-    // 清除错误状态和输入流
-    cin.clear();
-    cin.ignore(numeric_limits&lt;streamsize&gt;::max(), &#39;\n&#39;);
-&#125;
-
-return cin;
-</code></pre>
-<p>}</p>
-<p>以上代码使用try-catch块来捕获可能抛出的异常，当输入不满足要求的时候，通过throw语句抛出runtime_error类型的异常，异常消息作为参数传递</p>
-<p>在catch块中，异常被捕获并处理，错误消息被输出到标准错误流(‘cerr’),并使用cin.clear()来清除输入流的错误状态标志</p>
-<p>cin.ignore(numeric_limits<streamsize>::max(), ‘\n’)用于忽略剩余的输入内容。</p>
-<h2 id="这样，在发生异常时，会显示错误消息并清除错误状态，以便进行下一次输入。"><a href="#这样，在发生异常时，会显示错误消息并清除错误状态，以便进行下一次输入。" class="headerlink" title="这样，在发生异常时，会显示错误消息并清除错误状态，以便进行下一次输入。"></a>这样，在发生异常时，会显示错误消息并清除错误状态，以便进行下一次输入。</h2><p>see you again</p>
+        <p>每日算法题1</p>
+<p>两数之和</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/18/DAY-42/" data-id="cljadkwej0024rotk28ss2l92" data-title="DAY 42" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/08/04/DAY-58/" data-id="cllow2eel000emstkefys1824" data-title="DAY 58" class="article-share-link">Share</a>
       
       
       
@@ -455,10 +302,10 @@ return cin;
 
 
   
-    <article id="post-DAY-41" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-DAY-57" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/06/17/DAY-41/" class="article-date">
-  <time class="dt-published" datetime="2023-06-16T16:49:09.000Z" itemprop="datePublished">2023-06-17</time>
+    <a href="/2023/08/04/DAY-57/" class="article-date">
+  <time class="dt-published" datetime="2023-08-03T16:29:33.000Z" itemprop="datePublished">2023-08-04</time>
 </a>
     
   </div>
@@ -469,7 +316,7 @@ return cin;
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/17/DAY-41/">DAY 41</a>
+      <a class="p-name article-title" href="/2023/08/04/DAY-57/">DAY 57</a>
     </h1>
   
 
@@ -477,53 +324,13 @@ return cin;
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>嘶，很快考试了还是复习c++把</p>
-<p>真的很怕挂了，什么都没学跟废物似得</p>
-<p>STL的基本组件<br> • 容器（container）<br> • 迭代器（iterator）<br> • 函数对象（function object）<br> • 算法（algorithms）</p>
-<p>将迭代器作为算法的参数，通过迭代器来访问容器而不是把容器直接作为算法的参数</p>
-<p>将函数对象作为算法的参数而不是将函数所执行的运算作为算法的一部分？</p>
-<p>#include <iostream><br>#include <algorithm><br>#include <vector></p>
-<p>&#x2F;&#x2F; 定义一个函数对象（Functor）<br>class MultiplyBy {<br>private:<br>    int factor;<br>public:<br>    MultiplyBy(int factor) : factor(factor) {}</p>
-<pre><code>// 重载函数调用运算符
-int operator()(int value) const &#123;
-    return value * factor;
-&#125;
-</code></pre>
-<p>};</p>
-<p>int main() {<br>    std::vector<int> numbers &#x3D; {1, 2, 3, 4, 5};<br>    int factor &#x3D; 2;</p>
-<pre><code>// 创建函数对象
-MultiplyBy multiply(factor);
-
-// 使用函数对象作为算法参数，而不是将函数所执行的运算作为算法的一部分
-std::transform(numbers.begin(), numbers.end(), numbers.begin(), multiply);
-
-// 打印结果
-for (const auto&amp; number : numbers) &#123;
-    std::cout &lt;&lt; number &lt;&lt; &quot; &quot;;
-&#125;
-std::cout &lt;&lt; std::endl;
-
-return 0;
-</code></pre>
-<p>}<br>在    MultiplyBy multiply(factor);<br>这一步的时候，multiply这个对象的私有成员factor的值被设置为2</p>
-<pre><code>std::transform(numbers.begin(), numbers.end(), numbers.begin(), multiply);
-</code></pre>
-<p>这一步的时候执行算法numbers向量中的每一个元素作为参数传递给函数对象的函数调用运算符</p>
-<p>容器（Containers）：STL 提供了多种容器类，如向量（vector）、列表（list）、映射（map）、集合（set）等，用于存储和管理数据。这些容器提供了不同的特性和操作，以满足各种需求。</p>
-<p>算法（Algorithms）：STL 提供了大量的算法，如排序、查找、遍历、变换等，可用于对容器中的数据进行操作和处理。这些算法是通用的，适用于各种容器类型，而无需开发者自己实现。  </p>
-<p>异常处理</p>
-<p>抛掷异常的程序段<br>throw 表达式;</p>
-<p>捕获并处理异常的程序段<br>try<br>复合语句—保护段<br>catch（异常声明）<br>复合语句—异常处理程序<br>catch（异常声明）<br>复合语句</p>
-<p>将可能抛出异常的程序段嵌在try块之中。通过<br>正常的顺序执行到达try语句，然后执行try块内<br>的保护段</p>
-<p>如果在保护段执行期间没有引起异常，那么跟在<br>try块后的catch子句就不执行。程序从try块后<br>的最后一个catch子句后面的语句继续执行</p>
-<p>理解程度不行，完成度也不够，二十分钟过去了</p>
-<p>为什么呢?</p>
-<h2 id="这些b字跟没有见过一样"><a href="#这些b字跟没有见过一样" class="headerlink" title="这些b字跟没有见过一样"></a>这些b字跟没有见过一样</h2><p>see you again </p>
+        <p>什么都没做</p>
+<h2 id="do-nothing"><a href="#do-nothing" class="headerlink" title="do nothing "></a>do nothing </h2><p>see you again</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/17/DAY-41/" data-id="cljadkwek0028rotkdr9u3zp3" data-title="DAY 41" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/08/04/DAY-57/" data-id="cllow2eem000gmstk6vbhg9dv" data-title="DAY 57" class="article-share-link">Share</a>
       
       
       
@@ -537,10 +344,10 @@ return 0;
 
 
   
-    <article id="post-DAY-40" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-DAY-56" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/06/15/DAY-40/" class="article-date">
-  <time class="dt-published" datetime="2023-06-15T11:08:09.000Z" itemprop="datePublished">2023-06-15</time>
+    <a href="/2023/08/01/DAY-56/" class="article-date">
+  <time class="dt-published" datetime="2023-08-01T12:04:10.000Z" itemprop="datePublished">2023-08-01</time>
 </a>
     
   </div>
@@ -551,7 +358,7 @@ return 0;
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/15/DAY-40/">DAY 40</a>
+      <a class="p-name article-title" href="/2023/08/01/DAY-56/">DAY 56</a>
     </h1>
   
 
@@ -559,20 +366,12 @@ return 0;
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>一个好消息跟一个好消息，</p>
-<p>通宵供电力，好生活又要回来力</p>
-<p>一键部署站点discuz</p>
-<p>数据库名：sql…</p>
-<p>用户：sql…</p>
-<p>密码：PY…</p>
-<p>一键部署一个论坛网站，数据库的服务器地址选择它默认的就行，数据库的用户名和密码填一开始生成的那个就行</p>
-<hr>
-<p>see you again</p>
+        <h2 id="明天学数据库"><a href="#明天学数据库" class="headerlink" title="明天学数据库"></a>明天学数据库</h2><p>see you again</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/15/DAY-40/" data-id="cljadkwei0020rotk1f8kccky" data-title="DAY 40" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/08/01/DAY-56/" data-id="cllow2eej000amstkce9h7nnl" data-title="DAY 56" class="article-share-link">Share</a>
       
       
       
@@ -586,10 +385,10 @@ return 0;
 
 
   
-    <article id="post-DAY-39" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-DAY-55" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/06/14/DAY-39/" class="article-date">
-  <time class="dt-published" datetime="2023-06-14T08:10:34.000Z" itemprop="datePublished">2023-06-14</time>
+    <a href="/2023/07/19/DAY-55/" class="article-date">
+  <time class="dt-published" datetime="2023-07-19T13:40:48.000Z" itemprop="datePublished">2023-07-19</time>
 </a>
     
   </div>
@@ -600,7 +399,7 @@ return 0;
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/14/DAY-39/">DAY 39</a>
+      <a class="p-name article-title" href="/2023/07/19/DAY-55/">DAY 55</a>
     </h1>
   
 
@@ -608,51 +407,84 @@ return 0;
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>二十分钟复习一个实验，十分钟反思一个实验</p>
-<p>加油啊什么都不会的大哥哥</p>
-<p>开始总是很困难，专注的代价是很大的<br>#include <iostream></p>
-<p>using namespace std;<br>const float Pi&#x3D;3.1415926;<br>class Shape {<br>private:</p>
-<p>public:<br>    Shape(){<br>    }<br>    ~Shape(){<br>    }<br>    virtual float countArea(){<br>    }<br>    virtual float countPerimeter(){<br>    }<br>};<br>class Circle:public Shape{<br>private:<br>    float radius;</p>
-<p>public:<br>    Circle(float rad){<br>    radius&#x3D;rad;<br>    }<br>    float countArea(){<br>    return Pi<em>radius</em>radius;<br>       }<br>  float countPerimeter(){<br>     return 2<em>Pi</em>radius;<br>    }</p>
-<p>};<br>class Square:public Shape{<br>private:<br>    float side;<br>public:<br>    Square(float sid){<br>     side&#x3D;sid;<br>    }<br>    float countArea(){<br>    return side<em>side;<br>    }<br>    float countPerimeter(){<br>     return side</em>4;<br>     }<br>};<br>class Rectangle:public Shape{<br>private:<br>    float width;<br>    float length;<br>public:<br>    Rectangle(float lon,float wid){<br>    width&#x3D;wid;<br>    length&#x3D;lon;<br>    }<br>    float countArea(){<br>    return length*width;<br>    }<br>      float countPerimeter(){<br>     return (length+width)<em>2;<br>    }<br>};<br>int main()<br>{<br>Shape</em>example;<br>example&#x3D; new Circle(3.5);<br>cout &lt;&lt; “面积是” &lt;&lt; example-&gt;countArea();<br>    return 0;<br>}</p>
-<p>反思</p>
-<p>1.没有使用析构函数，并且基类的析构函数也要加virtual关键词</p>
-<p>这是因为将~Shape()声明为虚拟析构函数是为了支持多态性。当基类指针指向派生类对象时，使用虚拟析构函数可以确保通过基类指针正确销毁派生类对象。</p>
-<p>在C++中，当派生类对象通过基类指针进行删除时，如果基类的析构函数不是虚拟的，则只会调用基类的析构函数，而不会调用派生类的析构函数。这可能导致内存泄漏和未定义的行为。</p>
-<p>因此，为了正确地释放派生类的资源，应将基类的析构函数声明为虚拟的。</p>
-<p>2.构造函数很不熟练有两种命名形式</p>
-<p>class Circle:public Shape{<br>private:<br>    float radius;</p>
-<p>public:<br>    Circle(float rad){<br>    radius&#x3D;rad;<br>    }<br>    ~Circle(){}<br>};</p>
-<p>或</p>
-<p>class Circle:public Shape{<br>private:<br>    float radius;</p>
-<p>public:<br>    Circle(float rad):rad(radius){<br>    radius&#x3D;rad;<br>    }<br>    ~Circle(){}<br>};</p>
-<p>如果没有私有成员的话什么都不用写但仍然需要有构造函数</p>
-<p>class Circle:public Shape{<br>public:<br>    Circle(float rad):rad(radius){<br>    radius&#x3D;rad;<br>    }<br>    ~Circle(){}<br>};<br>3.在main函数中用Shape*example 而不是用Shape example 是为了使用指针的多态性质</p>
-<p>基类指针Shape* example可以指向派生类的对象，从而通过基类指针调用派生类的虚函数，实现多态性的效果</p>
-<p>由此可见，多态性在遍历元素对象方面有着无与伦比的优越性</p>
-<p>4.增强理解：多态性与new运算符</p>
-<p>使用new运算符可以创建对象的实例。在许多面向对象编程语言中，我们可以使用new运算符来实例化一个类，并创建该类的对象。通过实例化一个类，我们可以使用该类的属性和方法。</p>
-<p>多态性的概念使得我们可以使用父类的引用来引用子类的对象，并根据实际的对象类型调用相应的方法。</p>
-<p>5.如下，由于example是一个指针，所以需要在nihao前面加上&amp;<br>Shape<em>example;<br>Circle nihao(3.4);<br>example&#x3D; nihao;<br>改为<br>Shape</em>example;<br>Circle nihao(3.4);<br>example&#x3D; &amp;nihao;</p>
-<p>6.此外，在使用example调用countArea()函数时，应使用箭头操作符（-&gt;）而不是点操作符（.），因为example是一个指针。</p>
-<p>原因是example是一个指向Shape对象的指针，而不是一个Shape对象本身。箭头操作符用于通过指针访问成员函数。</p>
-<p>7.在使用example调用countArea()函数之前，需要检查example是否为nullptr，以避免空指针解引用错误。</p>
-<p>if (example !&#x3D; nullptr) {<br>        cout &lt;&lt; “面积是” &lt;&lt; example-&gt;countArea();<br>    }<br>8.最后一定要进行delete的操作</p>
-<p>修改之后的代码为#include <iostream><br>using namespace std;</p>
-<p>const float Pi &#x3D; 3.14159;</p>
-<p>class Shape {<br>public:<br>    Shape() {}<br>    virtual ~Shape() {}<br>    virtual float countArea() {}<br>    virtual float countPerimeter() {}<br>};</p>
-<p>class Circle : public Shape {<br>private:<br>    float radius;</p>
-<p>public:<br>    Circle(float rad) {<br>        radius &#x3D; rad;<br>    }<br>    ~Circle() {<br>    }<br>    float countArea() {<br>        return Pi * radius * radius;<br>    }<br>    float countPerimeter() {<br>        return 2 * Pi * radius;<br>    }<br>};</p>
-<p>class Square : public Shape {<br>private:<br>    float side;</p>
-<p>public:<br>    Square(float sid) {<br>        side &#x3D; sid;<br>    }<br>    ~Square() {<br>    }<br>    float countArea() {<br>        return side * side;<br>    }<br>    float countPerimeter() {<br>        return side * 4;<br>    }<br>};</p>
-<p>class Rectangle : public Shape {<br>private:<br>    float width;<br>    float length;</p>
-<p>public:<br>    Rectangle(float lon, float wid) {<br>        width &#x3D; wid;<br>        length &#x3D; lon;<br>    }<br>     ~Rectangle() {<br>    }<br>    float countArea() {<br>        return length * width;<br>    }<br>    float countPerimeter() {<br>        return (length + width) * 2;<br>    }<br>};</p>
-<h2 id="int-main-Shape-example-Circle-nihao-3-4-example-x3D-amp-nihao-if-example-x3D-nullptr-cout-lt-lt-“面积是”-lt-lt-example-gt-countArea-example-x3D-new-Rectangle-5-7-if-example-x3D-nullptr-cout-lt-lt-“面积是”-lt-lt-example-gt-countArea-delete-example-return-0"><a href="#int-main-Shape-example-Circle-nihao-3-4-example-x3D-amp-nihao-if-example-x3D-nullptr-cout-lt-lt-“面积是”-lt-lt-example-gt-countArea-example-x3D-new-Rectangle-5-7-if-example-x3D-nullptr-cout-lt-lt-“面积是”-lt-lt-example-gt-countArea-delete-example-return-0" class="headerlink" title="int main() {    Shape* example;    Circle nihao(3.4);    example &#x3D; &amp;nihao;    if (example !&#x3D; nullptr) {        cout &lt;&lt; “面积是” &lt;&lt; example-&gt;countArea();    }    example &#x3D; new Rectangle(5, 7);    if (example !&#x3D; nullptr) {        cout &lt;&lt; “面积是” &lt;&lt; example-&gt;countArea();    }    delete example;    return 0;}"></a>int main() {<br>    Shape* example;<br>    Circle nihao(3.4);<br>    example &#x3D; &amp;nihao;<br>    if (example !&#x3D; nullptr) {<br>        cout &lt;&lt; “面积是” &lt;&lt; example-&gt;countArea();<br>    }<br>    example &#x3D; new Rectangle(5, 7);<br>    if (example !&#x3D; nullptr) {<br>        cout &lt;&lt; “面积是” &lt;&lt; example-&gt;countArea();<br>    }<br>    delete example;<br>    return 0;<br>}</h2><p>see you again</p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/07/19/DAY-55/" data-id="cllow2eeh0005mstk4mehf397" data-title="DAY 55" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-54" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/07/19/DAY-54/" class="article-date">
+  <time class="dt-published" datetime="2023-07-19T12:56:32.000Z" itemprop="datePublished">2023-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/07/19/DAY-54/">DAY 54</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>昨天去玩了没有更新今天补回</p>
+<p>went to play yesterday without updating, today make up for it.</p>
+<p>dcl<br>即数据库的sql控制语法</p>
+<p>感觉非常简单，只要不断重复就能很容易地记住</p>
+<p>drop 是删除数据库&#x2F;表&#x2F;视图的权限</p>
+<p>create是创建数据库&#x2F;表</p>
+<p>用户要读取数据库里面的数据必须有权限</p>
+<p>mysql中有很多权限</p>
+<p>all所有权限</p>
+<p>select 查询数据的权限</p>
+<p>insert 插入数据的权限</p>
+<p>delete 删除数据的权限</p>
+<p>alter 修改表修改字段的权限</p>
+<p>drop 删除数据库&#x2F;表&#x2F;视图</p>
+<p>视图在进阶篇中才有提及</p>
+<p>create 创建数据库&#x2F;表</p>
+<p>通过dcl控制用户的权限的演示</p>
+<p>查询权限</p>
+<p>show grants for 用户名@主机名</p>
+<p>授予权限</p>
+<p>grant 权限列表 on 数据库名.表名 to 用户名@主机名</p>
+<p>如果要给数据库所有的表赋予权限写数据库名.*即可</p>
+<p>如果要指定数据库指定表名用指定数据库.指定表名即可</p>
+<p>撤销权限即用revoke</p>
+<p>revoke 权限列表 on 数据库名.表名 from 用户名@主机名</p>
+<p>show grants for heima </p>
+<p>接下来授予权限</p>
+<p>授予有关键字grant all on 哪一个数据库哪一个表 to 哪一个用户？@哪一个主机？</p>
+<p>注意revoke用的是from而grant用的是to</p>
+<p>每次执行完成之后用show grants 查询一下权限</p>
+<p>*代表的就是所有</p>
+<p>ddl dml dql dcl 就是四种相关的sql语句<br>ddl<br>data definition language</p>
+<p>dml<br>data manipulation language</p>
+<p>dcl<br>data control language</p>
+<h2 id="dqldata-query-language"><a href="#dqldata-query-language" class="headerlink" title="dqldata query language"></a>dql<br>data query language</h2><p>see you again</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/14/DAY-39/" data-id="cljadkwec001qrotkda86fx30" data-title="DAY 39" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/07/19/DAY-54/" data-id="cllow2eeg0003mstkh5vf55tw" data-title="DAY 54" class="article-share-link">Share</a>
       
       
       
@@ -666,10 +498,10 @@ return 0;
 
 
   
-    <article id="post-DAY-38" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-DAY-53" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/06/13/DAY-38/" class="article-date">
-  <time class="dt-published" datetime="2023-06-13T13:01:09.000Z" itemprop="datePublished">2023-06-13</time>
+    <a href="/2023/07/17/DAY-53/" class="article-date">
+  <time class="dt-published" datetime="2023-07-17T13:57:18.000Z" itemprop="datePublished">2023-07-17</time>
 </a>
     
   </div>
@@ -680,7 +512,7 @@ return 0;
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/13/DAY-38/">DAY 38</a>
+      <a class="p-name article-title" href="/2023/07/17/DAY-53/">DAY 53</a>
     </h1>
   
 
@@ -688,23 +520,99 @@ return 0;
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>其实挺愧疚的，我也知道我的博客每天写的跟屎一样，但是真的挤不出时间来，要不就是把c++代码复制一下放上来</p>
-<p>要不就是把代码放进chatgpt把它的分析放上来</p>
-<p>c++标准库中的输入流类有istream和ifstream和istringstream</p>
-<p>istream用于从字符串和文件中读取字符串和数据，可以接受多个输入流比如说文件和字符串</p>
-<p>ifstream用于从文件中读取数据，将文件作为输入流处理</p>
-<p>istringstream将字符串作为输入流处理</p>
-<p>istream&gt;(ifstream&#x3D;istringstream)</p>
-<p>ifstream infile(“stud.dat”,ios::binary);</p>
-<p>以打开文件stud.dat，将其作为一个对象，命名为infile</p>
-<p>infile.read((char *)&amp;stud[i],sizeof(stud[i]));</p>
-<p>(char *)&amp;stud[i]是强制类型转换将stud[i]的地址转换为char指针式</p>
-<h2 id="sizeof-stud-i-表示要读取的字节数’stud-i-’结构体的大小"><a href="#sizeof-stud-i-表示要读取的字节数’stud-i-’结构体的大小" class="headerlink" title="sizeof(stud[i])表示要读取的字节数’stud[i]’结构体的大小"></a>sizeof(stud[i])表示要读取的字节数’stud[i]’结构体的大小</h2><p>see you again</p>
+        <h2 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h2><p>see you again</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/13/DAY-38/" data-id="cljadkwef001urotk3r18492l" data-title="DAY 38" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/07/17/DAY-53/" data-id="cllow2eei0008mstkhz8jhdi1" data-title="DAY 53" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-52" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/07/16/DAY-52/" class="article-date">
+  <time class="dt-published" datetime="2023-07-16T07:25:58.000Z" itemprop="datePublished">2023-07-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/07/16/DAY-52/">DAY 52</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>the learning of mysql</p>
+<p>I have learned sql gram today and it has four sort like ddl dml dcl and so on</p>
+<p>需要注意的是，sql语句一定要有分号结尾，不然sql命令行不知道你输入的是sql语句</p>
+<p>it should be noted that the sql statement must have a semicolon ending, otherwise the sql command line will not know that you are entering a sql statement</p>
+<p>安装破解版datagrip在<a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaohuhu/p/17218430.html%E4%B8%AD%E6%9C%89%E6%95%99%E7%A8%8B">https://www.cnblogs.com/xiaohuhu/p/17218430.html中有教程</a></p>
+<h2 id="install-cracked-versions-datagrip-in-https-www-cnblogs-com-xiaohuhu-p-17218430-html-tutorial"><a href="#install-cracked-versions-datagrip-in-https-www-cnblogs-com-xiaohuhu-p-17218430-html-tutorial" class="headerlink" title="install cracked versions datagrip in https://www.cnblogs.com/xiaohuhu/p/17218430.html tutorial"></a>install cracked versions datagrip in <a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaohuhu/p/17218430.html">https://www.cnblogs.com/xiaohuhu/p/17218430.html</a> tutorial</h2><p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/07/16/DAY-52/" data-id="cllow2eek000cmstk2p5id8ce" data-title="DAY 52" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-51" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/07/15/DAY-51/" class="article-date">
+  <time class="dt-published" datetime="2023-07-15T00:11:48.000Z" itemprop="datePublished">2023-07-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/07/15/DAY-51/">DAY 51</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>this is a sql question</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/07/15/DAY-51/" data-id="cllow2eea0000mstk33qw68wc" data-title="DAY 51" class="article-share-link">Share</a>
       
       
       
@@ -722,7 +630,7 @@ return 0;
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -755,7 +663,7 @@ return 0;
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
     </div>
   </div>
 
@@ -768,23 +676,23 @@ return 0;
       <ul>
         
           <li>
-            <a href="/2023/06/25/DAY-47/">DAY 47</a>
+            <a href="/2023/08/24/DAY-60/">DAY 60</a>
           </li>
         
           <li>
-            <a href="/2023/06/23/DAY-46/">DAY 46</a>
+            <a href="/2023/08/10/DAY-59/">DAY 59</a>
           </li>
         
           <li>
-            <a href="/2023/06/23/DAY-45/">DAY 45</a>
+            <a href="/2023/08/04/DAY-58/">DAY 58</a>
           </li>
         
           <li>
-            <a href="/2023/06/21/DAY-44/">DAY 44</a>
+            <a href="/2023/08/04/DAY-57/">DAY 57</a>
           </li>
         
           <li>
-            <a href="/2023/06/20/DAY-43/">DAY 43</a>
+            <a href="/2023/08/01/DAY-56/">DAY 56</a>
           </li>
         
       </ul>
