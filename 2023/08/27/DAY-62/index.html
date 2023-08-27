@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>DAY 62 | NPC BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="居然存在这样一个无法避开的错误，真的是令人费解，难怪说最好用最新的技术，并且重构如此困难，因为但凡项目中 的一个模板升级了都会导致整个项目的重构，这个问题真的是令人头疼，不过还好，这个问题已经解决了， 这个问题就是老式的前端模板thymeleaf，它的版本是2.1.6，而springboot的版本是2.1.6，这个版本的thymeleaf 和springboot的版本不兼容，所以导致项目启动失败，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DAY 62">
+<meta property="og:url" content="http://example.com/2023/08/27/DAY-62/index.html">
+<meta property="og:site_name" content="NPC BLOG">
+<meta property="og:description" content="居然存在这样一个无法避开的错误，真的是令人费解，难怪说最好用最新的技术，并且重构如此困难，因为但凡项目中 的一个模板升级了都会导致整个项目的重构，这个问题真的是令人头疼，不过还好，这个问题已经解决了， 这个问题就是老式的前端模板thymeleaf，它的版本是2.1.6，而springboot的版本是2.1.6，这个版本的thymeleaf 和springboot的版本不兼容，所以导致项目启动失败，">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-08-27T12:19:56.000Z">
+<meta property="article:modified_time" content="2023-08-27T12:42:18.531Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="BY NPC">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="NPC BLOG" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">NPC BLOG</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">ANYBODY WANT TO PLAY WITH ME?</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-DAY-62" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/08/27/DAY-62/" class="article-date">
+  <time class="dt-published" datetime="2023-08-27T12:19:56.000Z" itemprop="datePublished">2023-08-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      DAY 62
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>居然存在这样一个无法避开的错误，真的是令人费解，难怪说最好用最新的技术，并且重构如此困难，因为但凡项目中</p>
+<p>的一个模板升级了都会导致整个项目的重构，这个问题真的是令人头疼，不过还好，这个问题已经解决了，</p>
+<p>这个问题就是老式的前端模板thymeleaf，它的版本是2.1.6，而springboot的版本是2.1.6，这个版本的thymeleaf</p>
+<p>和springboot的版本不兼容，所以导致项目启动失败，这个问题解决起来很简单，就是升级thymeleaf的版本，升级到3.0.11</p>
+<p>就可以了，但是问题来了，thymeleaf的版本升级之后，项目就无法启动了，报错信息如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Caused by: java.lang.NoSuchMethodError: org.thymeleaf.templatemode.TemplateMode.isStandard()</span><br></pre></td></tr></table></figure>
+
+<p>这个错误信息是说，thymeleaf的版本升级之后，它的模板模式（TemplateMode）的isStandard()方法被移除了，这个方法</p>
+<p>在2.1.6版本中是存在的，但是3.0.11版本中已经移除了，所以导致项目启动失败，这个问题的解决方案是，将thymeleaf的</p>
+<p>模板模式（TemplateMode）的isStandard()方法移除，这样项目就可以正常启动了</p>
+<p>可以说thymeleaf无法与springboot完全兼容了，所以传统前端模板就是逊啊，还是用vue吧，vue是真的好用，而且</p>
+<p>vue的生态圈非常强大，vue的版本升级之后，vue-router、vuex、vue-cli等等都会跟着升级，而且升级之后，项目</p>
+<p>的代码几乎不需要做任何修改，vue的生态圈真的是太强大了，而且vue的版本升级之后，vue的代码也会变得更加简洁，</p>
+<p>vue的版本升级之后，vue的代码也会变得更加简洁，而且vue的版本升级之后，vue的代码也会变得更加简洁  重要的事情说三遍</p>
+<p>好吧其实th:text这个语法并没有问题，只是因为chatgpt给的关于控制的类居然没有加上包package com.example.demo;</p>
+<p>草，真是离谱，并且加上这个idea要进行rerun才能够让你的修改生效，所以搞到我一直没有找到问题的真正所在，真是抽象</p>
+<p>一眼丁真，鉴定为纯纯搞人的</p>
+<p>上面的thymeleaf与spring boot其实是github coplit自动生成的，我并没有遇到该问题，懒得改了，用spring boot2.多版</p>
+<p>本的应该没有了，自动安装都是3.1.3的了<br>—-see you again   </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/08/27/DAY-62/" data-id="clltjv82v0000z0tk0mr2b8m7" data-title="DAY 62" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/08/26/DAY-61/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">DAY 61</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BY-NPc/" rel="tag">BY NPc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/I-come-here-to-sharpen-my-skills/" rel="tag">I come here to sharpen my skills</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/BY-NPC/" style="font-size: 20px;">BY NPC</a> <a href="/tags/BY-NPc/" style="font-size: 10px;">BY NPc</a> <a href="/tags/I-come-here-to-sharpen-my-skills/" style="font-size: 10px;">I come here to sharpen my skills</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/08/27/DAY-62/">DAY 62</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/26/DAY-61/">DAY 61</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/24/DAY-60/">DAY 60</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/10/DAY-59/">DAY 59</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/04/DAY-58/">DAY 58</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

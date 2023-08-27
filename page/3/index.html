@@ -77,6 +77,184 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-DAY-42" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/18/DAY-42/" class="article-date">
+  <time class="dt-published" datetime="2023-06-18T04:07:19.000Z" itemprop="datePublished">2023-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/18/DAY-42/">DAY 42</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>你好</p>
+<p>写的add_new_card函数</p>
+<p>void CardSystem::add_new_card(Card&amp; new_card) {<br>    string name &#x3D; new_card.get_name();<br>    int ret &#x3D; search(name);&#x2F;&#x2F;-2:找不到，-1:挂失，0:找到<br>    if (ret &#x3D;&#x3D; -1) {<br>        cout &lt;&lt; “your card is lost!!! go to find it!!!” &lt;&lt; endl;<br>        return;<br>    }<br>    if (ret &gt;&#x3D; 0) {<br>        cout &lt;&lt; “the card is exited!!!” &lt;&lt; endl;<br>        return;<br>    }<br>    cards_array_.push_back(new_card);<br>    cout &lt;&lt; “add a new card successfully!!!” &lt;&lt; endl;<br>}</p>
+<p>状态-2是找不到这张卡可以进行创建卡，0是已经找到这张卡不能建卡，-1是卡已经挂失，需要去恢复状态</p>
+<p>有几种使用的功能<br>1.建卡<br>  建卡失败<br>  建卡成功<br>2.充值<br>  充值失败<br>  充值成功<br>3.余额查询</p>
+<p>2.在主函数和重载(istream，注意不是ifstream)&gt;&gt;里，输入int可能输入char，需要用try..catch…throw; 命令行输入时，多输入错误类型，检查程序的错误判断是否完善，记得记录每一个bug；</p>
+<p>主函数和重载istream里面，输入int可能输入char</p>
+<p>重载friend istream&amp; operator&gt;&gt;(istream&amp; cin, Card&amp; input);这里输入的值可能是char而不是int</p>
+<p>一个友元函数，重载了输入流操作中的输入流操作符’&gt;&gt;’，使其能够从输入流读取数据，并且将数据保存到card对象当中</p>
+<p>该函数接受两个参数，一个是cin表示输入流对象，表示标准输入流</p>
+<p>Card&amp; input表示要读取数据的Card对象的引用</p>
+<p>函数返回一个输入流对象(istream&amp;)，允许在多个输入操作符连接在一起时进行链式输入</p>
+<p>该函数的实现将根据Card对象的内部结构和输入格式，从输入流中提取必要的数据，并将其存储在Card对象的成员变量中</p>
+<p>为什么要用友元函数？</p>
+<p>为了更好地访问私有成员和保护成员 operator&gt;&gt;函数可以直接访问Card类的私有成员变量value，以读取和设置其值</p>
+<p>具体的实现为：</p>
+<pre><code>friend istream&amp; operator&gt;&gt;(istream&amp; cin, Card&amp; input);//重载从命令行输入
+</code></pre>
+<p>istream&amp; operator&gt;&gt;(istream&amp; cin, Card&amp; input) {<br>    cout &lt;&lt; “please enter the name:\n”;<br>    cin &gt;&gt; input.name_;<br>    cout &lt;&lt; “please choose the type (1. student, 2. teacher)\n”;<br>    while (cin &gt;&gt; input.type_ &amp;&amp; (input.type_ &lt; 1 || input.type_ &gt; 2)) {<br>        cout &lt;&lt; “wrong type!!! please enter again!”;<br>    }<br>    cout &lt;&lt; “please enter the number(&gt;0): \n”;<br>    while (cin &gt;&gt; input.number_ &amp;&amp; input.number_ &lt; 0) {<br>        cout &lt;&lt; “wrong number(&gt;0)!!! please enter again!”;<br>    }<br>    cout &lt;&lt; “please choose the gender (1. male, 2. female)\n”;<br>    while (cin &gt;&gt; input.gender_ &amp;&amp; (input.gender_ &lt; 1 || input.gender_ &gt; 2)) {<br>        cout &lt;&lt; “wrong gender!!! please enter again!”;<br>    }<br>    cout &lt;&lt; “please enter the place:\n”;<br>    cin &gt;&gt; input.place_;<br>    return cin;<br>}<br>我的目的就是对以上重载的实现进行一个容错处理</p>
+<p>ifstream与istream的区别</p>
+<p>ifstream是istream的派生类，继承了istream的所有方法和操作符，并增加了一些用于从文件读取数据的特定方法</p>
+<p>总结：istream是输入流的基类，提供了通用的输入功能，而ifstream是从文件中读取数据的特化输入流类。</p>
+<p>这是一个重载输入流运算符，用于从输入流中读取数据并将其存储到Card对象的相应成员变量中</p>
+<p>istream&amp; operator&gt;&gt;(istream&amp; cin, Card&amp; input) {<br>    try {<br>        cout &lt;&lt; “Please enter the name:\n”;<br>        cin &gt;&gt; input.name_;</p>
+<pre><code>    cout &lt;&lt; &quot;Please choose the type (1. student, 2. teacher):\n&quot;;
+    while (!(cin &gt;&gt; input.type_) || (input.type_ &lt; 1 || input.type_ &gt; 2)) &#123;
+        throw runtime_error(&quot;Invalid type! Please enter again: &quot;);
+    &#125;
+    
+    cout &lt;&lt; &quot;Please enter the number (&gt;0):\n&quot;;
+    while (!(cin &gt;&gt; input.number_) || input.number_ &lt; 0) &#123;
+        throw runtime_error(&quot;Invalid number (&gt;0)! Please enter again: &quot;);
+    &#125;
+    
+    cout &lt;&lt; &quot;Please choose the gender (1. male, 2. female):\n&quot;;
+    while (!(cin &gt;&gt; input.gender_) || (input.gender_ &lt; 1 || input.gender_ &gt; 2)) &#123;
+        throw runtime_error(&quot;Invalid gender! Please enter again: &quot;);
+    &#125;
+    
+    cout &lt;&lt; &quot;Please enter the place:\n&quot;;
+    cin &gt;&gt; input.place_;
+&#125; catch (const exception&amp; e) &#123;
+    // 捕获异常并处理错误消息
+    cerr &lt;&lt; &quot;Exception caught: &quot; &lt;&lt; e.what() &lt;&lt; endl;
+    // 清除错误状态和输入流
+    cin.clear();
+    cin.ignore(numeric_limits&lt;streamsize&gt;::max(), &#39;\n&#39;);
+&#125;
+
+return cin;
+</code></pre>
+<p>}</p>
+<p>以上代码使用try-catch块来捕获可能抛出的异常，当输入不满足要求的时候，通过throw语句抛出runtime_error类型的异常，异常消息作为参数传递</p>
+<p>在catch块中，异常被捕获并处理，错误消息被输出到标准错误流(‘cerr’),并使用cin.clear()来清除输入流的错误状态标志</p>
+<p>cin.ignore(numeric_limits<streamsize>::max(), ‘\n’)用于忽略剩余的输入内容。</p>
+<h2 id="这样，在发生异常时，会显示错误消息并清除错误状态，以便进行下一次输入。"><a href="#这样，在发生异常时，会显示错误消息并清除错误状态，以便进行下一次输入。" class="headerlink" title="这样，在发生异常时，会显示错误消息并清除错误状态，以便进行下一次输入。"></a>这样，在发生异常时，会显示错误消息并清除错误状态，以便进行下一次输入。</h2><p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/18/DAY-42/" data-id="cljadkwej0024rotk28ss2l92" data-title="DAY 42" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-41" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/17/DAY-41/" class="article-date">
+  <time class="dt-published" datetime="2023-06-16T16:49:09.000Z" itemprop="datePublished">2023-06-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/17/DAY-41/">DAY 41</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>嘶，很快考试了还是复习c++把</p>
+<p>真的很怕挂了，什么都没学跟废物似得</p>
+<p>STL的基本组件<br> • 容器（container）<br> • 迭代器（iterator）<br> • 函数对象（function object）<br> • 算法（algorithms）</p>
+<p>将迭代器作为算法的参数，通过迭代器来访问容器而不是把容器直接作为算法的参数</p>
+<p>将函数对象作为算法的参数而不是将函数所执行的运算作为算法的一部分？</p>
+<p>#include <iostream><br>#include <algorithm><br>#include <vector></p>
+<p>&#x2F;&#x2F; 定义一个函数对象（Functor）<br>class MultiplyBy {<br>private:<br>    int factor;<br>public:<br>    MultiplyBy(int factor) : factor(factor) {}</p>
+<pre><code>// 重载函数调用运算符
+int operator()(int value) const &#123;
+    return value * factor;
+&#125;
+</code></pre>
+<p>};</p>
+<p>int main() {<br>    std::vector<int> numbers &#x3D; {1, 2, 3, 4, 5};<br>    int factor &#x3D; 2;</p>
+<pre><code>// 创建函数对象
+MultiplyBy multiply(factor);
+
+// 使用函数对象作为算法参数，而不是将函数所执行的运算作为算法的一部分
+std::transform(numbers.begin(), numbers.end(), numbers.begin(), multiply);
+
+// 打印结果
+for (const auto&amp; number : numbers) &#123;
+    std::cout &lt;&lt; number &lt;&lt; &quot; &quot;;
+&#125;
+std::cout &lt;&lt; std::endl;
+
+return 0;
+</code></pre>
+<p>}<br>在    MultiplyBy multiply(factor);<br>这一步的时候，multiply这个对象的私有成员factor的值被设置为2</p>
+<pre><code>std::transform(numbers.begin(), numbers.end(), numbers.begin(), multiply);
+</code></pre>
+<p>这一步的时候执行算法numbers向量中的每一个元素作为参数传递给函数对象的函数调用运算符</p>
+<p>容器（Containers）：STL 提供了多种容器类，如向量（vector）、列表（list）、映射（map）、集合（set）等，用于存储和管理数据。这些容器提供了不同的特性和操作，以满足各种需求。</p>
+<p>算法（Algorithms）：STL 提供了大量的算法，如排序、查找、遍历、变换等，可用于对容器中的数据进行操作和处理。这些算法是通用的，适用于各种容器类型，而无需开发者自己实现。  </p>
+<p>异常处理</p>
+<p>抛掷异常的程序段<br>throw 表达式;</p>
+<p>捕获并处理异常的程序段<br>try<br>复合语句—保护段<br>catch（异常声明）<br>复合语句—异常处理程序<br>catch（异常声明）<br>复合语句</p>
+<p>将可能抛出异常的程序段嵌在try块之中。通过<br>正常的顺序执行到达try语句，然后执行try块内<br>的保护段</p>
+<p>如果在保护段执行期间没有引起异常，那么跟在<br>try块后的catch子句就不执行。程序从try块后<br>的最后一个catch子句后面的语句继续执行</p>
+<p>理解程度不行，完成度也不够，二十分钟过去了</p>
+<p>为什么呢?</p>
+<h2 id="这些b字跟没有见过一样"><a href="#这些b字跟没有见过一样" class="headerlink" title="这些b字跟没有见过一样"></a>这些b字跟没有见过一样</h2><p>see you again </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/17/DAY-41/" data-id="cljadkwek0028rotkdr9u3zp3" data-title="DAY 41" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-DAY-40" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/06/15/DAY-40/" class="article-date">
@@ -568,90 +746,11 @@ return 0;
 
 
   
-    <article id="post-DAY-32" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/06/07/DAY-32/" class="article-date">
-  <time class="dt-published" datetime="2023-06-07T04:11:49.000Z" itemprop="datePublished">2023-06-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/07/DAY-32/">DAY 32</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>六六六，咖啡加可乐有一种雪碧的味道</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/07/DAY-32/" data-id="cljadkwe8001crotkeep6gns0" data-title="DAY 32" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-31-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/06/07/DAY-31-1/" class="article-date">
-  <time class="dt-published" datetime="2023-06-07T04:11:20.000Z" itemprop="datePublished">2023-06-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/07/DAY-31-1/">DAY 31</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/07/DAY-31-1/" data-id="cljadkwea001krotk1n2ehwyy" data-title="DAY 31" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -697,6 +796,14 @@ return 0;
       <ul>
         
           <li>
+            <a href="/2023/08/27/DAY-62/">DAY 62</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/26/DAY-61/">DAY 61</a>
+          </li>
+        
+          <li>
             <a href="/2023/08/24/DAY-60/">DAY 60</a>
           </li>
         
@@ -706,14 +813,6 @@ return 0;
         
           <li>
             <a href="/2023/08/04/DAY-58/">DAY 58</a>
-          </li>
-        
-          <li>
-            <a href="/2023/08/04/DAY-57/">DAY 57</a>
-          </li>
-        
-          <li>
-            <a href="/2023/08/01/DAY-56/">DAY 56</a>
           </li>
         
       </ul>
