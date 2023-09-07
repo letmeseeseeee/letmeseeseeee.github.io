@@ -77,6 +77,330 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-DAY-19-security" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/26/DAY-19-security/" class="article-date">
+  <time class="dt-published" datetime="2023-05-26T04:32:45.000Z" itemprop="datePublished">2023-05-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/26/DAY-19-security/">DAY 19 security</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>exercise name: warm up</p>
+<p>type: web</p>
+<p>testing centre: php、Code auditing</p>
+<p>f12 and found the tips source.php</p>
+<p> &#x2F;source.php follow the url</p>
+<p> <a target="_blank" rel="noopener" href="http://67e50b84-6e7c-4967-8e09-27fbb637a48b.node4.buuoj.cn:81/source.php">http://67e50b84-6e7c-4967-8e09-27fbb637a48b.node4.buuoj.cn:81/source.php</a>   </p>
+<p> and found the php code</p>
+<p>PHP 变量规则：</p>
+<p>变量以 $ 符号开始，后面跟着变量的名称<br>变量名必须以字母或者下划线字符开始<br>变量名只能包含字母、数字以及下划线（A-z、0-9 和 _ ）<br>变量名不能包含空格<br>变量名是区分大小写的（$y 和 $Y 是两个不同的变量）</p>
+<p>analyse the code </p>
+<p>$_page &#x3D; mb_substr(<br>    $page,<br>    0,<br>    mb_strpos($page . ‘?’, ‘?’)<br>);<br>使用了 PHP 的 mb_substr() 和 mb_strpos() 函数来截取字符串。这些函数是用于处理多字节字符的版本，可以正确处理包含非 ASCII 字符的字符串。<br>mb_substr() 函数用于返回一个字符串的子串。它接受三个参数：原始字符串 $page，子串的起始位置和子串的长度。在这段代码中，起始位置是 0，长度是通过 mb_strpos() 函数计算得出的。<br>mb_strpos() 函数用于在字符串中查找指定字符或子字符串的位置。它接受两个参数：要搜索的字符串和要查找的字符或子字符串。在这段代码中，它用于查找 $page 字符串中第一个出现的 ‘?’ 字符的位置。<br>通过这段代码，$_page 变量将被赋值为 $page 字符串中 ‘?’ 字符之前的子串。</p>
+<p>综上所述，给定的代码通过使用 PHP 的多字节字符串函数来截取 $page 字符串中 ‘?’ 字符之前的子串。</p>
+<hr>
+<p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/26/DAY-19-security/" data-id="cljadkwe0000jrotk05hs0hzr" data-title="DAY 19 security" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-18-c" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/26/DAY-18-c/" class="article-date">
+  <time class="dt-published" datetime="2023-05-25T17:03:17.000Z" itemprop="datePublished">2023-05-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/26/DAY-18-c/">DAY 18 c++</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>just, look at the code</p>
+<p>#include <iostream></p>
+<p>using namespace std;</p>
+<p>class Person{<br>protected:<br>    string sex;<br>    int age;<br>    string name;<br>public:<br>  Person(string nam,int ag,string se):name(nam),age(ag),sex(se){}<br>     void ShowPerson() {<br>        cout &lt;&lt; “name: “ &lt;&lt; name &lt;&lt; endl;<br>        cout &lt;&lt; “age: “ &lt;&lt; age &lt;&lt; endl;<br>        cout &lt;&lt; “sex: “ &lt;&lt; sex &lt;&lt; endl;<br>    }<br>};</p>
+<p>class Student : virtual public Person {<br>protected:<br>      int studentNumber;<br>public:<br>     Student(string nam,int ag,string se,int num):Person(nam,ag,se )<br>      {<br>          studentNumber&#x3D;num;<br>      }<br>       void ShowStudent(){cout&lt;&lt;”studentNumber: “&lt;&lt;studentNumber&lt;&lt;endl;}<br>};<br>class Employee : virtual public Person {<br>protected:<br>   string career;<br>public:<br>     Employee(string nam,int ag,string se,string caree):Person(nam,ag,se ){career&#x3D;caree;}<br>    void ShowCareer()<br>    {<br>        cout&lt;&lt;”career: “&lt;&lt;career&lt;&lt;endl;<br>    }<br>};<br>class PartTime_Graduate_Student : public Employee, public Student{<br>private:<br>   int wage;<br>public:<br>    PartTime_Graduate_Student(string nam,int ag,string se,int num,string caree,int wag):Person(nam,ag,se),Student(nam,ag,se,num),Employee(nam,ag,se,caree),wage(wag){};</p>
+<pre><code>void showPart() &#123;
+    ShowPerson();
+    ShowCareer();
+    ShowStudent();
+&#125;;
+</code></pre>
+<h2 id="int-main-PartTime-Graduate-Student-stu-“Ai”-19-”AÐ”-1-”¹IO±”-1000-stu-showPart-return-0-The-points-You’d-better-use-protected-to-have-the-viriable-of-基类-defined"><a href="#int-main-PartTime-Graduate-Student-stu-“Ai”-19-”AÐ”-1-”¹IO±”-1000-stu-showPart-return-0-The-points-You’d-better-use-protected-to-have-the-viriable-of-基类-defined" class="headerlink" title="};int main(){    PartTime_Graduate_Student stu(“Àî”,19,”ÄÐ”,1,”¹ÍÔ±”,1000);    stu.showPart();    return 0;}The points: You’d better use protected to have the viriable of 基类 defined"></a>};<br>int main()<br>{<br>    PartTime_Graduate_Student stu(“Àî”,19,”ÄÐ”,1,”¹ÍÔ±”,1000);<br>    stu.showPart();<br>    return 0;<br>}<br>The points: You’d better use protected to have the viriable of 基类 defined</h2><p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/26/DAY-18-c/" data-id="cljadkwdz000hrotkabszh21t" data-title="DAY 18 c++" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-影评-《家有女婿》" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/25/%E5%BD%B1%E8%AF%84-%E3%80%8A%E5%AE%B6%E6%9C%89%E5%A5%B3%E5%A9%BF%E3%80%8B/" class="article-date">
+  <time class="dt-published" datetime="2023-05-25T05:08:28.000Z" itemprop="datePublished">2023-05-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/25/%E5%BD%B1%E8%AF%84-%E3%80%8A%E5%AE%B6%E6%9C%89%E5%A5%B3%E5%A9%BF%E3%80%8B/">影评 《家有女婿》</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/25/%E5%BD%B1%E8%AF%84-%E3%80%8A%E5%AE%B6%E6%9C%89%E5%A5%B3%E5%A9%BF%E3%80%8B/" data-id="cljadkwev002yrotk5wtl44h8" data-title="影评 《家有女婿》" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-17-MANY-THINGS" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/25/DAY-17-MANY-THINGS/" class="article-date">
+  <time class="dt-published" datetime="2023-05-24T16:30:05.000Z" itemprop="datePublished">2023-05-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/25/DAY-17-MANY-THINGS/">DAY 17 MANY THINGS</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>ppt<br>关于ppt的超链接，可以给图片或者文字上超链接令其跳转到某一页幻灯片</p>
+<p>pr<br>在pr中新建项目然后导入视频即可对视频进行剪辑</p>
+<p>facesap<br>已经将两张人脸进行了extract</p>
+<p>华硕截图快捷键 win + alt +r</p>
+<hr>
+<p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/25/DAY-17-MANY-THINGS/" data-id="cljadkwdx000erotk82ohczn6" data-title="DAY 17 MANY THINGS" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-16-SECURITY" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/24/DAY-16-SECURITY/" class="article-date">
+  <time class="dt-published" datetime="2023-05-23T16:26:34.000Z" itemprop="datePublished">2023-05-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/24/DAY-16-SECURITY/">DAY 16 SECURITY</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>php 中的$意思是变量</p>
+<p>$加上字符串表示一个变量名字</p>
+<p>比如说$page这是一个变量名</p>
+<p>前端(frontend)</p>
+<p>用动态绑定style的方法可以改变transform的值</p>
+<!-- <div :style="{ transform: transformValue }"></div> -->
+
+<p>通过js改变transformValue的值即可控制盒子的transform属性</p>
+<hr>
+<p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/24/DAY-16-SECURITY/" data-id="cljadkwe2000qrotk6erj9d55" data-title="DAY 16 SECURITY" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-15-security" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/23/DAY-15-security/" class="article-date">
+  <time class="dt-published" datetime="2023-05-22T16:02:28.000Z" itemprop="datePublished">2023-05-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/23/DAY-15-security/">DAY 15 security</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>TYPE:web</p>
+<p>f12 and found the tip that there was a file named source.php</p>
+<p>input source.php after the url and it would appear the code<br>&lt;?php<br>    highlight_file(__FILE__);<br>    class emmm<br>    {<br>        public static function checkFile(&amp;$page)<br>        {<br>            $whitelist &#x3D; [“source”&#x3D;&gt;”source.php”,”hint”&#x3D;&gt;”hint.php”];<br>            if (! isset($page) || !is_string($page)) {<br>                echo “you can’t see it”;<br>                return false;<br>            }</p>
+<pre><code>        if (in_array($page, $whitelist)) &#123;
+            return true;
+        &#125;
+
+        $_page = mb_substr(
+            $page,
+            0,
+            mb_strpos($page . &#39;?&#39;, &#39;?&#39;)
+        );
+        if (in_array($_page, $whitelist)) &#123;
+            return true;
+        &#125;
+
+        $_page = urldecode($page);
+        $_page = mb_substr(
+            $_page,
+            0,
+            mb_strpos($_page . &#39;?&#39;, &#39;?&#39;)
+        );
+        if (in_array($_page, $whitelist)) &#123;
+            return true;
+        &#125;
+        echo &quot;you can&#39;t see it&quot;;
+        return false;
+    &#125;
+&#125;
+
+if (! empty($_REQUEST[&#39;file&#39;])
+    &amp;&amp; is_string($_REQUEST[&#39;file&#39;])
+    &amp;&amp; emmm::checkFile($_REQUEST[&#39;file&#39;])
+) &#123;
+    include $_REQUEST[&#39;file&#39;];
+    exit;
+&#125; else &#123;
+    echo &quot;&lt;br&gt;&lt;img src=\&quot;https://i.loli.net/2018/11/01/5bdb0d93dc794.jpg\&quot; /&gt;&quot;;
+&#125;  
+</code></pre>
+<p>?&gt;<br>url 后加上后缀?file&#x3D;hint.php?&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;ffffllllaaaagggg</p>
+<p>即可获得flag：flag{676dde41-6fef-4e13-ad67-e576330af907}</p>
+<hr>
+<p>see you again</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/23/DAY-15-security/" data-id="cljadkwds0005rotkdhxjbq5p" data-title="DAY 15 security" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-DAY-14-SECURITY" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/05/22/DAY-14-SECURITY/" class="article-date">
@@ -337,339 +661,6 @@ void showX() &#123;
 
 
   
-    <article id="post-DAY-10-c-learn" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/17/DAY-10-c-learn/" class="article-date">
-  <time class="dt-published" datetime="2023-05-17T12:50:18.000Z" itemprop="datePublished">2023-05-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/17/DAY-10-c-learn/">DAY 10 c++ learn</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Today I learned about C++ programming</p>
-<p>I learned about Inheritance(继承) and derivation(派生) knowledge</p>
-<p>The following is the code I got and this is a bad piece of code</p>
-<p>And my task is to fix it and make it run successfully</p>
-<p>Answer the question yesterday:</p>
-<p>I can use the :saveas to overwrite an existing file with the same name</p>
-<p>I do not know how to fix it.</p>
-<p>It is too late.</p>
-<p>Good night.</p>
-<hr>
-<p>See you tomorrow</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/17/DAY-10-c-learn/" data-id="cljadkwdw000crotk6nndew9h" data-title="DAY 10 c++ learn" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-9-front-end" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/17/DAY-9-front-end/" class="article-date">
-  <time class="dt-published" datetime="2023-05-16T16:26:16.000Z" itemprop="datePublished">2023-05-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/17/DAY-9-front-end/">DAY 9 front end</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>alright.</p>
-<p>I have found the way to solve the problem, the same error like I made.</p>
-<p>当我们引用的图片在静态资源文件夹下的话，一定要使用require进行引用,否则图片引用不生效</p>
-<p>esc模式下输入命令:.!可以在vim中执行外部命令我可以在编辑vim的时候输入shutdown -s -t 秒数来进行关机，非常方便vim </p>
-<p>想要保存到想要的路径只需要用:saveas 路径\文件名字 即可</p>
-<p>比如说</p>
-<p>:saveas D:\vimlianxi\file.txt</p>
-<p>vimlianxi 是文件夹的名字，而file.txt则是我想要保存的文件名字 </p>
-<p>没有这个文件的话就会进行新建一个文件名字</p>
-<p>如何修改一个文件里面的内容？可以用saveas吗？</p>
-<hr>
-<p>see you again.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/17/DAY-9-front-end/" data-id="cljadkwep002qrotke0ig38gl" data-title="DAY 9 front end" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-8-vim-learn" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/16/DAY-8-vim-learn/" class="article-date">
-  <time class="dt-published" datetime="2023-05-15T16:59:58.000Z" itemprop="datePublished">2023-05-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/16/DAY-8-vim-learn/">DAY 8 vim learn</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>You can click alt+windows+r to record video.</p>
-<p>cw → 替换从光标所在位置后到一个单词结尾的字符</p>
-<p>光标开始是指在闪烁的光标的左边边开始</p>
-<p>not very clear actually.</p>
-<p>tomorrow continue.</p>
-<p>how to open vim and save what I wrote as the name what I want and save it in the path I want.</p>
-<hr>
-<p>see you again.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/16/DAY-8-vim-learn/" data-id="cljadkwep002orotk41qzeqo0" data-title="DAY 8 vim learn" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-7-front-end-development" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/16/DAY-7-front-end-development/" class="article-date">
-  <time class="dt-published" datetime="2023-05-15T16:53:53.000Z" itemprop="datePublished">2023-05-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/16/DAY-7-front-end-development/">DAY 7 front end development</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Today finished large portion of the club work.</p>
-<p>and the most important part today is the changing components part.</p>
-<p>template part</p>
-  <!-- <div id="position">
-    <web id="component1" class="component active"> </web>
-                <ui id="component2" class="component"></ui>
-         <app id="component3" class="component"></app>  
-       
-              <program id="component4" class="component"></program> 
-                     <game id="component5" class="component"></game> 
-    <div class="web"  @click="switchComponent('component1')" ><div style="margin-top: 2.6vw;
-    margin-left: 5.4vw;"><span >Web开发</span></div> </div>
-    <div class="ui"  @click="switchComponent('component2')"><div style="    margin-top: 7.6vw;
-    margin-left: 3vw;"><span >UI设计</span></div> </div>
-    <div class="app" @click="switchComponent('component3')"><div style="     margin-top: 3.8vw;
-    margin-left: 3vw;"><span >APP开发</span></div></div>
-        <div class="program" @click="switchComponent('component4')"><div style="        margin-top: 4.1vw;
-    margin-left: 3.4vw;"><span >程序开发</span></div></div>
-    <div class="game"  @click="switchComponent('component5')"><div style="    margin-top: 6.6vw;
-    margin-left: 3vw;"><span >游戏开发</span></div></div>
-   
-     </div> -->
-
-<p>script part</p>
-<!-- export default {
-  components: {
-            mainPagebutton,
-web, ui,program, game, app
-},
-    data() {
-        return {
-        }
-    },
-    methods:
-    {
-    switchComponent(componentId) {
-      // 隐藏所有组件
-       var components = document.getElementsByClassName('component');
-  for (var i = 0; i < components.length; i++) {
-    components[i].classList.remove('active');
-    // 修改背景图片
-  }
-  // 显示选定的组件
-  var button = document.getElementsByClassName('web')[0];
-      if (button) {
-        button.style.backgroundImage = "url('@/assets/about/2.png')";
-      }
-  var component = document.getElementById(componentId);
-  if (component) {
-    component.classList.add('active');
- 
-    }
-      }
-    },
-    }
-
-</script> -->
-
-<h2 id="and-in-the-script-part-the-most-important-part-is-the-methods-part"><a href="#and-in-the-script-part-the-most-important-part-is-the-methods-part" class="headerlink" title="and in the script part, the most important part is the methods part."></a>and in the script part, the most important part is the methods part.</h2><p>see you again.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/16/DAY-7-front-end-development/" data-id="cljadkweo002krotk8r42ce4h" data-title="DAY 7 front end development" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Front-end-development" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/13/Front-end-development/" class="article-date">
-  <time class="dt-published" datetime="2023-05-13T05:28:46.000Z" itemprop="datePublished">2023-05-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/13/Front-end-development/">Front end development</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/13/Front-end-development/" data-id="cljadkwev002zrotk48r6gah9" data-title="Front end development" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-5-faceswap-extract-and-train" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/12/DAY-5-faceswap-extract-and-train/" class="article-date">
-  <time class="dt-published" datetime="2023-05-12T14:57:49.000Z" itemprop="datePublished">2023-05-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/12/DAY-5-faceswap-extract-and-train/">DAY 5 faceswap extract and train</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>choose A and B.</p>
-<p>A is the one you want to be replaced. </p>
-<p>You can replace B’face with A’s face.</p>
-<p>slove the problem:Spawn failed.</p>
-<p>You can’t have a empty content in an article.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/12/DAY-5-faceswap-extract-and-train/" data-id="cljadkwek002arotk06416zdv" data-title="DAY 5 faceswap extract and train" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -707,7 +698,7 @@ web, ui,program, game, app
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">September 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
     </div>
   </div>
 
@@ -720,23 +711,23 @@ web, ui,program, game, app
       <ul>
         
           <li>
-            <a href="/2023/08/27/DAY-62/">DAY 62</a>
+            <a href="/2023/09/07/DAY-68-steam%E7%A1%AC%E7%9B%98%E8%BD%AC%E7%A7%BB%E6%B8%B8%E6%88%8F/">DAY 68 steam硬盘转移游戏</a>
           </li>
         
           <li>
-            <a href="/2023/08/26/DAY-61/">DAY 61</a>
+            <a href="/2023/09/02/DAY-67/">DAY 67</a>
           </li>
         
           <li>
-            <a href="/2023/08/24/DAY-60/">DAY 60</a>
+            <a href="/2023/08/31/DAY-66/">DAY 66</a>
           </li>
         
           <li>
-            <a href="/2023/08/10/DAY-59/">DAY 59</a>
+            <a href="/2023/08/30/DAy-65/">DAy 65</a>
           </li>
         
           <li>
-            <a href="/2023/08/04/DAY-58/">DAY 58</a>
+            <a href="/2023/08/29/DAY-64/">DAY 64</a>
           </li>
         
       </ul>
