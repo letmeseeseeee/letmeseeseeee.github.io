@@ -77,6 +77,241 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-DAY-61" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/08/26/DAY-61/" class="article-date">
+  <time class="dt-published" datetime="2023-08-26T05:43:17.000Z" itemprop="datePublished">2023-08-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/08/26/DAY-61/">DAY 61</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>关于在navicat连接数据库时出现了1251 - Client does not support authentication protocol requested by server; consider upgrading MySQL client.<br>的解决办法</p>
+<p>其实只是数据库的权限不对</p>
+<p>找到数据库的安装位置</p>
+<p>用命令进入（要打开cmd命令窗口输入）</p>
+<p>cd C:\Program Files\MySQL\MySQL Server 8.0\bin</p>
+<p>C:\Program Files\MySQL\MySQL Server 8.0\bin是数据库的默认安装路径</p>
+<p>登录数据库</p>
+<p>输入你的数据库的密码</p>
+<p>接着输入以下两行代码<br>alter user ‘root‘@’localhost’ identified with mysql_native_password by ‘123456’;</p>
+<p>这条SQL语句是用于在MySQL数据库中修改指定用户（在这里是‘root‘@’localhost’）的认证方式和密码</p>
+<p>flush privileges;它的作用是将当前数据库的权限更改立即应用到MySQL服务器上</p>
+<h2 id="即可解决问题"><a href="#即可解决问题" class="headerlink" title="即可解决问题"></a>即可解决问题</h2><p>SEE YOU AGAIN</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/08/26/DAY-61/" data-id="clltjv82z0001z0tkcew28oss" data-title="DAY 61" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-60" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/08/24/DAY-60/" class="article-date">
+  <time class="dt-published" datetime="2023-08-24T07:06:25.000Z" itemprop="datePublished">2023-08-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/08/24/DAY-60/">DAY 60</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>实训第一周的作业</p>
+<p>题目是<br>1.创建一个Person类，包含id,name两个属性，添加2个构造函数，重写toString（）方法返回id和name的值，同时包含display方法，用于显示id和name的值；包含静态的daffodilThree方法，用于循环打印100-999之间的水仙花数</p>
+<p>2.创建一个测试类TestPerson</p>
+<p>实例化Person类对象，并调用其display方法。</p>
+<p>打印水仙花数</p>
+<p>我创建了两个java文件</p>
+<p>一个名字是TestPerson.java 装main</p>
+<p>一个名字是Person.java 装Person类</p>
+<p>Person类中有两个基本属性</p>
+<p>我设置为了 int id 和 String name</p>
+<p>然后有两个构造方法</p>
+<p>一个有参构造方法</p>
+<p>一个无参构造方法<br>    public Person(){<br>        &#x2F;&#x2F;无参构造函数<br>    }</p>
+<pre><code>public Person(int id,String name)&#123;
+    this.id=id;
+    this.name=name;
+    //有参构造函数
+&#125;
+然后重构了toString方法
+public String toString()&#123;
+    return &quot;id:&quot;+this.id+&quot; name:&quot;+this.name;
+&#125;
+写了display()方法
+
+ public void display()&#123;
+    System.out.println(this.toString());
+&#125;
+</code></pre>
+<p>在测试类TestPerson中实例化Person类对象，并调用其display方法。</p>
+<p>写了daffodilThree以打印水仙花数</p>
+<pre><code>public static void daffodilThree()&#123;
+    for(int i=100;i&lt;1000;i++)&#123;
+        int a=i/100;
+        int b=i/10%10;
+        int c=i%10;
+        if(i==a*a*a+b*b*b+c*c*c)&#123;
+            System.out.println(i);
+        &#125;
+    &#125;
+&#125;
+然后在main中调用
+以下是我的整段代码
+
+public static void main(String[] args) &#123;
+    Person person=new Person(1,&quot;张三&quot;);
+    person.display();
+    daffodilThree();
+&#125;
+运行结果
+id:1 name:张三
+153
+370
+371
+407
+Process finished with exit code 0
+代码如下
+TestPerson.java
+import java.util.Scanner;
+
+public class TestPerson &#123;
+    public static void main(String[] args) &#123;
+        Person person=new Person(1,&quot;张三&quot;);
+        person.display();
+        daffodilThree();
+    &#125;
+    public static void daffodilThree()&#123;
+        for(int i=100;i&lt;1000;i++)&#123;
+            int a=i/100;
+            int b=i/10%10;
+            int c=i%10;
+            if(i==a*a*a+b*b*b+c*c*c)&#123;
+                System.out.println(i);
+            &#125;
+        &#125;
+    &#125;
+&#125;
+Person.java
+public class Person &#123;
+    int id;
+    String name;
+    public Person()&#123;
+        //无参构造函数
+    &#125;
+
+    public Person(int id,String name)&#123;
+        this.id=id;
+        this.name=name;
+        //有参构造函数
+    &#125;
+    public String toString()&#123;
+        return &quot;id:&quot;+this.id+&quot; name:&quot;+this.name;
+    &#125;
+    public void display()&#123;
+        System.out.println(this.toString());
+    &#125;
+&#125;
+代码上传到了github上
+</code></pre>
+<hr>
+<p>SEE YOU AGAIN</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/08/24/DAY-60/" data-id="cllow2eeo000kmstk2cm5g5an" data-title="DAY 60" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-DAY-59" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/08/10/DAY-59/" class="article-date">
+  <time class="dt-published" datetime="2023-08-09T16:57:25.000Z" itemprop="datePublished">2023-08-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/08/10/DAY-59/">DAY 59</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>sql注入的考题</p>
+<p>sql注入</p>
+<p>sql语句注入实际上考研一个人对于数据库程序执行的相关代码的理解</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/08/10/DAY-59/" data-id="cllow2een000imstkhk1o1pc9" data-title="DAY 59" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-DAY-58" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/08/04/DAY-58/" class="article-date">
@@ -402,129 +637,6 @@
 
 
   
-    <article id="post-DAY-51" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/07/15/DAY-51/" class="article-date">
-  <time class="dt-published" datetime="2023-07-15T00:11:48.000Z" itemprop="datePublished">2023-07-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/07/15/DAY-51/">DAY 51</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>this is a sql question</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/15/DAY-51/" data-id="cllow2eea0000mstk33qw68wc" data-title="DAY 51" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-50" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/07/14/DAY-50/" class="article-date">
-  <time class="dt-published" datetime="2023-07-13T17:11:56.000Z" itemprop="datePublished">2023-07-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/07/14/DAY-50/">DAY 50</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="今天睡觉"><a href="#今天睡觉" class="headerlink" title="今天睡觉"></a>今天睡觉</h2><p>see you again</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/14/DAY-50/" data-id="cllow2eei0007mstkatzpgszr" data-title="DAY 50" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-DAY-49" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/07/13/DAY-49/" class="article-date">
-  <time class="dt-published" datetime="2023-07-13T03:41:08.000Z" itemprop="datePublished">2023-07-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/07/13/DAY-49/">DAY 49</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>BUU SQL COURSE 1<br>显然是一个考sql注入的题目</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/13/DAY-49/" data-id="cllow2eep000mmstk8isf4eb1" data-title="DAY 49" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BY-NPC/" rel="tag">BY NPC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -575,23 +687,23 @@
       <ul>
         
           <li>
+            <a href="/2023/09/11/DAY71-%E6%97%A5%E5%B8%B8%E6%8E%A8%E8%BF%9B%E9%A1%B9%E7%9B%AE/">DAY71 日常推进项目</a>
+          </li>
+        
+          <li>
+            <a href="/2023/09/09/DAY-70-%E4%BA%BA%E7%B1%BB%E7%9A%84%E8%83%BD%E5%8A%9B%E6%98%AF%E6%9C%89%E9%99%90%E7%9A%84%E3%80%82%E8%A6%81%E4%B9%88%E8%B6%85%E8%BF%9B%E5%8C%96%EF%BC%8C%E8%A6%81%E4%B9%88%E5%8F%98%E5%BE%97%E5%B9%B3%E5%BA%B8%E3%80%82/">DAY 70 人类的能力是有限的。要么超进化，要么变得平庸。</a>
+          </li>
+        
+          <li>
+            <a href="/2023/09/08/DAY-69-bb%E5%B9%B3%E5%8F%B0%E8%B7%9F%E5%B1%8E%E4%B8%80%E6%A0%B7/">DAY 69 bb平台跟屎一样</a>
+          </li>
+        
+          <li>
             <a href="/2023/09/07/DAY-68-steam%E7%A1%AC%E7%9B%98%E8%BD%AC%E7%A7%BB%E6%B8%B8%E6%88%8F/">DAY 68 steam硬盘转移游戏</a>
           </li>
         
           <li>
             <a href="/2023/09/02/DAY-67/">DAY 67</a>
-          </li>
-        
-          <li>
-            <a href="/2023/08/31/DAY-66/">DAY 66</a>
-          </li>
-        
-          <li>
-            <a href="/2023/08/30/DAy-65/">DAy 65</a>
-          </li>
-        
-          <li>
-            <a href="/2023/08/29/DAY-64/">DAY 64</a>
           </li>
         
       </ul>
